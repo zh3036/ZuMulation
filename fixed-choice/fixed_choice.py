@@ -19,6 +19,15 @@ def preference_option_score(pref, option):
             return int(num_text.group(0))
         print('Could not find integer in text: ' + text)
 
-print(preference_option_score('I like to eat healthy food.', 'This restaurant sells vegetables and noodles'))
-print(preference_option_score('I like to eat healthy food.', 'This restaurant sells hamburgers and fries'))
-print(preference_option_score('I like to eat healthy food.', 'This restaurant sells fish and salad'))
+def preference_option_matrix(prefs, options):
+    return [[preference_option_score(pref, option) for option in options] for pref in prefs]
+
+
+prefs = ['I like to eat healthy food.', 'I like to eat meat.']
+options = ['This restaurant serves vegetables and noodels', 'This restaurant serves hamburgers and fries', 'This restaurant serves fish and salad']
+
+print(preference_option_matrix(prefs, options))
+
+# print(preference_option_score('I like to eat healthy food.', 'This restaurant sells vegetables and noodles'))
+# print(preference_option_score('I like to eat healthy food.', 'This restaurant sells hamburgers and fries'))
+# print(preference_option_score('I like to eat healthy food.', 'This restaurant sells fish and salad'))
