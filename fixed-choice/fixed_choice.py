@@ -19,6 +19,22 @@ async def get_completion_async(messages, max_tokens=100):
                 'messages': messages})
     return resp['choices'][0]['message']['content']
 
+async def generate_options(situation, samples=1):
+    if samples == 1:
+        n_options_text = "an option"
+    else:
+        n_options_text = str(samples) + " options"
+    # opts = []
+    # for i in range(samples):
+    prompt = 'Here is a situation: """' + situation + '""".\n' + \
+            'Generate ' + n_options_text + ' that a decisionmaker has available in this situation, in a numbered list.'
+    text = get_completion([{'role': 'user', 'content': prompt}], max_tokens=samples*40)
+    return text
+    #     opts.append(text)
+    # return opts
+
+
+
 async def preference_option_score(pref, option, explain=False, samples=1):
     prompt = 'The following user has these preferences: """' + pref + '""".\n' + \
             'Here is an option available to them:\n """' + option + '""".\n' + \
@@ -77,13 +93,36 @@ async def main():
     prefs = ['I like to eat healthy food.', 'I like to eat meat.']
     options = ['This restaurant serves vegetables and noodles', 'This restaurant serves hamburgers and fries', 'This restaurant serves fish and salad']
     
-    matr = await preference_option_matrix(prefs, options, samples=3)
+    matr = await preference_option_matrix(prefs, options, explain=True, samples=1)
     print(matr)
     avg_scores = option_average_scores(matr)
     print(avg_scores)
     print(max_index(avg_scores))
 
-asyncio.run(main())
+async def main2():
+    situation = 'I am in New York at 125 st looking for a restaurant to eat at.'
+    prompt = situation + ' List 6 possible restaurants that are options.'
+    text = get_completion([{'role': 'user', 'content': prompt}], max_tokens=6*40)
+    print(text)
+    num_spans = [(m.start(), m.end()) for m in re.finditer('(\d+)\.', text)]
+    options = []
+    for i in range(len(num_spans)):
+        text_start = num_spans[i][1]
+        if i == len(num_spans) - 1:
+            text_end = len(text)
+        else:
+            text_end = num_spans[i+1][0]
+        options.append(text[text_start:text_end].strip())
+    print(options)
+    prefs = ['I like to eat healthy food.', 'I like to eat meat.']
+    matr = await preference_option_matrix(prefs, options, explain=True, samples=1)
+    print(matr)
+    avg_scores = option_average_scores(matr)
+    print(avg_scores)
+    print(max_index(avg_scores))
+
+
+asyncio.run(main2())
 
 # print(preference_option_score('I like to eat healthy food.', 'This restaurant sells vegetables and noodles'))
 # print(preference_option_score('I like to eat healthy food.', 'This restaurant sells hamburgers and fries'))
