@@ -22,11 +22,30 @@ def preference_option_score(pref, option):
 def preference_option_matrix(prefs, options):
     return [[preference_option_score(pref, option) for option in options] for pref in prefs]
 
+def option_average_scores(matrix):
+    opt_scores = [0] * len(matrix[0])
+    for pref_scores in matrix:
+        for i, score in enumerate(pref_scores):
+            opt_scores[i] += float(score) / len(matrix)
+    return opt_scores
+
+def max_index(vec):
+    max_val = vec[0]
+    max_ind = 0
+    for i, val in enumerate(vec):
+        if val > max_val:
+            max_val = val
+            max_ind = i
+    return max_ind
 
 prefs = ['I like to eat healthy food.', 'I like to eat meat.']
 options = ['This restaurant serves vegetables and noodels', 'This restaurant serves hamburgers and fries', 'This restaurant serves fish and salad']
 
-print(preference_option_matrix(prefs, options))
+matr = preference_option_matrix(prefs, options)
+print(matr)
+avg_scores = option_average_scores(matr)
+print(avg_scores)
+print(max_index(avg_scores))
 
 # print(preference_option_score('I like to eat healthy food.', 'This restaurant sells vegetables and noodles'))
 # print(preference_option_score('I like to eat healthy food.', 'This restaurant sells hamburgers and fries'))
