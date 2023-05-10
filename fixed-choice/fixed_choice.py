@@ -1,5 +1,7 @@
-import openai
+import asyncio
 import re
+import openai
+import openai_async
 
 
 def get_completion(messages, max_tokens=100):
@@ -8,7 +10,16 @@ def get_completion(messages, max_tokens=100):
             max_tokens=max_tokens,
             messages=messages)['choices'][0]['message']['content']
 
-def preference_option_score(pref, option, explain=False, samples=1):
+async def get_completion_async(messages, max_tokens=100):
+    resp = await openai_async.chat_complete(
+            timeout=2,
+            payload={
+                'model': 'gpt-3.5-turbo',
+                'max_tokens': max_tokens,
+                'messages': messages})
+    return resp['choices'][0]['message']['content']
+
+async def preference_option_score(pref, option, explain=False, samples=1):
     prompt = 'The following user has these preferences: """' + pref + '""".\n' + \
             'Here is an option available to them:\n """' + option + '""".\n' + \
             'Predict how good this option is according to their preferences, from 0-1000. '
@@ -31,8 +42,14 @@ def preference_option_score(pref, option, explain=False, samples=1):
     score = sum(scores) / len(scores)
     return (score, scores, explans)
 
-def preference_option_matrix(prefs, options, explain=False, samples=1):
-    return [[preference_option_score(pref, option, explain, samples) for option in options] for pref in prefs]
+async def preference_option_matrix(prefs, options, explain=False, samples=1):
+    mat = []
+    for pref in prefs:
+        pref_scores = []
+        for option in options:
+            pref_scores.append(await preference_option_score(pref, option, explain, samples))
+        mat.append(pref_scores)
+    return mat
 
 def option_average_scores(matrix):
     opt_scores = [0] * len(matrix[0])
@@ -50,14 +67,18 @@ def max_index(vec):
             max_ind = i
     return max_ind
 
-prefs = ['I like to eat healthy food.', 'I like to eat meat.']
-options = ['This restaurant serves vegetables and noodles', 'This restaurant serves hamburgers and fries', 'This restaurant serves fish and salad']
+async def main():
 
-matr = preference_option_matrix(prefs, options, samples=3)
-print(matr)
-avg_scores = option_average_scores(matr)
-print(avg_scores)
-print(max_index(avg_scores))
+    prefs = ['I like to eat healthy food.', 'I like to eat meat.']
+    options = ['This restaurant serves vegetables and noodles', 'This restaurant serves hamburgers and fries', 'This restaurant serves fish and salad']
+    
+    matr = await preference_option_matrix(prefs, options, samples=3)
+    print(matr)
+    avg_scores = option_average_scores(matr)
+    print(avg_scores)
+    print(max_index(avg_scores))
+
+asyncio.run(main())
 
 # print(preference_option_score('I like to eat healthy food.', 'This restaurant sells vegetables and noodles'))
 # print(preference_option_score('I like to eat healthy food.', 'This restaurant sells hamburgers and fries'))
