@@ -40,6 +40,7 @@ class Evaluator(ABC):
 
 class ScoringBuilder(ABC):
     """
+		Returns a function which evaluates a user's preferences for an option.
     """
     @abstractmethod
     def build_scoring_model(self, struct_user_state, user_schema, struct_option_states: list, option_schema):
