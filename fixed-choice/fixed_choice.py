@@ -11,12 +11,12 @@ def get_completion(messages, max_tokens=100):
 def preference_option_score(pref, option):
     prompt = 'The following user has these preferences: "' + pref + '".\n' + \
             'Here is an option available to them:\n "' + option + '".\n' + \
-            'Predict how good this option is according to their preferences, from 0-1000. Just say the number, nothing else.'
+            'Predict how good this option is according to their preferences, from 0-1000. Give the number first, and then explain your reasoning.'
     while True:
         text = get_completion([{'role': 'user', 'content': prompt}])
         num_text = re.search('\d+', text)
         if num_text:
-            return int(num_text.group(0))
+            return (int(num_text.group(0)), text)
         print('Could not find integer in text: ' + text)
 
 def preference_option_matrix(prefs, options):
@@ -26,7 +26,7 @@ def option_average_scores(matrix):
     opt_scores = [0] * len(matrix[0])
     for pref_scores in matrix:
         for i, score in enumerate(pref_scores):
-            opt_scores[i] += float(score) / len(matrix)
+            opt_scores[i] += float(score[0]) / len(matrix)
     return opt_scores
 
 def max_index(vec):
