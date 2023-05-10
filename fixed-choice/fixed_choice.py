@@ -43,11 +43,14 @@ async def preference_option_score(pref, option, explain=False, samples=1):
     return (score, scores, explans)
 
 async def preference_option_matrix(prefs, options, explain=False, samples=1):
-    coros = []
+    # coros = []
+    results = []
     for pref in prefs:
         for option in options:
-            coros.append(preference_option_score(pref, option, explain, samples))
-    results = await asyncio.gather(*coros)
+            # coros.append(preference_option_score(pref, option, explain, samples))
+            results.append(await preference_option_score(pref, option, explain, samples))
+    # note: using asyncio.gather doesn't actually improve performance!
+    # results = await asyncio.gather(*coros)
     mat = []
     for i, pref in enumerate(prefs):
         mat.append(results[i*len(options) : (i+1)*len(options)])
