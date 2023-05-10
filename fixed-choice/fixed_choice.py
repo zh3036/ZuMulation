@@ -8,10 +8,14 @@ def get_completion(messages, max_tokens=100):
             max_tokens=max_tokens,
             messages=messages)['choices'][0]['message']['content']
 
-def preference_option_score(pref, option):
-    prompt = 'The following user has these preferences: "' + pref + '".\n' + \
-            'Here is an option available to them:\n "' + option + '".\n' + \
-            'Predict how good this option is according to their preferences, from 0-1000. Give the number first, and then explain your reasoning.'
+def preference_option_score(pref, option, explain=False):
+    prompt = 'The following user has these preferences: """' + pref + '""".\n' + \
+            'Here is an option available to them:\n """' + option + '""".\n' + \
+            'Predict how good this option is according to their preferences, from 0-1000. '
+    if explain:
+        prompt += 'Give the number first, and then explain your reasoning.'
+    else:
+        prompt += 'Give the number only.'
     while True:
         text = get_completion([{'role': 'user', 'content': prompt}])
         num_text = re.search('\d+', text)
@@ -19,8 +23,8 @@ def preference_option_score(pref, option):
             return (int(num_text.group(0)), text)
         print('Could not find integer in text: ' + text)
 
-def preference_option_matrix(prefs, options):
-    return [[preference_option_score(pref, option) for option in options] for pref in prefs]
+def preference_option_matrix(prefs, options, explain=False):
+    return [[preference_option_score(pref, option, explain) for option in options] for pref in prefs]
 
 def option_average_scores(matrix):
     opt_scores = [0] * len(matrix[0])
@@ -41,7 +45,7 @@ def max_index(vec):
 prefs = ['I like to eat healthy food.', 'I like to eat meat.']
 options = ['This restaurant serves vegetables and noodels', 'This restaurant serves hamburgers and fries', 'This restaurant serves fish and salad']
 
-matr = preference_option_matrix(prefs, options)
+matr = preference_option_matrix(prefs, options, True)
 print(matr)
 avg_scores = option_average_scores(matr)
 print(avg_scores)
