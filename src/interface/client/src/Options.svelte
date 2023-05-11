@@ -22,6 +22,7 @@
     </div>
   {/each}
 </div>
+<br/>
 <button type="button" on:click={() => options = [...options, { name: '', enabled: true, description: '' }]}>
   Add option
 </button>

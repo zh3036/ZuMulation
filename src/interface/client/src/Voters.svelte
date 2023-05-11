@@ -19,6 +19,7 @@
     </div>
   {/each}
 </div>
+<br/>
 <button type="button" on:click={() => voters = [...voters, { name: '', enabled: true}]}>
   Add voter
 </button>
