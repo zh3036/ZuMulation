@@ -1,1 +1,3 @@
 .env
+src/interface/__pycache__
+src/interface/client/node_modules
