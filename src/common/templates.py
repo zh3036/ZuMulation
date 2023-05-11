@@ -1,10 +1,14 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 
 
 class StructStateBuilder(ABC):
     """
     Abstract class for state builders
     """
+    @abstractmethod
+    def __init__(self, natural_problem_statement: str, llm):
+        pass
+
     @abstractmethod
     def build_options_schema(self, user_inputs: list, options: list):
         pass
