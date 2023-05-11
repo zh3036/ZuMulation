@@ -72,11 +72,7 @@ Here is the list of people and things they said:
         prompt = """Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
 The person: {}
 The criteria: {}""".format(user_input, crit) +\
-"""Your response should be a JSON object with keys being the criteria and values being the number, eg: `{
-    "foo": 0.1,
-    "bar": 0.9,
-    "baz": 0.6
-}`"""
+"""Your response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`"""
         j = json.loads(conversation.predict(input=prompt))
         # TODO: format validation
         return j
@@ -89,19 +85,17 @@ The criteria: {}""".format(user_input, crit) +\
             verbose=True
         )
         crit = ", ".join(criteria)
-        prompt = """Given a potential action for {}, can you assign a number between -1 and 1 for how positively this option impacts the criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted.
+        prompt = """Given a potential action for the problem of {} and a set of criteria related to the problem, can you assign a number between -1 and 1 for how positively this option each individual criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted. Make sure to assign a value to each criteria, do not leave any out and write out the complete JSON.
 The option: {}
 The criteria: {}""".format(self.prob_statement, option, crit) +\
-"""Your response should be a JSON object with keys being the criteria and values being the number, eg: `{
-    "foo": 0.1,
-    "bar": 0.9,
-    "baz": 0.6
-}`"""
+"""Your response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`"""
 
         s = conversation.predict(input=prompt)
+        print("QQ", s)
+        s = "{" + re.findall(r'\{(.*)\}', s)[-1] + "}"
         print(s)
         j = json.loads(s)
-        # TODO: format validation
+        # TODO: format validation, check between -1 and 1 etc
         print(j)
         return j
 
@@ -146,3 +140,4 @@ Attitudes towards projects: Looks forward to collaborative workspaces, skill-sha
     print(user)
     o = l.build_option_struct_state("""Project 1 - Sustainable Food Production System (allocation: $30)
 Explanation: As an aspiring chef with a culinary education, I am passionate about turning locally-grown and sustainably sourced ingredients into delicious culinary creations. I believe this project could provide valuable resources and inspire community residents, including myself, in innovative and sustainable cooking practices while also reducing our carbon footprint.""", user_scheme)
+    print(o)
