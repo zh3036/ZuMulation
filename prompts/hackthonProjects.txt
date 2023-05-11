@@ -1,1 +1,247 @@
-this doucment contains test descriptions about hackathon projects.
+this doucment contains test descriptions about hackathon projects. this is raw text before processed by gpt
+
+2
+
+Idea pitch
+Self-issued SBT
+description : You issue your self an SBT with a claim and let others endorse the SBT to give it credibility. 
+
+why it is useful: 
+
+1  record off line events , “I clean the house for residents” SBT recognized by residents. “we do gardening together” recognized by fellow gardeners , “I made good arguments” rec by people who attend same offline discussions , “thoughtful ZK hacker” rec by ZK devs with 1000 github stars.   recording is useful as it is the basis of narrating history, the credibility of recognition should be computed according to something like eigen-trust algorithm. 
+
+2 give social relation semantics, you may want to know how your friends and second or higher degree connections at zuzalu  interact with each other , so that you can better navigate zuzalu social networks. For example, you are a coffee lover and you saw Sam has SBT “do barista coffee together” recognized by your friend K, then you know you can go talk to Sam about coffee. We could even use NLP to get a coffee subgraph from the whole social graph. 
+
+skill: solidity , full stack, idea generation, 
+
+I am on a visitor pass , but i have friends who are currently residents.
+
+
+
+Dominant Assurance Contracts:
+Build a smart contract and straightforward front end for DACS.
+There are 2 principles of DACS...
+1. There is a target funding threshhold and deadline. If it is mett, a
+transaction occurs. If it is not, then everyone is refunded.
+2. Early funders are incentivized with additional reward.
+For example, if we had a 1 yr target of 100k to purchase a beachsiide
+apartment in prospera honduras, then if you funded the first 1Ok
+within the first month you receive a guaranteed 5% return on yobur
+funds.
+If 100k is raised, the apartment building is purchased at the
+deadline.
+If 100k is not reached by the deadline, everyone is refunded.
+We need a smart contract developer, a front end developer, arhd
+people interested in crowdfunding and incentive design
+17:20
+
+Bibaboo
+Project idea: a blockchain-based tool for curating and preserving
+valuable discussions on Discord and Telegram. The tool would use a
+bot to quickly store selected content and associated metadata
+(author, time, channel, tags) on the chain. This content could then
+be minted as an nft. Community members could easily retrieve the
+content through different tags.
+The goal of the bot is to help keep interesting discussions alive aand
+visible across different time zones and platforms. We welcome
+developers and content creators, or anyone who has any idea to
+join our team and help build this open source tool!
+why we need this tool:
+- A lot of community members are feeling overwhelmed with the
+amount of messages on Telegram. While it's important to keep the
+discussions and natural correspondence going, we can save the
+more important information (eg. schedules, events, etc) from the
+chatbox to the chain.
+Zuzalu needs to keep discussions alive online as all residences and
+visitors go elsewhere after May. This bot can help to curate and
+preserve interesting discussions and topics, making them more
+accessible to the community, especially those in different time
+zones, and prepare for the next Zuzalu event.
+edited 19:59
+
+ManuAlzuru
+| DoinGud :D
+Reply
+The problem we aim to solve is how to bring people togetheer in
+safe and enjoyable way. Current methods of inviting people to
+events lack accountability and can lead to situations where people
+may feel unsafe or uncomfortable.
+1533 aims to create a safer and more accountable way to connect
+with people. We will use NFTs, ZK tech, Zuzalu passport,
+decentralized storage and a Bolivar (Venezuelan Note) with an
+unique serial number to bootstrap the community.
+The idea is to create a more trustworthy social graph that can be
+used to build stronger connections among peers.
+Our hope is that 1533 will become a valuable tool for communities
+like Zuzalu, and eventually for anyone looking for a safer and more
+accountable way to connect with others.
+We are looking for other creators (engineers, designers, artists). I'm
+sure that many people in Zuzalu have a piece of the puzzle that is
+necessary for making this a reality.
+Check the notion page and send me a DM:
+https://www.notion.so/doingud/Zuzalu-
+Hackathon-9f66c659189f480b94b84be108ccab3c?pvs=4
+Gud People on Notion
+Zuzalu Hackathon
+
+cejay z
+Reply
+1 Short description of the idea
+Title: Zuzalu TimeMap (White Paper Equivalent)
+One important component of Zuzalu is Zupass, which allowsus to
+connect to the future! We allow Zupass holders to publicly share
+their approximate coordinates once every month (e.g. accurateto
+10km, consider privacy). While this feature may seem insignificant at
+first glance, Zuzalu's development timeline can easily be visualized
+in map form. The development timeline can show how the platform
+grows over time and highlight areas where user activity is frequent.
+Users will be able to view the map and learn about the development
+of Zuzalu.As more and more users use Zupass functionality and
+share their locations, the Zuzalu map will become a valuable
+resource. This can be used to guide the future developmentof
+Zuzalu.
+It may look like a covid map...
+2 Skills needed to build the project:
+single-page application > solidity > zk
+3 How many team members are you looking for?
+Not sure, because may join other people's teams
+5
+1
+edited 00:31
+
+Cat-Thu
+I'm interested in doing a community value accountability dashboaard
+scored by zk attestations.
+We build a dashboard showing a list of community values, and fo1
+each value a score to represent how much (or little) the communiity
+in aggregate has lived up to those values.
+The scores are derived from attestations from a zupass holder to
+another zupass holder or the whole community about one or moTre
+values and can be a
+. Ideally most of it is secret, only the
+aggregate score is public to prevent gaming and popularity contests.
+(I'm a full stack web developer with some limited experience in
+solidity and zk tooling)
+5
+12:15
+
+
+just got an idea for network state after the pitch time:
+build some assets class that can only be owned by two people ,
+something like common properties. for example a proof of
+marriage NFT can only be owned together by two people. Or some
+erc20 token that can only be owned together by two people. This
+would serve as a bond between two citizens of a network sstate. if
+they want to use the token, they have to both agree. If they want to
+transfer the token, they have to transfer it to another pair of peopleلا
+The difference between this and a multisig wallet is that : if one
+person want to quit having common assets with other other one,
+then these assets disappears.
+in order to prevent one people have two wallet, so some kind of
+POH is needed, zupass would do as well.
+i got another hackathon project already, so won't be able tto work on
+this idea, but if anyone is interested , i am happy to talk and
+contribute some design thoughts.
+LN
+11:44
+
+Attila Kaplan
+PROPOSAL: Coordination app that allows members of Zuazlu to find
+each other across the world to work, live and travel together.
+FEATURES:
+- real time location tracking on a world map interface for
+spontaneous meet-ups (kinda like the snapchat feature)
+coordination tool where members can indicate to which locatijons
+they will go next with which probability to enable coordination on
+location planning
+- ZK-passport gating for exclusive access to verified Zuzalu members
+WHO WE NEED: Someone with ZK coding experience that canhelp
+us create the verification mechanism for the app
+We'll create a channel for this on the building hub - please reach out
+if you're interested
+AK
+5
+11:52
+
+SeniorPumpkin 
+Reply
+Hi! We're building Whispers:
+A TG tool for Zuzalians to anonymously send "whisper tokens" to
+each other.
+How it works: A can anonymously send a whisper token to B. This
+token could contain a sentiment like "dope vibe". If B appreciates
+this anonymous compliment, they can claim it and share on the
+wider tg channel. Every zuzalian will be able to view this whisper
+token, casting their approval or disapproval via a thumbs-up or
+down.
+The initial thought was to provide an engaging space for shy peoplle
+to connect with people they vibe with. But data gathered from these
+interaction can be consolidated into a community social dashboard,
+showing how vibrant this community is underlined and maybe
+provide some insight of the sentiments expressed towards
+zuzalians.
+potentially I'm looking for someone with zk experience and a UI
+designer
+
+
+
+0xPetra
+gm all!
+Reply
+After attending AlxCrypto this past weekend I got
+doomer pilled.
+I thought about an idea to implement as las resort in case AGI takes
+over: a distributed dead-man switch to unplug key Al infra.
+I know it's super naive, but I didn't find anything similar on the
+internet and we can always trust on having outsider innovation by
+not being constrained by current paradigms. 9/10 won't make
+sense, but experimentation is key to explore new posibilities.
+Anyone with good system designs and infraestructure in generalaare
+welcomed to jam on this! DMs open
+
+
+
+edited 12:34
+Alex M
+Hey
+Building a GPT-curated healthguide for basic diseases after visiting3
+Tropics 2. With the power of Al and Supportive community we
+provide Overlooked Diseases Guide, Post-traveller check up& Lab
+locator for 2B people market
+We are two people: me and Ivan well worked together. We are
+engineers with cutting edge machine learning & community buildiing
+expertise. Ivan is published in top-Al magazines (NIPS, UCL,..), I am
+top50 hacker by Major League Hacking made my own 40,000dev
+community.
+Skills are needed Al expertise, community and healthcare
+marketing. First two we have
+Looking for collaboration with healthcare enthusiasts who wvants to
+enhance awareness of neglected diseases.
+15:23
+
+
+Tom Howard @cryptom2
+Reply
+Two ZK ideas for anyone to run with:
+1. zk-risk - for more sophisticated DeFi and trading systems, we
+need a better understanding of risk metrics on chain. The systeem
+should be able to take as input any arbitrary combination of asssets
+or "positions", including pure ETH, DeFi lending positions, other
+complicated products such as options or vault derivatives. As well it
+should take any market data it needs from onchain sources soas
+not to be reliant on offchain systems. It should output the classsic
+risk metrics of Greeks (Delta, Gamma, Theta, etc), implied volatility,
+and the results of a monte-Carlo simulation of portfolio shocks. Thiss
+should be zk in order to both keep the input addresses privatebut
+also to offload complex computations that are not efficient in EVM.
+A prototype of this could simply calculate the Greeks andIV for a
+given asset.
+2. zkmI-LLM marketplace. Using a zkml library, enable creaators of
+LLM models to rent access to their library or buy their model
+without anyone being able to view the model code/weights directly.
+Kind of an NFT DRM system for large models.
+Bonus: Zupass has inspired some thinking around Network Stateفي
+tooling, however the thoughts are incomplete/not ready to express
+for a hack. If this has deeply inspired you as well I'm happy to jaam on
+this.
+16:29
