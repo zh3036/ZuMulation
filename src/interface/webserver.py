@@ -1,6 +1,6 @@
 
 import sqlite3
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 
 app = Flask(__name__)
 
@@ -11,4 +11,11 @@ def get_db_connection():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return send_from_directory('client/public', 'index.html')
+
+@app.route("/<path:path>")
+def home(path):
+    return send_from_directory('client/public', path)
+
+if __name__ == '__main__':
+    app.run(debug=True)
