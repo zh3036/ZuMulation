@@ -1,6 +1,6 @@
 this doucment contains test descriptions about hackathon projects. this is raw text before processed by gpt
 
-
+2
 
 Idea pitch
 Self-issued SBT
