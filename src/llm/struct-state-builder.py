@@ -132,6 +132,7 @@ Persona: Architect, age 46, separated, devoted father and amateur cyclist
 General Opinion on Zuzalu: He’s hungry to join projects driving improvement in healthier urban landscape design, as it aligns with his worldview and principles.
 Attitudes towards this matter are expressed through his deep interest to contribute to solid renewable energy schemes, enhancing transportation, promoting ecosystem conservation-centric activities, and securing enough Rec and Tech facilities triggering creative development amongst dwellers in these spaces.""", [
                         "building a sauna", "making a full time bar", "buying art to place around the community"])
+    print(user_scheme)
     user = l.build_user_struct_state("""Citizen 2: Tom Sanders
 Persona: Entrepreneur, age 40, married, two kids, involved in the tech industry
 General Opinion on Zuzalu: Sees it as a smart way of living, intrigued by innovation and creative opportunities offered in such a space.
@@ -141,3 +142,6 @@ Attitudes towards projects: Looks forward to collaborative workspaces, skill-sha
     o = l.build_option_struct_state("""Project 1 - Sustainable Food Production System (allocation: $30)
 Explanation: As an aspiring chef with a culinary education, I am passionate about turning locally-grown and sustainably sourced ingredients into delicious culinary creations. I believe this project could provide valuable resources and inspire community residents, including myself, in innovative and sustainable cooking practices while also reducing our carbon footprint.""", user_scheme)
     print(o)
+
+
+# TODODODODO: validate the json
