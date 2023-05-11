@@ -21,7 +21,11 @@ class LLMStateBuilder(StructStateBuilder):
         self.llm = llm if llm is not None else OpenAI(temperature=0)
         self.prob_statement = natural_problem_statement
 
-    def build_options_schema(self, user_inputs: list[str], options: list[str]):
+    def build_options_schema(self, user_inputs: list[str], options: list[str], user_schema):
+        """
+        Return the exact user schema for this case
+        """
+        return user_schema
         pass
 
     def build_user_schema(self, user_inputs: str, options: list[str]):
@@ -73,12 +77,33 @@ The criteria: {}""".format(user_input, crit) +\
     "bar": 0.9,
     "baz": 0.6
 }`"""
-        return json.loads(conversation.predict(input=prompt))
+        j = json.loads(conversation.predict(input=prompt))
+        # TODO: format validation
+        return j
        
-        
-
     def build_option_struct_state(self, option, schema):
-        pass
+        criteria = schema["criteria"]
+        conversation = ConversationChain(
+            llm=self.llm,
+            memory=ConversationBufferMemory(),
+            verbose=True
+        )
+        crit = ", ".join(criteria)
+        prompt = """Given a potential action for {}, can you assign a number between -1 and 1 for how positively this option impacts the criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted.
+The option: {}
+The criteria: {}""".format(self.prob_statement, option, crit) +\
+"""Your response should be a JSON object with keys being the criteria and values being the number, eg: `{
+    "foo": 0.1,
+    "bar": 0.9,
+    "baz": 0.6
+}`"""
+
+        s = conversation.predict(input=prompt)
+        print(s)
+        j = json.loads(s)
+        # TODO: format validation
+        print(j)
+        return j
 
 
 if __name__ == '__main__':
@@ -113,8 +138,11 @@ Persona: Architect, age 46, separated, devoted father and amateur cyclist
 General Opinion on Zuzalu: He’s hungry to join projects driving improvement in healthier urban landscape design, as it aligns with his worldview and principles.
 Attitudes towards this matter are expressed through his deep interest to contribute to solid renewable energy schemes, enhancing transportation, promoting ecosystem conservation-centric activities, and securing enough Rec and Tech facilities triggering creative development amongst dwellers in these spaces.""", [
                         "building a sauna", "making a full time bar", "buying art to place around the community"])
-    l.build_user_struct_state("""Citizen 2: Tom Sanders
+    user = l.build_user_struct_state("""Citizen 2: Tom Sanders
 Persona: Entrepreneur, age 40, married, two kids, involved in the tech industry
 General Opinion on Zuzalu: Sees it as a smart way of living, intrigued by innovation and creative opportunities offered in such a space.
 Attitudes towards projects: Looks forward to collaborative workspaces, skill-sharing opportunities, and sustainable solutions in energy and food production. Appreciates health and wellness initiatives to achieve a better work-life balance.
 """, user_scheme)
+    print(user)
+    o = l.build_option_struct_state("""Project 1 - Sustainable Food Production System (allocation: $30)
+Explanation: As an aspiring chef with a culinary education, I am passionate about turning locally-grown and sustainably sourced ingredients into delicious culinary creations. I believe this project could provide valuable resources and inspire community residents, including myself, in innovative and sustainable cooking practices while also reducing our carbon footprint.""", user_scheme)
