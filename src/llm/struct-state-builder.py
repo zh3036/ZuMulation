@@ -73,7 +73,7 @@ The criteria: {}""".format(user_input, crit) +\
     "bar": 0.9,
     "baz": 0.6
 }`"""
-        print(conversation.predict(input=prompt))
+        return json.loads(conversation.predict(input=prompt))
        
         
 
