@@ -1,10 +1,11 @@
 <script>
   import Options from './Options.svelte';
-	export let name;
+  import Voters from './Voters.svelte';
 </script>
 
 <main>
   <Options/>
+  <Voters/>
 </main>
 
 <style>
