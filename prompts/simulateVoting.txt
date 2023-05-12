@@ -1,0 +1,128 @@
+# vote from citizen 1
+
+
+Project 1 (Sustainable Food Production System): 35 dollars
+(35 voted-points)
+As an aspiring chef, the access to fresh, locally grown produce is essential to me, and I believe it can also benefit the community's health and environment. Vertical farming could lead to innovation in the culinary domain and lower Zuzalu's carbon footprint.
+
+Project 6 (Health and Wellness Program): 20 dollars
+(14.142 voted-points)
+Physical and mental wellbeing is crucial to every individual in the community. The variety of health-promoting activities and access to holistic therapies resonate with my personal values and promote healthy living in Zuzalu.
+
+Project 7 (Skill-Sharing and Educational Initiatives): 15 dollars
+(10.607 voted-points)
+Providing opportunities for skill development and knowledge exchange will improve the individual growth of community members while enriching the overall creative and entrepreneurial environment.
+
+Project 3 (Waste Management and Recycling Program): 10 dollars
+(7.071 voted-points)
+Supporting a closed-loop recycling system and sustainable waste management is essential for maintaining a long-term healthy, eco-friendly community.
+
+Project 8 (Transportation and Mobility Promoting): 10 dollars
+(7.071 voted-points)
+I believe that promoting and facilitating sustainable modes of transportation enhances the community's overall health and environmental footprint.
+
+Project 9 (Art and Culture Enrichment): 5 dollars
+(5.000 voted-points)
+Supporting local artists and promoting creativity within the community will lead to a positive atmosphere and more resilient local culture.
+
+Project 2, 4, 5, and 10: 0 dollars
+While I see the positive impact of renewable energy, workspaces, libraries, and wildlife initiatives, my current priorities focus more on food production, health, and fostering creativity at Zuzalu. However, I'll advocate for revisiting these topics in future funding rounds.
+
+
+# vote from citizen 2
+
+
+Project 1 (Sustainable Food Production System): 10 dollars
+(10 voted-points)
+Though not central to my personal interests, I recognize the value of a sustainable food production system for others in the community, and it may contribute to improved availability of fresh produce for the benefit of general health.
+
+Project 2 (Renewable Energy Infrastructure): 20 dollars
+(40 voted-points)
+As an astrophysicist, I am excited by advancements in energy technology, and I believe renewable energy infrastructure can help transform the community's long-term sustainability goals while also promoting innovation in the field.
+
+Project 3 (Waste Management and Recycling Program): 0 dollars
+(0 voted-points)
+Although this project is imperative for overall community sustainability, it is not my top priority, and I will delegate it to other community members who are more passionate to vote on this initiative.
+
+Project 4 (Collective Workspaces and Incubator): 10 dollars
+(10 voted-points)
+I highly appreciate the facilitation of innovative thinking and collaboration provided by collective workspaces. Furthermore, the incubator aspect might lead to fruitful future projects for Zuzalu and its members by attracting outside investment.
+
+Project 5 (Communal Resource Library): 20 dollars
+(40 voted-points)
+As a book lover and an advocate for knowledge-sharing, I believe a communal resource library will prove invaluable for community members' intellectual growth and nourishment, offering helpful reference and exploration materials for various fields.
+
+Project 6 (Health and Wellness Program): 0 dollars
+(0 voted-points)
+While I appreciate the importance of health and wellness, I am less interested in establishing more structured programs for it in the community, and thus prefer not using my funds towards supporting this project.
+
+Project 7 (Skill-Sharing and Educational Initiatives): 10 dollars
+(10 voted-points)
+Sharing knowledge through education is very important to me, and I believe the younger citizens will immensely benefit from such initiatives while also growing connections among Zuzalu members. However, I prioritize other projects more highly.
+
+Project 8 (Transportation and Mobility Promoting): 0 dollars
+(0 voted-points)
+Different transportation options have the potential to improve Zuzalu's sustainability and access, but my main priority for monetary allocation would favor technology, educational, and arts-related programs instead this time.
+
+Project 9 (Art and Culture Enrichment): 20 dollars
+(40 voted-points)
+I am a strong supporter of creative and arts-related projects boosting community atmosphere, artistic exchange, and fostering expanded personal interests in the arts. I gladly put forth a significant amount of funds for promoting such enrichment.
+
+Project 10 (Wildlife and Ecosystem Conservation Efforts): 10 dollars
+(10 voted-points)
+Clean surroundings and ecological balance significantly enhance the quality of our environment, so I would dedicate a portion of my funds towards maintaining harmony with Zuzalu's natural world, to make it more enjoyable for everyone.
+
+
+above is two voter profiles for the funding allocation, generate a final funding allocation of 50k USD , according to this vote, and rationals for each allocation. The final allocation is to be shown to every citizen as an official announcement
+
+GPT (edited): 
+
+Dear citizens of Zuzalu,
+
+
+Based on your thoughtful input and quadratic funding principles, we have allocated the 50,000 USD to the 10 projects as follows:
+
+
+Project 1 (Sustainable Food Production System): 5000 USD
+A medium priority for citizens, this project will strengthen our food supply, promote community health, and reduce our carbon footprint by investing in innovative agricultural solutions. But this project is not central to some citizen
+
+Project 2 (Renewable Energy Infrastructure): 11,000 USD
+This project facilitates a sustainable future and transforms community infrastructure, as it perfectly aligns with the benefits of cutting edge energy technology and innovation.
+
+Project 3 (Waste Management and Recycling Program): 1,500 USD
+Being a core component of keeping Zuzalu eco-friendly, this project will be supported at a smaller scale at the moment but recognized and reassessed in future understanding its importance towards environmental sustainability.
+
+Project 4 (Collective Workspaces and Incubator): 5,000 USD
+With the intent of fostering creativity and innovative thinking, nurturing workspaces are essential for productivity and are crucial for attracting outside investment within the community.
+
+Project 5 (Communal Resource Library): 5,000 USD
+Championing intellectual growth and offering reference materials, this project contributes to spiritual nourishment from various perspectives within the realm of cultural expansion and interdisciplinary connections.
+
+Project 6 (Health and Wellness Program): 8,000 USD
+Personal well-being through various activities and therapies is central to both physical and mental forms, enhancing much more than body vitality but collective contentment for the community at large.
+
+Project 7 (Skill-Sharing and Educational Initiatives): 2,000 USD
+A crucial means to provide personal growth and holistically shape the community, this small yet powerful investment back both young minds and seasoned learners in bolstering the array of collectively-endorsed skill sets.
+
+Project 8 (Transportation and Mobility Promoting): 2,000 USD
+Allocating necessary funds to maximize efficient and intuitive public services providing alternative modes of transport reduces vehicle dependency and hones a more resilient network over time via increased civic incentives.
+
+Project 9 (Art and Culture Enrichment): 1,500 USD
+Cultivating artistry and creativity, specifically focused on encouraging diverse collaborations and synergies across Zuzalu, inject passion, context, and region-specific conversations held through the universal language of art.
+
+Project 10 (Wildlife and Ecosystem Conservation Efforts): 1,500 USD
+Filled to secure and polish the more equitable and humane aspects of nature, this allocation stands for continuous peace exerted onto the entire community, towards Zuzalan's overall comprehensive outdoors experience.
+
+
+We sincerely appreciate your thoughtful votes and look forward to observing the true impact of your voice directed through these allocations positively transit and evolve Zuzalu.
+
+
+Thank you for your dedication to building a stronger and more vibrant community!
+
+
+With appreciation,
+
+
+The Zuzalu Allocation Committee
+
+

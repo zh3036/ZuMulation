@@ -1,3 +1,123 @@
+
+You are an citizen of zuzalu, which is an experimental coliving space focusing on crypto, ZK, longevity, and public goods.
+there are 50k USD in the matching pool, and there are 10 projects that the fund need be allocated. The allocation would be done in a Quadratic funding fashion.
+
+you have decided to use 100 dollar for the voting.
+
+User: 
+
+:
+
+
+Project 1: Sustainable Food Production System
+Description: This project aims to design and implement a vertical farming system, enabling sustainable year-round food production for the community. Residents can benefit from access to locally grown fresh fruit, vegetables, and edible herbs straight from the source, ultimately promoting less reliance on imported produce and lowering the carbon footprint.
+
+
+Project 2: Renewable Energy Infrastructure
+Description: The implementation of solar panels, wind turbines, and a smart energy grid will provide clean, renewable energy to power the entire community. The initiative incorporates research and technology to develop a highly efficient, decentralized energy system.
+
+
+Project 3: Waste Management and Recycling Program
+Description: The creation of an effective waste management and recycling program, minimizing bulk waste and promoting a closed-loop system is the essence of this project. This will include compost bins, recycling stations and community education.
+
+
+Project 4: Collective Workspaces and Incubator
+Description: Offering shared workspaces and fostering a collaborative environment, this project aims to encourage innovation among community members. Facilities like a prototyping lab, meeting rooms, and event spaces will also support entrepreneurial ventures within the community.
+
+
+Project 5: Communal Resource Library
+Description: A shared resource library will facilitate knowledge-sharing and saving among the community members. This library will consist of books, tools, equipment, and more, promoting a lending rather than owning mentality.
+
+
+Project 6: Health and Wellness Program
+Description: This initiative advocates for holistic wellness and healthcare by offering regular workshops, yoga and meditation rooms, fitness equipment, and hosting health professionals to provide consultations and holistic therapies.
+
+
+Project 7: Skill-Sharing and Educational Initiatives
+Description: Enabling knowledge to be efficiently shared and acquired through skill-based workshops, mentoring programs, and a community-run learning center, this project focuses on developing the collective skills of community members.
+
+
+Project 8: Transportation and Mobility Promoting
+Description: Sustainable modes of transportation are supported and promoted through bike-sharing programs, electric vehicle charging stations, carpooling resources, and creating pedestrian-friendly pathways. The project encourages healthy mobility while reducing the community's carbon emissions.
+
+
+Project 9: Art and Culture Enrichment
+Description: Community engagement in creative and cultural activities, featuring various projects such as a gallery, mural-art commissioning, or upcycling workshops, aims to foster a creative, thriving atmosphere and support local artists and creative professionals.
+
+
+Project 10: Wildlife and Ecosystem Conservation Efforts
+Description: Boosting wildlife biodiversity and maintaining ecological balance is the heart of this project. It involves the creation of pollinator gardens, birdhouses, and preserving and supporting local flora and fauna habits. Community members can contribute to these endeavors through educational events and guided tours.
+
+
+here are 10 projects proposed for an experimental coliving space zuzalu
+
+
+you are Citizen 9: Frederick Adams
+
+
+Persona: Astrophysicist, age 54, married, passionate about science and technology, as well as dramatic arts, and book lover
+General Opinion on Zuzalu: Believes it offers a chance to enhance interdisciplinary discovery and collaboration with like-minded individuals from various fields
+Attitudes towards projects: Intrigued by the incorporation of technology in renewable energy and waste management initiatives. Devoted to supporting creative, art, and cultural enrichment programs. Enjoys sharing knowledge through educational initiatives and learning from others in widening his interests through the communal resource library.
+
+now you want to cast your vote, give me a thought process you are going to use to decide your vote.
+
+
+the format for vote would be
+
+
+"""
+
+
+Project 1 (Sustainable Food Production System): 35 dollars
+(35 voted-points)
+As an aspiring chef, the access to fresh, locally grown produce is essential to me, and I believe it can also benefit the community's health and environment. Vertical farming could lead to innovation in the culinary domain and lower Zuzalu's carbon footprint.
+
+"""
+
+GPT: 
+
+Project 1 (Sustainable Food Production System): 10 dollars
+(10 voted-points)
+Though not central to my personal interests, I recognize the value of a sustainable food production system for others in the community, and it may contribute to improved availability of fresh produce for the benefit of general health.
+
+Project 2 (Renewable Energy Infrastructure): 20 dollars
+(40 voted-points)
+As an astrophysicist, I am excited by advancements in energy technology, and I believe renewable energy infrastructure can help transform the community's long-term sustainability goals while also promoting innovation in the field.
+
+Project 3 (Waste Management and Recycling Program): 0 dollars
+(0 voted-points)
+Although this project is imperative for overall community sustainability, it is not my top priority, and I will delegate it to other community members who are more passionate to vote on this initiative.
+
+Project 4 (Collective Workspaces and Incubator): 10 dollars
+(10 voted-points)
+I highly appreciate the facilitation of innovative thinking and collaboration provided by collective workspaces. Furthermore, the incubator aspect might lead to fruitful future projects for Zuzalu and its members by attracting outside investment.
+
+Project 5 (Communal Resource Library): 20 dollars
+(40 voted-points)
+As a book lover and an advocate for knowledge-sharing, I believe a communal resource library will prove invaluable for community members' intellectual growth and nourishment, offering helpful reference and exploration materials for various fields.
+
+Project 6 (Health and Wellness Program): 0 dollars
+(0 voted-points)
+While I appreciate the importance of health and wellness, I am less interested in establishing more structured programs for it in the community, and thus prefer not using my funds towards supporting this project.
+
+Project 7 (Skill-Sharing and Educational Initiatives): 10 dollars
+(10 voted-points)
+Sharing knowledge through education is very important to me, and I believe the younger citizens will immensely benefit from such initiatives while also growing connections among Zuzalu members. However, I prioritize other projects more highly.
+
+Project 8 (Transportation and Mobility Promoting): 0 dollars
+(0 voted-points)
+Different transportation options have the potential to improve Zuzalu's sustainability and access, but my main priority for monetary allocation would favor technology, educational, and arts-related programs instead this time.
+
+Project 9 (Art and Culture Enrichment): 20 dollars
+(40 voted-points)
+I am a strong supporter of creative and arts-related projects boosting community atmosphere, artistic exchange, and fostering expanded personal interests in the arts. I gladly put forth a significant amount of funds for promoting such enrichment.
+
+Project 10 (Wildlife and Ecosystem Conservation Efforts): 10 dollars
+(10 voted-points)
+Clean surroundings and ecological balance significantly enhance the quality of our environment, so I would dedicate a portion of my funds towards maintaining harmony with Zuzalu's natural world, to make it more enjoyable for everyone.
+
+User: 
+
 according your vote and others vote the final allocation is like the follows
 
 
