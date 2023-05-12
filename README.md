@@ -8,7 +8,7 @@ prototypes on open-agency architecture
 ### high level description of process
 Use LLM to help communities conduct Quadratic Funding more effectively.
 1. Each member creates a voter profile: expressing their general thoughts on the desired projects to be built, expectations for the community, and evaluations of previous projects using natural language.
-2. LLM generates a set of criteria based on the ideas of all members, and for each criteria LLM tries to scoring each project on behalf of every member of the community.
+2. LLM generates a set of criteria based on the ideas of all members, and for each criteria LLM tries to score each project on behalf of every member of the community.
 3. LLM tries to conduct quadratic voting on behalf of each member for a group of projects based on these criteria scores (with a budget of 100 USD).
 4. A funding allocation is generated from the quadratic voting process.
 5. LLM simulates being each member, provides feedback on the funding allocation, and decides whether to modify their vote.
@@ -25,3 +25,7 @@ Use LLM to help communities conduct Quadratic Funding more effectively.
 5. Using LLM all along: everyone(or every cluster if we want to do some clustering), read the final allocation, give some opinion to everyone else . everyone reads everyone else opinion, reference the final allocation and then decide whether they change their criteria score, vote(with some explanations). This part can be inspectable as well. We could create some vector representation for how everyone want others to change their votes or criteria scoring. 
 6. using classic quadratic funding algorithm
 7. we need an algorithm to decide when to stop or just give a iteration limit
+
+
+## comment by deger
+using nash bargaining rather than quadratic funding
