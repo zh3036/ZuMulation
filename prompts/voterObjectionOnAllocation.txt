@@ -3,6 +3,8 @@ there are 50k USD in the matching pool, and there are 10 projects that the fund 
 
 you have decided to use 100 dollar for the voting.
 
+
+##########
 User: 
 
 :
@@ -64,6 +66,8 @@ your Attitudes towards projects: Extremely open to options that welcome her to i
 
 now you want to cast your vote, give me a thought process you are going to use to decide your vote.
 
+
+############
 GPT: 
 
 As Louisa Hernandez, my priority is to support projects that align with my passion for cooking and healthy eating, while also considering the overall sustainability and wellbeing of the Zuzalu community. With my culinary background, I believe that dedicating resources towards food production, skill-sharing initiatives, and health promotion will lead to an improved quality of life for everyone living in Zuzalu, and will offer more opportunities and creative outlets.
@@ -105,6 +109,8 @@ While I see the positive impact of renewable energy, workspaces, libraries, and 
 
 My decision to allocate the 100 dollars in this way comes from considering my personal objectives and assessing the benefits provided by these projects on the community's current and long-term wellbeing. The final quadratic funding distribution can focus on addressing the wider priorities and diverse perspectives of other Zuzalu citizens.
 
+
+###############
 User: 
 
 the final allocation is as follows:
@@ -161,6 +167,9 @@ The Zuzalu Allocation Committee
 
 
 looking at the final allocation, please state your objections, and how you might want others change their votes
+
+##########
+
 
 GPT: 
 
