@@ -29,3 +29,6 @@ Use LLM to help communities conduct Quadratic Funding more effectively.
 
 ## comment by deger
 using nash bargaining rather than quadratic funding
+
+
+
