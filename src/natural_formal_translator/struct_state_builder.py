@@ -62,6 +62,10 @@ Here is the list of people and things they said:
         }
 
     def build_user_struct_state(self, user_input, schema):
+        """
+        Returns a dictionary mapping criteria to a number between 0 and 1. 0 meaning the criteria is irrelvant to the person
+        1 meaning the criteria is relevant.
+        """
         criteria = schema["criteria"]
         conversation = ConversationChain(
             llm=self.llm,
