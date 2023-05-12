@@ -1,19 +1,18 @@
+import re
+import json
+from langchain.memory import ConversationBufferMemory
+from langchain.output_parsers import CommaSeparatedListOutputParser
+from langchain.llms import OpenAI
+from langchain.chains import ConversationChain
+from langchain.prompts import (
+    PromptTemplate,
+)
+import openai
+from common.templates import StructStateBuilder
 import os
 import sys
 parent_dir_name = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 sys.path.append(parent_dir_name)
-
-from common.templates import StructStateBuilder
-import openai
-from langchain.prompts import (
-    PromptTemplate,
-)
-from langchain.chains import ConversationChain
-from langchain.llms import OpenAI
-from langchain.output_parsers import CommaSeparatedListOutputParser
-from langchain.memory import ConversationBufferMemory
-import json
-import re
 
 
 class LLMStateBuilder(StructStateBuilder):
@@ -76,11 +75,18 @@ Here is the list of people and things they said:
         prompt = """Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
 The person: {}
 The criteria: {}""".format(user_input, crit) +\
-"""Your response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`"""
-        j = json.loads(conversation.predict(input=prompt))
+            """Your response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`"""
+        conversation.predict(input=prompt)
+        s = conversation.predict(
+            input="Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON").replace("\n", " ")
+
+        s = re.findall(r'\{(.*)\}', s)[-1].replace("“", "\"").replace("”", "\"")
+        print("Going with", s)
+        j = json.loads("{" + s.lower() + "}")
+
         # TODO: format validation
         return j
-       
+
     def build_option_struct_state(self, option, schema):
         criteria = schema["criteria"]
         conversation = ConversationChain(
@@ -92,13 +98,15 @@ The criteria: {}""".format(user_input, crit) +\
         prompt = """Given a potential action for the problem of {} and a set of criteria related to the problem, can you assign a number between -1 and 1 for how positively this option each individual criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted. Make sure to assign a value to each criteria, do not leave any out and write out the complete JSON.
 The option: {}
 The criteria: {}""".format(self.prob_statement, option, crit) +\
-"""Your response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`"""
+            """Your response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`"""
 
-        s = conversation.predict(input=prompt)
+        conversation.predict(input=prompt)
+        s = conversation.predict(
+            input="Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON").replace("\n", " ")
         print("QQ", s)
-        s = "{" + re.findall(r'\{(.*)\}', s)[-1] + "}"
+        s = "{" + re.findall(r'\{(.*)\}', s)[-1].replace("“", "\"").replace("”", "\"") + "}"
         print(s)
-        j = json.loads(s)
+        j = json.loads(s.lower())
         # TODO: format validation, check between -1 and 1 etc
         print(j)
         return j
@@ -135,7 +143,7 @@ Citizen 7: Samuel Wilson
 Persona: Architect, age 46, separated, devoted father and amateur cyclist
 General Opinion on Zuzalu: He’s hungry to join projects driving improvement in healthier urban landscape design, as it aligns with his worldview and principles.
 Attitudes towards this matter are expressed through his deep interest to contribute to solid renewable energy schemes, enhancing transportation, promoting ecosystem conservation-centric activities, and securing enough Rec and Tech facilities triggering creative development amongst dwellers in these spaces.""", [
-                        "building a sauna", "making a full time bar", "buying art to place around the community"])
+        "building a sauna", "making a full time bar", "buying art to place around the community"])
     print(user_scheme)
     user = l.build_user_struct_state("""Citizen 2: Tom Sanders
 Persona: Entrepreneur, age 40, married, two kids, involved in the tech industry
