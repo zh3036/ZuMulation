@@ -8,9 +8,9 @@ import os
 from algorithms.voting.quadratic import perform_votes
 pool = Pool()
 
-# llm = OpenAI(model_name="gpt-4")
+# llm = OpenAI(model_name="gpt-3.5-turbo")
 ANTRHOPIC_KEY = os.environ['ANTHROPIC_API_KEY']
-llm = Anthropic(anthropic_api_key=ANTRHOPIC_KEY)
+llm = Anthropic(anthropic_api_key=ANTRHOPIC_KEY, model="claude-instant-v1")
 
 
 def simple_voting(problem_statement: str, user_inputs: list[str], options: list[str]):
