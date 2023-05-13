@@ -23,7 +23,12 @@ def perform_votes(options: list[dict], users: list[dict]) -> dict:
     """
     preferences = [_build_normalized_user_preference(
         options, user) for user in users]
-    
+        
+    # make preferences' each entry summed up to 10
+    for i in range(len(preferences)):
+        total = sum(preferences[i])
+        preferences[i] = [p / total * 10 for p in preferences[i]]
+
     weighted_votes = [
         sum(sqrt(preferences[i][j]) for i in range(len(users)))
         for j in range(len(options))

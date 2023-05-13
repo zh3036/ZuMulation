@@ -49,3 +49,17 @@ the current process is
 3. summarize objections
 4. ask whether people change their votes(weights on criteria)
 5. compute new votes
+
+
+# known bug
+
+
+
+## key error in criteria
+
+  File "/Users/yihan/LocalYihan/openAgency/open-agency/src/algorithms/voting/quadratic.py", line 8, in <listcomp>
+    unNormalized = [sum([option[o] * user[o] for o in option.keys()])
+                                     ~~~~^^^
+KeyError: 'local food production'
+
+need better error checking and exception handling
