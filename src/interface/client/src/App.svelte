@@ -1,10 +1,10 @@
 <script>
-  import Options from './Options.svelte';
+  import Proposals from './Proposals.svelte';
   import Voters from './Voters.svelte';
 </script>
 
 <main>
-  <Options/>
+  <Proposals/>
   <Voters/>
 </main>
 
