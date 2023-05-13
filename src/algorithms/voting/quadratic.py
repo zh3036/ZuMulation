@@ -31,4 +31,13 @@ def perform_votes(options: list[dict], users: list[dict]) -> dict:
     quadraticVotes = [v**2 for v in weighted_votes]
     return {"qvRes": quadraticVotes, "preferenceMatrix": preferences}
 
-
+def perform_votes_from_prf(prf: list) -> list:
+    """
+    Returns a list of the number of votes which each option received.
+    """
+    weighted_votes = [
+        sum(sqrt(prf[i][j]) for i in range(len(prf)))
+        for j in range(len(prf[0]))
+    ]
+    quadraticVotes = [v**2 for v in weighted_votes]
+    return quadraticVotes
