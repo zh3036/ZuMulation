@@ -54,7 +54,8 @@ if __name__ == "__main__":
     # direct std to output_vote.txt
     output_file = open("output_main.txt", "a")
     sys.stdout = output_file
-    problem="allocating money to projects being built for a community of hackers"
+    #problem="allocating money to projects being built for a community of hackers"
+    problem="using quadratic funding to allocate "+"money to projects being built for a co-living community of hackers"
     user_inputs=["""Citizen 1: Mary Green
 Persona: Environmental enthusiast, age 32, single, yoga instructor
 General Opinion on Zuzalu: Excited about the idea of living in an ecologically focused environment promoting a strong, healthy sense of community.

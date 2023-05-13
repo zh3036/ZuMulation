@@ -21,9 +21,11 @@ class Iteration:
         ret = conversation.predict(input=f"""You are acting as a person. Here is the person: 
 {user_input}
 A decision has been made regarding {self.prob_statement}. The decision is to {self.decision}.
-What is your biggest objection to this decision? Please write a sentence or two.""")
+What is your biggest objection to this decision? Please write three objections.""")
         return ret
 
+    def summarize_objections(self, objections: list[str]) -> str:
+        return 
     def update_user(self, user_input, objections):
         """
         Update the user's beliefs and values based on the objections 

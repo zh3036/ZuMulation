@@ -93,7 +93,7 @@ The criteria: {}""".format(user_input, crit) +\
 
     def build_option_struct_state(self, option, schema):
         """
-        rate the options on each critera , return jason
+        rate the options on each critera , return json
         """
         criteria = schema["criteria"]
         conversation = ConversationChain(

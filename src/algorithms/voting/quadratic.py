@@ -21,10 +21,12 @@ def perform_votes(options: list[dict], users: list[dict]) -> list[int]:
     """
     preferences = [_build_normalized_user_preference(
         options, user) for user in users]
+    
     weighted_votes = [
         sum(sqrt(preferences[i][j]) for i in range(len(users)))
         for j in range(len(options))
     ]
     quadraticVotes = [v**2 for v in weighted_votes]
-    return quadraticVotes
+    return {"qvRes": quadraticVotes, "preferenceMatrix": preferences}
+
 
