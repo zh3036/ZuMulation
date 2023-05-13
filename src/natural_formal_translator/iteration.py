@@ -6,6 +6,7 @@ from langchain import Anthropic
 import numpy as np
 from math import sqrt
 import ast
+from algorithms.voting.quadratic import perform_votes_from_prf
 
 class Iteration:
     def __init__(self, prb_st: str, voteRes: list, options: list[str], llm=None):
@@ -86,15 +87,23 @@ $&$ [option1 vote, option2 vote, option3 vote, ...] $&$ reasons for each change/
             memory=ConversationBufferMemory(),
             verbose=False
         )
-        ret = conversation.predict(input=f"""{update_msg}
-          above is an message about a voter changing his/her vote.
-          there are {str(num_options)} options in this votes.
-            Please output the formatted vote for each option in the format of
-            [option1 vote, option2 vote, option3 vote, ...] , and output nothing else
-            make sure it can be parsed into python list using ast.literal_eval
-          """)
-        print (ret)
-        return ast.literal_eval(ret)
+        # catch exceptions of SyntaxError: invalid syntax for the following code
+        for i in range(10):
+            try:
+                ret = conversation.predict(input=f"""{update_msg}
+                above is an message about a voter changing his/her vote.
+                there are {str(num_options)} options in this votes.
+                    Please output the formatted vote for each option in the format of
+                    [option1 vote, option2 vote, option3 vote, ...] , and output nothing else
+                    make sure it can be parsed into python list using ast.literal_eval
+                """)
+                print (ret)
+                ret = ast.literal_eval(ret)
+                assert len(ret) == num_options
+                break # no error, break the loop
+            except:
+                print ("error in parsing the votes, retrying...")
+        return ret
 
 
 
@@ -136,41 +145,46 @@ Explanation: A healthy dose of art and culture can breathe life into any communi
 ])
     # make vote_by_citizen 's each entry sum up to 10
     vote_by_citiziens = vote_by_citiziens*10 / vote_by_citiziens.sum(axis=1,keepdims=1)
-    print (vote_by_citiziens)
+    # print (vote_by_citiziens)
     # generate a quadraftic voting result
-    voteRes = [
-        sum(sqrt(vote_by_citiziens[i][j]) for i in range(len(citizen_descs)))
-        for j in range(len(options))
-    ]
-    voteRes = [v**2 for v in voteRes]
+    # voteRes = [
+    #     sum(sqrt(vote_by_citiziens[i][j]) for i in range(len(citizen_descs)))
+    #     for j in range(len(options))
+    # ]
+    # voteRes = [v**2 for v in voteRes]
+    voteRes = perform_votes_from_prf(vote_by_citiziens)
     print(voteRes)
 
-    It_test = Iteration("using quadratic funding to allocate "+"money to projects being built for a co-living community of hackers",\
-                        voteRes,options,llm=llm)
-    print (It_test.finalDecisions)
-    citizen_objections = [It_test.create_natural_objection(citizen_desc) for citizen_desc in citizen_descs]
-    # print (citizen_objections)
-    summary_objections = It_test.summarize_objections(citizen_objections)
-    # print (summary_objections)
-    # user_updated = It_test.update_user(citizen_descs[1],summary_objections,vote_by_citiziens[1],options)
-    # print (user_updated)
-    # print (It_test.get_formatted_votes(user_updated,5))
-    newVotes = []
-    for i in range(len(citizen_descs)):
-        citizen_updated = It_test.update_user(citizen_descs[i],summary_objections,vote_by_citiziens[i],options)
-        newVote = It_test.get_formatted_votes(citizen_updated,5)
-        newVotes.append(newVote)
+    for count in range(3):
+        It_test = Iteration("using quadratic funding to allocate "+"money to projects being built for a co-living community of hackers",\
+                            voteRes,options,llm=llm)
+        print (It_test.finalDecisions)
+        citizen_objections = [It_test.create_natural_objection(citizen_desc) for citizen_desc in citizen_descs]
+        # print (citizen_objections)
+        summary_objections = It_test.summarize_objections(citizen_objections)
+        # print (summary_objections)
+        # user_updated = It_test.update_user(citizen_descs[1],summary_objections,vote_by_citiziens[1],options)
+        # print (user_updated)
+        # print (It_test.get_formatted_votes(user_updated,5))
+        newVotes = []
+        for i in range(len(citizen_descs)):
+            citizen_updated = It_test.update_user(citizen_descs[i],summary_objections,vote_by_citiziens[i],options)
+            newVote = It_test.get_formatted_votes(citizen_updated,len(options))
+            newVotes.append(newVote)
+        print (newVotes)
+        newVotes =np.array(newVotes)
+        newVotes =newVotes*10 / newVotes.sum(axis=1,keepdims=1)
+        print (newVotes)
+        print(vote_by_citiziens)
 
-    newVotes =np.array(newVotes)
-    newVotes =newVotes*10 / newVotes.sum(axis=1,keepdims=1)
-    print (newVotes)
-    print(vote_by_citiziens)
+        # voteRes_new = [
+        #     sum(sqrt(newVotes[i][j]) for i in range(len(citizen_descs)))
+        #     for j in range(len(options))
+        # ]
+        # voteRes_new = [v**2 for v in voteRes_new]
+        voteRes_new = perform_votes_from_prf(newVotes)
+        print (voteRes_new)
+        print (voteRes)
 
-    voteRes_new = [
-        sum(sqrt(newVotes[i][j]) for i in range(len(citizen_descs)))
-        for j in range(len(options))
-    ]
-    voteRes_new = [v**2 for v in voteRes_new]
-
-    print (voteRes_new)
-    print (voteRes)
+        voteRes = voteRes_new
+        vote_by_citiziens = newVotes
