@@ -4,8 +4,14 @@
 </script>
 
 <main>
-  <Proposals/>
-  <Voters/>
+  <div class="row">
+    <div class="column">
+      <Proposals/>
+    </div>
+    <div class="column">
+      <Voters/>
+    </div>
+  </div>
 </main>
 
 <style>
@@ -27,4 +33,11 @@
 			max-width: none;
 		}
 	}
+  .row {
+    display: flex;
+  }
+
+  .column {
+    flex: 50%;
+  }
 </style>
