@@ -25,5 +25,6 @@ def perform_votes(options: list[dict], users: list[dict]) -> list[int]:
         sum(sqrt(preferences[i][j]) for i in range(len(users)))
         for j in range(len(options))
     ]
+    quadraticVotes = [v**2 for v in weighted_votes]
+    return quadraticVotes
 
-    return weighted_votes

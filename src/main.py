@@ -3,17 +3,24 @@ from natural_formal_translator import struct_state_builder
 from pathos.multiprocessing import ProcessingPool as Pool
 
 from langchain import Anthropic
+from langchain.chat_models import ChatAnthropic
 import os
+import sys
 
 from algorithms.voting.quadratic import perform_votes
 pool = Pool()
 
 # llm = OpenAI(model_name="gpt-3.5-turbo")
 ANTRHOPIC_KEY = os.environ['ANTHROPIC_API_KEY']
+
+#TODO: UserWarning: This Anthropic LLM is deprecated. Please use `from langchain.chat_models import ChatAnthropic` instead
 llm = Anthropic(anthropic_api_key=ANTRHOPIC_KEY, model="claude-instant-v1")
 
 
 def simple_voting(problem_statement: str, user_inputs: list[str], options: list[str]):
+    """
+    user_inputs is voter profiles; options is the options to vote on; 
+    """
     if True:
         state_formalizer = struct_state_builder.LLMStateBuilder(
             problem_statement, llm=llm)
@@ -44,6 +51,9 @@ def simple_voting(problem_statement: str, user_inputs: list[str], options: list[
 
 
 if __name__ == "__main__":
+    # direct std to output_vote.txt
+    output_file = open("output_main.txt", "a")
+    sys.stdout = output_file
     problem="allocating money to projects being built for a community of hackers"
     user_inputs=["""Citizen 1: Mary Green
 Persona: Environmental enthusiast, age 32, single, yoga instructor
@@ -84,3 +94,4 @@ Explanation: Total well-being comprises more than just eating right; a healthy m
                """Project 5 - Art and Culture Enrichment (allocation: $10)
 Explanation: A healthy dose of art and culture can breathe life into any community. As an appreciator of art, I believe dedicated gallery spaces, workshops, and other creative projects will not only foster our home-grown artistic expressions but also incorporate creativity into our everyday lives, potentially blending with food production and healthy living."""]
     simple_voting(problem, user_inputs, options)
+    output_file.close()

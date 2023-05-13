@@ -3,6 +3,7 @@ import json
 from langchain.memory import ConversationBufferMemory
 from langchain.output_parsers import CommaSeparatedListOutputParser
 from langchain.llms import OpenAI
+from langchain import Anthropic
 from langchain.chains import ConversationChain
 from langchain.prompts import (
     PromptTemplate,
@@ -30,6 +31,7 @@ class LLMStateBuilder(StructStateBuilder):
     def build_user_schema(self, user_inputs: str, options: list[str]):
         """
         We will extract what the users "value" in relation to making a choice about the problem statement
+        generate a set of criteria according to users' natural language
         """
         conversation = ConversationChain(
             llm=self.llm,
@@ -62,8 +64,10 @@ Here is the list of people and things they said:
 
     def build_user_struct_state(self, user_input, schema):
         """
-        Returns a dictionary mapping criteria to a number between 0 and 1. 0 meaning the criteria is irrelvant to the person
+        Returns a dictionary mapping criteria weights to a number between 0 and 1. 
+        0 meaning the criteria is irrelvant to the person
         1 meaning the criteria is relevant.
+        
         """
         criteria = schema["criteria"]
         conversation = ConversationChain(
@@ -85,9 +89,12 @@ The criteria: {}""".format(user_input, crit) +\
         j = json.loads("{" + s.lower() + "}")
 
         # TODO: format validation
-        return j
+        return j 
 
     def build_option_struct_state(self, option, schema):
+        """
+        rate the options on each critera , return jason
+        """
         criteria = schema["criteria"]
         conversation = ConversationChain(
             llm=self.llm,
@@ -104,6 +111,8 @@ The criteria: {}""".format(self.prob_statement, option, crit) +\
         s = conversation.predict(
             input="Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON").replace("\n", " ")
         print("QQ", s)
+        # also save s into a file
+
         s = "{" + re.findall(r'\{(.*)\}', s)[-1].replace("“", "\"").replace("”", "\"") + "}"
         print(s)
         j = json.loads(s.lower())
@@ -113,8 +122,12 @@ The criteria: {}""".format(self.prob_statement, option, crit) +\
 
 
 if __name__ == '__main__':
+    output_file = open("output_struct_state.txt", "a")
+    sys.stdout = output_file
+    ANTRHOPIC_KEY = os.environ['ANTHROPIC_API_KEY']
+    llm = Anthropic(anthropic_api_key=ANTRHOPIC_KEY, model="claude-instant-v1")
     l = LLMStateBuilder(
-        "allocating money to projects being built for a community of hackers")
+        "allocating money to projects being built for a community of hackers",llm=llm)
     user_scheme = l.build_user_schema("""Citizen 1: Mary Green
 Persona: Environmental enthusiast, age 32, single, yoga instructor
 General Opinion on Zuzalu: Excited about the idea of living in an ecologically focused environment promoting a strong, healthy sense of community.
@@ -144,13 +157,17 @@ Persona: Architect, age 46, separated, devoted father and amateur cyclist
 General Opinion on Zuzalu: He’s hungry to join projects driving improvement in healthier urban landscape design, as it aligns with his worldview and principles.
 Attitudes towards this matter are expressed through his deep interest to contribute to solid renewable energy schemes, enhancing transportation, promoting ecosystem conservation-centric activities, and securing enough Rec and Tech facilities triggering creative development amongst dwellers in these spaces.""", [
         "building a sauna", "making a full time bar", "buying art to place around the community"])
-    print(user_scheme)
+    print(user_scheme) 
+    # print user_scheme to file , 
+
+
     user = l.build_user_struct_state("""Citizen 2: Tom Sanders
 Persona: Entrepreneur, age 40, married, two kids, involved in the tech industry
 General Opinion on Zuzalu: Sees it as a smart way of living, intrigued by innovation and creative opportunities offered in such a space.
 Attitudes towards projects: Looks forward to collaborative workspaces, skill-sharing opportunities, and sustainable solutions in energy and food production. Appreciates health and wellness initiatives to achieve a better work-life balance.
 """, user_scheme)
     print(user)
+
     o = l.build_option_struct_state("""Project 1 - Sustainable Food Production System (allocation: $30)
 Explanation: As an aspiring chef with a culinary education, I am passionate about turning locally-grown and sustainably sourced ingredients into delicious culinary creations. I believe this project could provide valuable resources and inspire community residents, including myself, in innovative and sustainable cooking practices while also reducing our carbon footprint.""", user_scheme)
     print(o)
