@@ -35,5 +35,9 @@
   .proposal {
     border: 1px solid #ccc;
     padding: 1em;
+    margin: 0.5em;
+  }
+  button {
+    margin: 0.5em;
   }
 </style>

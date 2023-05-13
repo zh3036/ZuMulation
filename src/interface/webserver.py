@@ -1,6 +1,11 @@
 
 import sqlite3
 from flask import Flask, render_template, send_from_directory
+import sys
+
+sys.path.append('..')
+
+import main
 
 app = Flask(__name__)
 
