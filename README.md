@@ -32,3 +32,20 @@ using nash bargaining rather than quadratic funding
 
 
 
+## 0513 notes
+
+the current process is
+
+1. LLM get criteria from human
+2. LLM got human weight of each criteria 
+3. LLM rate projects for each criteria 
+4. LLM generate vote for human and aggregate 
+
+
+# 0513 TODO
+0. show vote of everyone
+1. make vote result pair with projects 
+2. seek objections
+3. summarize objections
+4. ask whether people change their votes(weights on criteria)
+5. compute new votes
