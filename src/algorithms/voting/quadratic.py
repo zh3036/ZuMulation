@@ -15,9 +15,11 @@ def _build_normalized_user_preference(options: list[dict], user: dict) -> list[f
     return [u / total for u in unNormalized]
 
 
-def perform_votes(options: list[dict], users: list[dict]) -> list[int]:
+def perform_votes(options: list[dict], users: list[dict]) -> dict:
     """
-    Returns a list of the number of votes which each option received.
+    Returns a dict
+     qvRes key give a list ofthe number of votes which each option received.
+     preferenceMatrix key gives a matrix of preferences for each user.
     """
     preferences = [_build_normalized_user_preference(
         options, user) for user in users]

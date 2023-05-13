@@ -85,7 +85,7 @@ The criteria: {}""".format(user_input, crit) +\
             input="Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON").replace("\n", " ")
 
         s = re.findall(r'\{(.*)\}', s)[-1].replace("“", "\"").replace("”", "\"")
-        print("Going with", s)
+        print("the criteria weight for users", s)
         j = json.loads("{" + s.lower() + "}")
 
         # TODO: format validation
@@ -110,8 +110,8 @@ The criteria: {}""".format(self.prob_statement, option, crit) +\
         conversation.predict(input=prompt)
         s = conversation.predict(
             input="Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON").replace("\n", " ")
-        print("QQ", s)
-        # also save s into a file
+        print("how does the project score on each criteria", s)
+
 
         s = "{" + re.findall(r'\{(.*)\}', s)[-1].replace("“", "\"").replace("”", "\"") + "}"
         print(s)

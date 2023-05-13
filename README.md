@@ -43,8 +43,8 @@ the current process is
 
 
 # 0513 TODO
-0. show vote of everyone
-1. make vote result pair with projects 
+0. show vote of everyone DONE
+1. make vote result pair with projects  
 2. seek objections
 3. summarize objections
 4. ask whether people change their votes(weights on criteria)

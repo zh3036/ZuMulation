@@ -15,7 +15,7 @@ ANTRHOPIC_KEY = os.environ['ANTHROPIC_API_KEY']
 
 #TODO: UserWarning: This Anthropic LLM is deprecated. Please use `from langchain.chat_models import ChatAnthropic` instead
 llm = Anthropic(anthropic_api_key=ANTRHOPIC_KEY, model="claude-instant-v1")
-
+# llm = OpenAI(model_name="gpt-4")
 
 def simple_voting(problem_statement: str, user_inputs: list[str], options: list[str]):
     """
@@ -46,13 +46,14 @@ def simple_voting(problem_statement: str, user_inputs: list[str], options: list[
     # user_structs =  [{'health': 0.9, 'transport': 0.8, 'energy': 0.9, 'skill': 0.3, 'art': 0.5, 'food': 0.7}, {'food': 0.8, 'health': 0.9, 'transport': 0.5, 'skill': 0.7, 'art': 0.3, 'energy': 0.9}, {'food': 0.3, 'health': 0.4, 'transport': 0.2, 'skill': 0.8, 'art': 0.9, 'energy': 0.5}, {'food': 0.5, 'health': 0.7, 'transport': 0.8, 'skill': 0.9, 'art': 0.6, 'energy': 1}, {'food': 0.3, 'health': 0.8, 'transport': 0.7, 'skill': 0.5, 'art': 0.2, 'energy': 0.4}, {'food': 1.0, 'health': 1.0, 'transport': 0.7, 'skill': 0.8, 'art': 0.5, 'energy': 0.5}, {'food': 0.3, 'health': 0.8, 'transport': 0.7, 'skill': 0.5, 'art': 0.4, 'energy': 0.9}]
     # options_structs = [{'food': 1, 'health': 1, 'transport': 0, 'skill': 1, 'art': 1, 'energy': 1}, {'food': 1.0, 'health': 0.0, 'transport': 0.0, 'skill': 1.0, 'art': 1.0, 'energy': 0.0}, {'food': 0.9, 'health': 1, 'transport': 1, 'skill': 0, 'art': 0, 'energy': 0.8}, {'food': 0, 'health': 1, 'transport': 0, 'skill': 0, 'art': 0, 'energy': 1}, {'food': 0, 'health': 0, 'transport': 0, 'skill': 0, 'art': 1, 'energy': 0}]
     # criteria = list(user_schema["criteria"].keys())
-    votes = perform_votes(options_structs, user_structs)
-    print("Votes", votes)
+    return perform_votes(options_structs, user_structs)
+
 
 
 if __name__ == "__main__":
     # direct std to output_vote.txt
-    output_file = open("output_main.txt", "a")
+    output_file = open("output_main2.txt", "a")
+    output_file.write("\nxxxxxxx\nxxxxxxxxx\nxxxxxxxx\n\n")
     sys.stdout = output_file
     #problem="allocating money to projects being built for a community of hackers"
     problem="using quadratic funding to allocate "+"money to projects being built for a co-living community of hackers"
@@ -84,15 +85,21 @@ Attitudes towards projects: Extremely open to options that welcome her to innova
 Persona: Architect, age 46, separated, devoted father and amateur cyclist
 General Opinion on Zuzalu: He’s hungry to join projects driving improvement in healthier urban landscape design, as it aligns with his worldview and principles.
 Attitudes towards this matter are expressed through his deep interest to contribute to solid renewable energy schemes, enhancing transportation, promoting ecosystem conservation-centric activities, and securing enough Rec and Tech facilities triggering creative development amongst dwellers in these spaces."""]
-    options=["""Project 1 - Sustainable Food Production System (allocation: $30)
+
+    options=["""Project 1 - Sustainable Food Production System 
 Explanation: As an aspiring chef with a culinary education, I am passionate about turning locally-grown and sustainably sourced ingredients into delicious culinary creations. I believe this project could provide valuable resources and inspire community residents, including myself, in innovative and sustainable cooking practices while also reducing our carbon footprint.""",
-               """Project 2 - Skill-Sharing and Educational Initiatives (allocation: $25)
+               """Project 2 - Skill-Sharing and Educational Initiatives 
 Explanation: We can never stop learning, improving and sharing our knowledge with others. Combining culinary education and experience with others' skill sets will only lead to a more vibrant and multifaceted community. I look forward to expanding my own horizons as well as having the opportunity to teach cooking classes and share my passion for food with my fellow community members.""",
-               """Project 3 - Transportation and Mobility Promoting (allocation: $20)
+               """Project 3 - Transportation and Mobility Promoting 
 Explanation: Being an advocate for healthy living and sustainability, ensuring efficient and environment-friendly mobility options is important. Commuting to local farmers' markets and other food sourcing without negatively impacting the environment is both practical and appealing for me. Investing in bike-shares and community-friendly pathways will also encourage a more active lifestyle and foster community-wide connections.""",
-               """Project 4 - Health and Wellness Program (allocation: $15)
+               """Project 4 - Health and Wellness Program 
 Explanation: Total well-being comprises more than just eating right; a healthy mind and body are of vital importance too. Yoga, meditation, and holistic therapies resonate deeply with my desire to live a well-rounded life. This project could attract health professionals from whom I can learn and truly cultivate a wholesome atmosphere in our community.""",
-               """Project 5 - Art and Culture Enrichment (allocation: $10)
+               """Project 5 - Art and Culture Enrichment 
 Explanation: A healthy dose of art and culture can breathe life into any community. As an appreciator of art, I believe dedicated gallery spaces, workshops, and other creative projects will not only foster our home-grown artistic expressions but also incorporate creativity into our everyday lives, potentially blending with food production and healthy living."""]
-    simple_voting(problem, user_inputs, options)
+
+    v = simple_voting(problem, user_inputs, options)
+    FinalVoteRes = v['qvRes']
+    userVotes = v['preferenceMatrix']
+    print("user votes", userVotes)
+    print("final Votes", FinalVoteRes)
     output_file.close()
