@@ -5,7 +5,7 @@ from langchain.memory import ConversationBufferMemory
 from langchain import Anthropic
 import numpy as np
 from math import sqrt
-
+import ast
 
 class Iteration:
     def __init__(self, prb_st: str, voteRes: list, options: list[str], llm=None):
@@ -67,15 +67,34 @@ According to your persona,
 What is your biggest objection to this funding allocation results? Please write two objections.
 Different people have different objections to this decision. Here are some objections summary:
 {objections_summary}
-you original vote for {options} are {original_vote} respectively
+you original vote for {options} are {original_vote} respectively which contributes the final allocation through quadratic funding.
 we want you to respond to the objection summary, 
 give your new vote if you would like change, and give your reasons for each change/or no change
 If you want to change your vote, please write down your new vote for each option. 
 if you donot want to change your vote, please output your original vote for each option.
 your output should be in format of 
-[option1 vote, option2 vote, option3 vote, ...] $&$ reasons for each change/or no change
+$&$ [option1 vote, option2 vote, option3 vote, ...] $&$ reasons for each change/or no change
 """)
         return ret
+    
+    def get_formatted_votes(self,update_msg:str, num_options:int)->list[float]:
+        """
+        get the formatted votes from the user's response
+        """
+        conversation = ConversationChain(
+            llm=self.llm,
+            memory=ConversationBufferMemory(),
+            verbose=False
+        )
+        ret = conversation.predict(input=f"""{update_msg}
+          above is an message about a voter changing his/her vote.
+          there are {str(num_options)} options in this votes.
+            Please output the formatted vote for each option in the format of
+            [option1 vote, option2 vote, option3 vote, ...] , and output nothing else
+            make sure it can be parsed into python list using ast.literal_eval
+          """)
+        print (ret)
+        return ast.literal_eval(ret)
 
 
 
@@ -111,14 +130,14 @@ Explanation: A healthy dose of art and culture can breathe life into any communi
 # vote_by_citiziens is a matrix such that every entry is one citizen's vote for each options, initialzed with random values between 0 and 10
     # vote_by_citiziens = np.random.randint(0,10,size=(len(citizen_descs),len(options)))
     vote_by_citiziens = np.array([
-    [10,0, 10, 0, 5],
+    [0,0, 10, 0, 5],
     [0, 7, 10, 0, 10],
     [0, 10, 0, 10, 15]
 ])
     # make vote_by_citizen 's each entry sum up to 10
     vote_by_citiziens = vote_by_citiziens*10 / vote_by_citiziens.sum(axis=1,keepdims=1)
     print (vote_by_citiziens)
-
+    # generate a quadraftic voting result
     voteRes = [
         sum(sqrt(vote_by_citiziens[i][j]) for i in range(len(citizen_descs)))
         for j in range(len(options))
@@ -130,55 +149,28 @@ Explanation: A healthy dose of art and culture can breathe life into any communi
                         voteRes,options,llm=llm)
     print (It_test.finalDecisions)
     citizen_objections = [It_test.create_natural_objection(citizen_desc) for citizen_desc in citizen_descs]
-    print (citizen_objections)
+    # print (citizen_objections)
     summary_objections = It_test.summarize_objections(citizen_objections)
-    print (summary_objections)
-    user_updated = It_test.update_user(citizen_descs[1],summary_objections,vote_by_citiziens[1],options)
-    print (user_updated)
+    # print (summary_objections)
+    # user_updated = It_test.update_user(citizen_descs[1],summary_objections,vote_by_citiziens[1],options)
+    # print (user_updated)
+    # print (It_test.get_formatted_votes(user_updated,5))
+    newVotes = []
+    for i in range(len(citizen_descs)):
+        citizen_updated = It_test.update_user(citizen_descs[i],summary_objections,vote_by_citiziens[i],options)
+        newVote = It_test.get_formatted_votes(citizen_updated,5)
+        newVotes.append(newVote)
 
+    newVotes =np.array(newVotes)
+    newVotes =newVotes*10 / newVotes.sum(axis=1,keepdims=1)
+    print (newVotes)
+    print(vote_by_citiziens)
 
+    voteRes_new = [
+        sum(sqrt(newVotes[i][j]) for i in range(len(citizen_descs)))
+        for j in range(len(options))
+    ]
+    voteRes_new = [v**2 for v in voteRes_new]
 
-
-
-class Iteration2:
-    def __init__(self, natural_problem_statement: str, decision: str, option: str, llm=None):
-        self.llm = llm if llm is not None else OpenAI(temperature=0, model_name="GPT-4")
-        self.prob_statement = natural_problem_statement
-        self.decision = decision
-
-    def create_natural_objection(self, user_input) -> str:
-        """
-        Create a natural language objection to the decision
-        """
-        conversation = ConversationChain(
-            llm=self.llm,
-            memory=ConversationBufferMemory(),
-            verbose=False
-        )
-        ret = conversation.predict(input=f"""You are acting as a person. Here is the person's description: 
-{user_input}
-A decision has been made regarding {self.prob_statement}. The decision is to {self.decision}.
-What is your biggest objection to this decision? Please write two objections.""")
-        return ret
-
-    def summarize_objections(self, objections: list[str]) -> str:
-        return ""
-    
-    def update_user(self, user_input, objections):
-        """
-        Update the user's beliefs and values based on the objections 
-        """
-        conversation = ConversationChain(
-            llm=self.llm,
-            memory=ConversationBufferMemory(),
-            verbose=False
-        )
-        ret = conversation.predict(input=f"""You are acting as a person. Here is the person:
-{user_input}
-A decision has been made regarding {self.prob_statement}. The decision is to {self.decision}.
-Different people have different objections to this decision. Here are some objections:
-{objections}
-Consider these objections and update your set of beliefs and values. What is your new set of beliefs and values? Please write a sentence or two.""")
-        return ret
-
-
+    print (voteRes_new)
+    print (voteRes)
