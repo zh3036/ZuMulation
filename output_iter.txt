@@ -421,3 +421,84 @@ In summary, decision makers should evaluate increasing the funding for the Susta
  [2.27437738 1.23874487 2.30945399 0.32491105 3.85251271]]
 [23.557667757559514, 15.44302771855539, 15.906078783495277, 8.8998162655854, 19.919689282982525]
 [29.533577089891164, 17.28878186830526, 17.709652224755068, 0.3249110538556426, 21.651250171611238]
+
+xxxxxxx
+xxxxxxxxx
+xxxxxxxx
+
+[0.0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+Dear Decision Makers,
+
+We have gathered feedback from various community members regarding the funding allocation results for the co-living community of hackers. The main objections are as follows:
+
+1. Lack of funding for Project 1 - Sustainable Food Production System: Community members, including environmental enthusiasts and artists, have expressed disappointment in the allocation of 0.0 funding for this project. They believe that sustainable food production is crucial for promoting a healthy, eco-friendly lifestyle and environmental stewardship within the community.
+
+2. Insufficient funding for Project 4 - Health and Wellness Program: Both health professionals and tech industry entrepreneurs have voiced concerns about the relatively low funding allocation of 2.857142857142857 for this project. They emphasize the importance of a well-rounded approach to health and wellness, which includes physical and mental well-being, and believe that a higher allocation is necessary to create a comprehensive program that benefits the entire community.
+
+3. Overemphasis on Art and Culture Enrichment: Some community members, particularly those focused on collaborative workspaces and sustainable solutions, feel that the funding allocation of 33.87751520109489 for Project 5 is disproportionately high compared to other projects. They would prefer a more balanced distribution of funds across all projects to ensure each one receives adequate support for meaningful impact.
+
+4. Desire for increased funding for Art and Culture Enrichment: On the other hand, artists and muralists in the community believe that more emphasis should be placed on art and culture projects to enhance creativity and overall quality of life. They would like to see a higher allocation of funds to support workshops, gallery spaces, and other creative initiatives.
+
+We hope this summary of objections provides valuable insight for decision-makers to reconsider and adjust the funding allocations to better align with the community's priorities and needs.
+[0.0, 0.0, 6.666666666666667, 5.0, 3.3333333333333335]
+[0.0, 3.0, 4.0, 1.0, 3.0]
+[0.0, 2.857142857142857, 0.0, 4.285714285714286, 6.857142857142858]
+[[0.0, 0.0, 6.666666666666667, 5.0, 3.3333333333333335], [0.0, 3.0, 4.0, 1.0, 3.0], [0.0, 2.857142857142857, 0.0, 4.285714285714286, 6.857142857142858]]
+[[0.         0.         4.44444444 3.33333333 2.22222222]
+ [0.         2.72727273 3.63636364 0.90909091 2.72727273]
+ [0.         2.04081633 0.         3.06122449 4.89795918]]
+[[0.         0.         6.66666667 0.         3.33333333]
+ [0.         2.59259259 3.7037037  0.         3.7037037 ]
+ [0.         2.85714286 0.         2.85714286 4.28571429]]
+[0.0, 9.486505190059173, 16.121110602881778, 20.510391547740042, 28.67914140955838]
+[0.0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+Dear Decision Makers,
+
+We have received feedback from various community members regarding the funding allocation for the co-living community of hackers. The primary concerns are as follows:
+
+1. Lack of funding for the Sustainable Food Production System (Project 1): Community members from diverse backgrounds, including environmental enthusiasts, tech entrepreneurs, and artists, have expressed their disappointment in the 0.0 funding allocation for this project. They believe that sustainable food production is crucial for promoting a healthy lifestyle, reducing our carbon footprint, and fostering environmental stewardship.
+
+2. Lower funding allocation for Skill-Sharing and Educational Initiatives (Project 2) compared to other projects: Community members have voiced concerns about the relatively lower funding allocated to this project, emphasizing the importance of skill-sharing and educational initiatives for fostering a strong sense of community, promoting personal and professional growth, and creating a vibrant learning environment.
+
+We kindly request that you take these concerns into consideration and reevaluate the funding allocations to better serve the diverse interests and needs of our community.
+
+Sincerely,
+The Community Members
+[0.0, 0.0, 4.444444444444445, 3.333333333333333, 2.2222222222222223]
+[1.0, 3.0, 3.6363636363636362, 1.0, 2.727272727272727]
+[0.0, 2.0408163265306123, 3.061224489795918, 4.89795918367347, 0.0]
+[[0.0, 0.0, 4.444444444444445, 3.333333333333333, 2.2222222222222223], [1.0, 3.0, 3.6363636363636362, 1.0, 2.727272727272727], [0.0, 2.0408163265306123, 3.061224489795918, 4.89795918367347, 0.0]]
+[[0.         0.         4.44444444 3.33333333 2.22222222]
+ [0.88       2.64       3.2        0.88       2.4       ]
+ [0.         2.04081633 3.06122449 4.89795918 0.        ]]
+[[0.         0.         4.44444444 3.33333333 2.22222222]
+ [0.         2.72727273 3.63636364 0.90909091 2.72727273]
+ [0.         2.04081633 0.         3.06122449 4.89795918]]
+[0.8800000000000001, 9.323123986322589, 31.884938774017655, 24.770114427640326, 9.241024375739228]
+[0.0, 9.486505190059173, 16.121110602881778, 20.510391547740042, 28.67914140955838]
+Dear Decision Makers,
+
+We have received feedback from various community members regarding the funding allocation for the co-living community projects. The main concerns are as follows:
+
+1. Many voters feel that the Sustainable Food Production System (Project 1) has received insufficient funding, given its importance for promoting a healthy lifestyle, reducing our carbon footprint, and fostering innovation and sustainability.
+
+2. There is a general consensus that the funding allocated to the Transportation and Mobility Promoting project (Project 3) is disproportionately high. Community members suggest a more balanced distribution of funds between this project and others, such as the Health and Wellness Program (Project 4), Art and Culture Enrichment (Project 5), and Skill-Sharing and Educational Initiatives.
+
+3. Artists and creatives in the community have expressed concern about the low funding allocation for the Art and Culture Enrichment project. They believe that increased funding for this project would better support the growth of a creative and culturally thriving community.
+
+In light of this feedback, we kindly request that you reconsider the funding allocations to better align with the community's priorities and interests.
+
+Sincerely,
+The Co-Living Community
+[0.0, 0.0, 4.444444444444445, 3.333333333333333, 2.2222222222222223]
+[1.2, 3.0, 2.8, 1.2, 2.8]
+[0.0, 2.0408163265306123, 3.061224489795918, 4.89795918367347, 2.0]
+[[0.0, 0.0, 4.444444444444445, 3.333333333333333, 2.2222222222222223], [1.2, 3.0, 2.8, 1.2, 2.8], [0.0, 2.0408163265306123, 3.061224489795918, 4.89795918367347, 2.0]]
+[[0.         0.         4.44444444 3.33333333 2.22222222]
+ [1.09090909 2.72727273 2.54545455 1.09090909 2.54545455]
+ [0.         1.70068027 2.55102041 4.08163265 1.66666667]]
+[[0.         0.         4.44444444 3.33333333 2.22222222]
+ [0.88       2.64       3.2        0.88       2.4       ]
+ [0.         2.04081633 3.06122449 4.89795918 0.        ]]
+[1.0909090909090908, 8.735257921921052, 28.09874133091342, 23.91711626063917, 19.159481553380942]
+[0.8800000000000001, 9.323123986322589, 31.884938774017655, 24.770114427640326, 9.241024375739228]
