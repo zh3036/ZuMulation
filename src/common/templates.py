@@ -10,7 +10,7 @@ class StructStateBuilder(ABC):
         pass
 
     @abstractmethod
-    def build_options_schema(self, user_inputs: list, options: list):
+    def build_options_schema(self, user_inputs: list, options: list, user_schema):
         pass
 
     @abstractmethod
@@ -47,7 +47,7 @@ class ScoringBuilder(ABC):
 		Returns a function which evaluates a user's preferences for an option.
     """
     @abstractmethod
-    def build_scoring_model(self, struct_user_state, user_schema, struct_option_states: list, option_schema):
+    def build_scoring_model(self, struct_user_state, struct_option_states: list):
         pass
 
 
