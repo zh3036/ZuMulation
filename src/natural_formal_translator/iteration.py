@@ -7,7 +7,7 @@ import numpy as np
 from math import sqrt
 import ast
 from algorithms.voting.quadratic import perform_votes_from_prf
-
+import sys
 class Iteration:
     def __init__(self, prb_st: str, voteRes: list, options: list[str], llm=None):
         self.llm = llm if llm is not None else OpenAI(temperature=0, model_name="gpt-4")
@@ -73,6 +73,7 @@ we want you to respond to the objection summary,
 give your new vote if you would like change, and give your reasons for each change/or no change
 If you want to change your vote, please write down your new vote for each option. 
 if you donot want to change your vote, please output your original vote for each option.
+notice there are {str(len(options))} options
 your output should be in format of 
 $&$ [option1 vote, option2 vote, option3 vote, ...] $&$ reasons for each change/or no change
 """)
@@ -109,6 +110,9 @@ $&$ [option1 vote, option2 vote, option3 vote, ...] $&$ reasons for each change/
 
 
 if __name__ == "__main__":
+    output_file = open("output_iter.txt", "a")
+    output_file.write("\nxxxxxxx\nxxxxxxxxx\nxxxxxxxx\n\n")
+    sys.stdout = output_file
     llm = Anthropic(model="claude-instant-v1-100k")
     citizen_descs=["""Citizen 1: Mary Green
 Persona: Environmental enthusiast, age 32, single, yoga instructor
@@ -158,11 +162,11 @@ Explanation: A healthy dose of art and culture can breathe life into any communi
     for count in range(3):
         It_test = Iteration("using quadratic funding to allocate "+"money to projects being built for a co-living community of hackers",\
                             voteRes,options,llm=llm)
-        print (It_test.finalDecisions)
+        # print (It_test.finalDecisions)
         citizen_objections = [It_test.create_natural_objection(citizen_desc) for citizen_desc in citizen_descs]
         # print (citizen_objections)
         summary_objections = It_test.summarize_objections(citizen_objections)
-        # print (summary_objections)
+        print (summary_objections)
         # user_updated = It_test.update_user(citizen_descs[1],summary_objections,vote_by_citiziens[1],options)
         # print (user_updated)
         # print (It_test.get_formatted_votes(user_updated,5))
@@ -188,3 +192,4 @@ Explanation: A healthy dose of art and culture can breathe life into any communi
 
         voteRes = voteRes_new
         vote_by_citiziens = newVotes
+    output_file.close()
