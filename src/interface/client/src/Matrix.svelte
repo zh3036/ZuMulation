@@ -37,14 +37,14 @@
       <tr>
         <th></th>
         {#each proposals as proposal, i}
-          <th><SvelteTooltip tip={i >= proposalDicts.length ? "" : JSON.stringify(proposalDicts[i])}>{proposal.name}</SvelteTooltip></th>
+          <th><SvelteTooltip tip={i >= proposalDicts.length ? "" : JSON.stringify(proposalDicts[i])} color="#CCCCCC">{proposal.name}</SvelteTooltip></th>
         {/each}
       </tr>
     </thead>
     <tbody>
       {#each voters as voter, i}
         <tr>
-          <th><SvelteTooltip tip={i >= voterDicts.length ? "" : JSON.stringify(voterDicts[i])}>{voter.name}</SvelteTooltip></th>
+          <th><SvelteTooltip tip={i >= voterDicts.length ? "" : JSON.stringify(voterDicts[i])} color="#CCCCCC">{voter.name}</SvelteTooltip></th>
           {#each proposals as proposal, j}
             {#if (i >= matrix.length || j >= matrix[0].length)}
               <td>N/A</td>
@@ -57,8 +57,3 @@
     </tbody>
   </table>
 </div>
-<style>
-  SvelteTooltip {
-    color: white;
-  }
-</style>
