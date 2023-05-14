@@ -8,7 +8,6 @@ from langchain.chains import ConversationChain
 from langchain.prompts import (
     PromptTemplate,
 )
-import openai
 from common.templates import StructStateBuilder
 import os
 
@@ -20,7 +19,7 @@ sys.path.append(parent_dir_name)
 
 
 
-class LLMStateBuilder(StructStateBuilder):
+class SimpleLLMStateBuilder(StructStateBuilder):
     def __init__(self, natural_problem_statement: str, llm=None) -> None:
         self.llm = llm if llm is not None else OpenAI(temperature=0)
         self.prob_statement = natural_problem_statement
@@ -130,7 +129,7 @@ if __name__ == '__main__':
     sys.stdout = output_file
     ANTRHOPIC_KEY = os.environ['ANTHROPIC_API_KEY']
     llm = Anthropic(anthropic_api_key=ANTRHOPIC_KEY, model="claude-instant-v1")
-    l = LLMStateBuilder(
+    l = SimpleLLMStateBuilder(
         "allocating money to projects being built for a community of hackers",llm=llm)
     user_scheme = l.build_user_schema("""Citizen 1: Mary Green
 Persona: Environmental enthusiast, age 32, single, yoga instructor
