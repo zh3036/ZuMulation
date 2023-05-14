@@ -1,0 +1,280 @@
+<script>
+  // window.process = { env: {} };
+	// import {forceSimulation} from "d3-force-d3";
+
+  // import { ReactAdapter } from "svelte-react-kit";
+  import ReactComponent from "svelte-react";
+  import { ForceGraph2D } from "react-force-graph";
+
+  const data = {
+    links: [
+      { source: 0, target: 7, val: 8, named_target: "project relevance" },
+      {
+        source: 0,
+        target: 8,
+        val: 9,
+        named_target: "sustainability focus",
+      },
+      { source: 0, target: 9, val: 9, named_target: "health promotion" },
+      { source: 0, target: 10, val: 7, named_target: "skill sharing" },
+      {
+        source: 0,
+        target: 11,
+        val: 9,
+        named_target: "community involvement ",
+      },
+      {
+        source: 0,
+        target: 12,
+        val: 6,
+        named_target: "cultural enrichment ",
+      },
+      { source: 0, target: 13, val: 8, named_target: "accessibility" },
+      {
+        source: 0,
+        target: 14,
+        val: 9,
+        named_target: "food sustainability",
+      },
+      {
+        source: 0,
+        target: 15,
+        val: 8,
+        named_target: "education initiatives",
+      },
+      { source: 1, target: 7, val: 9, named_target: "project relevance" },
+      {
+        source: 1,
+        target: 8,
+        val: 8,
+        named_target: "sustainability focus",
+      },
+      { source: 1, target: 9, val: 7, named_target: "health promotion" },
+      { source: 1, target: 10, val: 10, named_target: "skill sharing" },
+      {
+        source: 1,
+        target: 11,
+        val: 8,
+        named_target: "community involvement",
+      },
+      {
+        source: 1,
+        target: 12,
+        val: 6,
+        named_target: "cultural enrichment",
+      },
+      { source: 1, target: 13, val: 5, named_target: "accessibility" },
+      {
+        source: 1,
+        target: 14,
+        val: 8,
+        named_target: "food sustainability",
+      },
+      {
+        source: 1,
+        target: 15,
+        val: 9,
+        named_target: "education initiatives",
+      },
+      { source: 2, target: 7, val: 9, named_target: "project relevance" },
+      {
+        source: 2,
+        target: 8,
+        val: 7,
+        named_target: "sustainability focus",
+      },
+      { source: 2, target: 9, val: 6, named_target: "health promotion" },
+      { source: 2, target: 10, val: 8, named_target: "skill sharing" },
+      {
+        source: 2,
+        target: 11,
+        val: 9,
+        named_target: "community involvement",
+      },
+      {
+        source: 2,
+        target: 12,
+        val: 9.5,
+        named_target: "cultural enrichment",
+      },
+      { source: 2, target: 13, val: 8, named_target: "accessibility" },
+      {
+        source: 2,
+        target: 14,
+        val: 7,
+        named_target: "food sustainability",
+      },
+      {
+        source: 2,
+        target: 15,
+        val: 8,
+        named_target: "education initiatives",
+      },
+      { source: 3, target: 7, val: 9, named_target: "project relevance" },
+      {
+        source: 3,
+        target: 8,
+        val: 10,
+        named_target: "sustainability focus",
+      },
+      { source: 3, target: 9, val: 5, named_target: "health promotion" },
+      { source: 3, target: 10, val: 8, named_target: "skill sharing" },
+      {
+        source: 3,
+        target: 11,
+        val: 9,
+        named_target: "community involvement",
+      },
+      {
+        source: 3,
+        target: 12,
+        val: 6,
+        named_target: "cultural enrichment",
+      },
+      { source: 3, target: 13, val: 7, named_target: "accessibility" },
+      {
+        source: 3,
+        target: 14,
+        val: 8,
+        named_target: "food sustainability",
+      },
+      {
+        source: 3,
+        target: 15,
+        val: 8,
+        named_target: "education initiatives",
+      },
+      { source: 4, target: 7, val: 9, named_target: "project relevance" },
+      {
+        source: 4,
+        target: 8,
+        val: 8,
+        named_target: "sustainability focus",
+      },
+      { source: 4, target: 9, val: 9, named_target: "health promotion" },
+      { source: 4, target: 10, val: 7, named_target: "skill sharing" },
+      {
+        source: 4,
+        target: 11,
+        val: 9,
+        named_target: "community involvement",
+      },
+      {
+        source: 4,
+        target: 12,
+        val: 7,
+        named_target: "cultural enrichment",
+      },
+      { source: 4, target: 13, val: 9, named_target: "accessibility" },
+      {
+        source: 4,
+        target: 14,
+        val: 8,
+        named_target: "food sustainability",
+      },
+      {
+        source: 4,
+        target: 15,
+        val: 9,
+        named_target: "education initiatives",
+      },
+      { source: 5, target: 7, val: 7, named_target: "project relevance" },
+      {
+        source: 5,
+        target: 8,
+        val: 9.5,
+        named_target: "sustainability focus",
+      },
+      {
+        source: 5,
+        target: 9,
+        val: 8.5,
+        named_target: "health promotion",
+      },
+      { source: 5, target: 10, val: 8, named_target: "skill sharing" },
+      {
+        source: 5,
+        target: 11,
+        val: 8,
+        named_target: "community involvement",
+      },
+      {
+        source: 5,
+        target: 12,
+        val: 6,
+        named_target: "cultural enrichment",
+      },
+      { source: 5, target: 13, val: 7, named_target: "accessibility" },
+      {
+        source: 5,
+        target: 14,
+        val: 9,
+        named_target: "food sustainability",
+      },
+      {
+        source: 5,
+        target: 15,
+        val: 7.5,
+        named_target: "education initiatives",
+      },
+      { source: 6, target: 7, val: 9, named_target: "project relevance" },
+      {
+        source: 6,
+        target: 8,
+        val: 10,
+        named_target: "sustainability focus",
+      },
+      { source: 6, target: 9, val: 8, named_target: "health promotion" },
+      { source: 6, target: 10, val: 7, named_target: "skill sharing" },
+      {
+        source: 6,
+        target: 11,
+        val: 9,
+        named_target: "community involvement",
+      },
+      {
+        source: 6,
+        target: 12,
+        val: 8,
+        named_target: "cultural enrichment",
+      },
+      { source: 6, target: 13, val: 6, named_target: "accessibility" },
+      {
+        source: 6,
+        target: 14,
+        val: 7,
+        named_target: "food sustainability",
+      },
+      {
+        source: 6,
+        target: 15,
+        val: 6,
+        named_target: "education initiatives",
+      },
+    ],
+    nodes: [
+      { name: "User 0", group: 1, id: 0 },
+      { name: "User 1", group: 1, id: 1 },
+      { name: "User 2", group: 1, id: 2 },
+      { name: "User 3", group: 1, id: 3 },
+      { name: "User 4", group: 1, id: 4 },
+      { name: "User 5", group: 1, id: 5 },
+      { name: "User 6", group: 1, id: 6 },
+      { name: "project relevance", group: 2, id: 7 },
+      { name: "sustainability focus", group: 2, id: 8 },
+      { name: "health promotion", group: 2, id: 9 },
+      { name: "skill sharing", group: 2, id: 10 },
+      { name: "community involvement", group: 2, id: 11 },
+      { name: "cultural enrichment", group: 2, id: 12 },
+      { name: "accessibility", group: 2, id: 13 },
+      { name: "food sustainability", group: 2, id: 14 },
+      { name: "education initiatives", group: 2, id: 15 },
+    ],
+  };
+</script>
+
+<!-- <ReactAdapter el={ForceGraph2D} graphData={data} /> -->
+<!-- <ReactComponent this={ForceGraph2D} props={{graphData: data}} graphData={data} /> -->
+<react:ForceGraph2D graphData={data} />
+
+

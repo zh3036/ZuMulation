@@ -63,29 +63,32 @@ Explanation: Being an advocate for healthy living and sustainability, ensuring e
                """Project 4 - a cigarette and alchohol shop
                     sell cigarretees, can generate profit for the community.""",
                """Project 5 - Art and Culture Enrichment 
-Explanation: A healthy dose of art and culture can breathe life into any community. As an appreciator of art, I believe dedicated gallery spaces, workshops, and other creative projects will not only foster our home-grown artistic expressions but also incorporate creativity into our everyday lives, potentially blending with food production and healthy living."""]
+Explanation: A healthy dose of art and culture can breathe life into any community. As an appreciator of art, I believe dedicated gallery spaces, workshops, and other creative projects will not only foster our home-grown artistic expressions but also incorporate creativity into our everyday lives, potentially blending with food production and healthy living. They do not like coding or Github"""]
 
 
-options3 = """Project 1: Sustainable Food Production System
-Description: This project aims to design and implement a vertical farming system, enabling sustainable year-round food production for the community. Residents can benefit from access to locally grown fresh fruit, vegetables, and edible herbs straight from the source, ultimately promoting less reliance on imported produce and lowering the carbon footprint.
+options3 = """Project 1: Zuzalu Stay Connected
+Description: A community connection and planning coordination app. The app collects data overtime to help residents make informed decisions about their lifestyle and community involvement. It also provides a platform for residents to share their ideas and collaborate on projects.
 
-Project 2: Renewable Energy Infrastructure
-Description: The implementation of solar panels, wind turbines, and a smart energy grid will provide clean, renewable energy to power the entire community. The initiative incorporates research and technology to develop a highly efficient, decentralized energy system.
+Project 2: ZK Community Currency
+Description: A private currency for Zuzalu. We want to use this currency to aid inequality by providing private air drops to those who are still building their wealth. We want this to be private because we do not want to expose sensitive details.
 
-Project 3: Waste Management and Recycling Program
-Description: The creation of an effective waste management and recycling program, minimizing bulk waste and promoting a closed-loop system is the essence of this project. This will include compost bins, recycling stations and community education.
+Project 3: Weekly Biomarker Tracking
+Description: We will pay for biomarker tracking for all residents. This will help us understand the health of our community and help us make informed decisions about our lifestyle and community involvement.
 
-Project 4: Collective Workspaces and Incubator
-Description: Offering shared workspaces and fostering a collaborative environment, this project aims to encourage innovation among community members. Facilities like a prototyping lab, meeting rooms, and event spaces will also support entrepreneurial ventures within the community.
+Project 4: Zuzalu Community Garden
+Description: We will have a single garden where volunteers can plant and harvest food. We will use this food to feed the community and sell the rest to local restaurants. We want to also have a limit on the total amount of food that can be harvested per week.
 
-Project 5: Communal Resource Library
-Description: A shared resource library will facilitate knowledge-sharing and saving among the community members. This library will consist of books, tools, equipment, and more, promoting a lending rather than owning mentality.
+Project 5: Communal Resource Hub
+Description: A shared resource hub on GitHub will facilitate knowledge-sharing and saving among the community members. This hub will consist of books, papers, equipment, and more, promoting a lending rather than owning mentality.
 
-Project 6: Health and Wellness Program
+Project 6: Health and Wellness Coaching
 Description: This initiative advocates for holistic wellness and healthcare by offering regular workshops, yoga and meditation rooms, fitness equipment, and hosting health professionals to provide consultations and holistic therapies.
 
-Project 7: Skill-Sharing and Educational Initiatives
+Project 7: Skill-Sharing and Educational Initiatives Days
 Description: Enabling knowledge to be efficiently shared and acquired through skill-based workshops, mentoring programs, and a community-run learning center, this project focuses on developing the collective skills of community members.
+"""
+
+options_real = """
 """
 
 options3 = options3.split("\n\n")
