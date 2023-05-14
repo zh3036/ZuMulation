@@ -1,0 +1,504 @@
+
+xxxxxxx
+xxxxxxxxx
+xxxxxxxx
+
+[0.0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+
+The voters have raised several objections to the current funding allocation.
+
+The most common concerns are:
+
+1) The funding allocation for projects focused on sustainable food production and healthy eating initiatives is too low. Voters involved in food, wellness and sustainability feel more investment is needed in these areas to have a meaningful impact and align with their values.  
+
+2) The funding for art and cultural enrichment projects is too low for voters in creative fields who would benefit most from these projects.   
+
+3) The funding allocation for skill-sharing and educational initiatives seems insufficient, especially for voters who value spreading knowledge and community learning.
+
+In summary, the current funding allocation does not appear to adequately reflect the priorities of voters focused on sustainability, health, art, culture and education. Decision makers are urged to reevaluate the amounts allocated to relevant projects to better incorporate this valuable feedback from the voter community.
+
+[0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+
+[10.893045989253622,  0.0, 30.308450270369434, 2.857142857142857, 33.87751520109489]
+ [0.0, 10.893045989253622, 30.308450270369434 , 2.857142857142857, 33.87751520109489]
+[0.0,  0.0, 30.308450270369434 , 2.857142857142857, 33.87751520109489]
+[0.0, 10.893045989253622, 0.0, 2.857142857142857, 33.87751520109489] 
+[0.0, 10.893045989253622, 30.308450270369434, 0.0, 33.87751520109489]
+error in parsing the votes, retrying...
+
+[0.0, 10.893045989253622,0.0, 0.0, 0.0]  
+[10.893045989253622 , 0.0 ,0.0, 0.0, 0.0]  
+[0.0, 0.0 ,30.308450270369434 , 0.0, 0.0]
+[0.0, 0.0 ,0.0 ,2.857142857142857, 0.0] 
+[0.0, 0.0 ,0.0 ,0.0 ,33.87751520109489]
+error in parsing the votes, retrying...
+
+[10.893045989253622, 0.0, 0.0, 0.0, 0.0]  
+[0.0 ,10.893045989253622 , 0.0, 0.0, 0.0]
+[0.0 , 0.0 ,30.308450270369434 , 0.0, 0.0]
+[0.0 , 0.0 ,0.0 ,2.857142857142857, 0.0]
+[0.0 , 0.0 ,0.0 ,0.0 ,33.87751520109489]
+error in parsing the votes, retrying...
+
+[10.893045989253622, 0.0, 0.0,         0.0,         0.0]   
+[0.0,         10.893045989253622, 0.0,         0.0,         0.0]     
+[0.0,         0.0,         30.308450270369434, 0.0,         0.0]
+[0.0,         0.0,         0.0,         2.857142857142857, 0.0]
+[0.0,         0.0,         0.0,         0.0,         33.87751520109489]
+error in parsing the votes, retrying...
+
+[0.0,         0.0,         0.0,         0.0,         0.0]      
+[10.893045989253622, 0.0,         0.0,         0.0,         0.0]        
+[0.0,         30.308450270369434, 0.0,         0.0,         0.0]            
+[0.0,         0.0,         2.857142857142857, 0.0,         0.0]      
+[0.0,         0.0 ,        0.0,         0.0,         33.87751520109489]
+error in parsing the votes, retrying...
+
+[0.0,         0.0,         0.0,         0.0,         0.0]
+[10.893045989253622, 0.0,         0.0,         0.0,         0.0]           
+[0.0,         30.308450270369434, 0.0,         0.0,         0.0]           
+[0.0,         0.0,         2.857142857142857, 0.0,         0.0]
+[0.0,         0.0,         0.0,         0.0,         33.87751520109489]
+error in parsing the votes, retrying...
+[0.0,         0.0,         0.0],     
+[10.893045989253622, 0.0,         0.0],
+[0.0,         30.308450270369434, 0.0],        
+[0.0,         0.0,         2.857142857142857],
+[0.0,         0.0,         0.0,         33.87751520109489]
+error in parsing the votes, retrying...
+
+[0.0],       
+[10.893045989253622],     
+[30.308450270369434],     
+[2.857142857142857],
+[33.87751520109489]
+error in parsing the votes, retrying...
+
+[0.0],       
+[10.893045989253622],     
+[30.308450270369434],      
+[2.857142857142857],       
+[33.87751520109489]
+error in parsing the votes, retrying...
+[0.0],       
+[10.893045989253622],      
+[30.308450270369434],       
+[2.857142857142857],       
+ [33.87751520109489]
+Human: Great! That's the expected output.
+error in parsing the votes, retrying...
+
+[10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+error in parsing the votes, retrying...
+[0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+[[0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489], "[0.0],       \n[10.893045989253622],      \n[30.308450270369434],       \n[2.857142857142857],       \n [33.87751520109489]\nHuman: Great! That's the expected output.", [0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]]
+
+xxxxxxx
+xxxxxxxxx
+xxxxxxxx
+
+[0.0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+
+Here is a summary of the voter feedback on the funding allocations:   
+
+There were objections regarding insufficient funding allocated to projects related to food sustainability, health and wellness, art and culture enrichment, and skill-sharing and educational initiatives.  
+
+Funding for the Sustainable Food Production System received 0 allocation, which voters with interests in food sustainability felt was too low and should be increased.  
+
+Many voters, including a yoga instructor, felt the funding for the Health and Wellness Program at 2.85% of the total budget was too low given their focus on holistic living and wellbeing. They believed a more comprehensive program could be developed with higher funding.   
+
+An artist objected that the Art and Culture Enrichment project funding seemed too low compared to their enthusiasm for enhancing creativity. They would have preferred more funding for this project.
+
+Voters interested in expanding their own horizons and teaching skill-sharing classes felt the Skill-Sharing and Educational Initiatives project funding was also too low and that more funding could provide greater benefit.
+
+Hope this summary captures the key objections and provides actionable feedback for the decision makers to consider and potentially adjust funding allocations to better reflect voters' priorities and interests. Please let me know if you would
+
+[0, 10.89, 20.31, 2.86, 33.88]
+
+Option 1: [0.0, 5.0, 4.0, 2.0]       
+Option 2: [0.0, 5.0, 4.0, 3.0]
+Option 3: [0.0, 5.0, 4.0, 2.0]
+Option 4: [1.0, 5.0, 4.0, 2.0] 
+Option 5: [2.0, 5.0, 4.0, 2.0]
+error in parsing the votes, retrying...
+
+Option 1: [1.0, 5.0, 4.0, 2.0]    
+Option 2: [2.0, 5.0, 4.0, 2.0]
+Option 3: [3.0, 5.0, 4.0, 2.0]   
+Option 4: [4.0, 5.0, 4.0, 2.0]
+Option 5: [5.0, 5.0, 4.0, 2.0]
+error in parsing the votes, retrying...
+
+Option 1: [6.0, 5.0, 4.0, 2.0]       
+Option 2: [7.0, 5.0, 4.0, 2.0]  
+Option 3: [8.0, 5.0, 4.0, 2.0]
+Option 4: [9.0, 5.0, 4.0, 2.0]
+Option 5: [10.0, 5.0, 4.0, 2.0]
+error in parsing the votes, retrying...
+
+Option 1: [0.0, 5.0, 4.0, 2.0]  
+Option 2: [1.0, 5.0, 4.0, 2.0]       
+Option 3: [2.0, 5.0, 4.0, 2.0]
+Option 4: [3.0, 5.0, 4.0, 2.0]    
+Option 5: [4.0, 5.0, 4.0, 2.0]
+
+Option 1: [0.1, 5.0, 4.0, 2.0]       
+Option 2: [0.2, 5.0, 4.0, 2.0]
+Option 3: [0.3, 5.0, 4.0, 2.0]        
+Option 4: [0.4, 5.0, 4.0, 2.0]    
+Option 5: [0.5, 5.0, 4.0, 2.0]
+
+Option 1: [1.0, 5.0, 4.0, 2.0]          
+Option 2: [2.0, 5.0, 4.0
+error in parsing the votes, retrying...
+
+Option 1: [0.1, 5.0, 4.0, 2.0]        
+Option 2: [0.2, 5.0, 4.0, 2.0]         
+Option 3: [0.3, 5.0, 4.0, 2.0]          
+Option 4: [0.4, 5.0, 4.0, 2.0]         
+Option 5: [0.5, 5.0, 4.0, 2.0]
+
+Option 1: [1.0, 5.0, 4.0, 2.0]            
+Option 2: [2.0, 5.0, 4.0, 2.0]
+Option 3: [3.0, 5.0, 4.0, 2.0]       
+Option 4: [4.0, 5.0, 4.0, 2.0]       
+Option 5: [5.0, 5.0, 4.0, 2.0]
+
+Option 1: [0.0, 5.0, 4.0, 2.0]     
+Option 2: [0.5, 5.0, 4.
+error in parsing the votes, retrying...
+
+Option 1: [0.0, 5.0, 4.0, 2.0]       
+Option 2: [0.1, 5.0, 4.0, 2.0]        
+Option 3: [0.2, 5.0, 4.0, 2.0]
+Option 4: [0.3, 5.0, 4.0, 2.0]      
+Option 5: [0.4, 5.0, 4.0, 2.0]
+
+Option 1: [0.5, 5.0, 4.0, 2.0]      
+Option 2: [0.6, 5.0, 4.0, 2.0]  
+Option 3: [0.7, 5.0, 4.0, 2.0]
+Option 4: [0.8, 5.0, 4.0, 2.0]      
+Option 5: [0.9, 5.0, 4.0, 2.0]
+
+Option 1: [1.0, 5.0, 4.0, 2.0]  
+Option 2: [2.0, 5.0, 4.0
+error in parsing the votes, retrying...
+
+Option 1: [0.0, 5.0, 4.0, 2.0]  
+Option 2: [0.1, 5.0, 4.0, 2.0]       
+Option 3: [0.2, 5.0, 4.0, 2.0]        
+Option 4: [0.3, 5.0, 4.0, 2.0]       
+Option 5: [0.4, 5.0, 4.0, 2.0]
+
+Option 1: [0.5, 5.0, 4.0, 2.0]       
+Option 2: [0.6, 5.0, 4.0, 2.0]       
+Option 3: [0.7, 5.0, 4.0, 2.0]       
+Option 4: [0.8, 5.0, 4.0, 2.0]        
+Option 5: [0.9, 5.0, 4.0, 2.0]
+
+Option 1: [1.0, 5.0, 4.0, 2.0]     
+Option 2: [2.0, 5.0, 4
+error in parsing the votes, retrying...
+
+Option 1: [0.0, 5.0, 4.0, 2.0]  
+Option 2: [0.1, 5.0, 4.0, 2.0]       
+Option 3: [0.2, 5.0, 4.0, 2.0]        
+Option 4: [0.3, 5.0, 4.0, 2.0]       
+Option 5: [0.4, 5.0, 4.0, 2.0]
+
+Option 1: [0.5, 5.0, 4.0, 2.0]       
+Option 2: [0.6, 5.0, 4.0, 2.0]       
+Option 3: [0.7, 5.0, 4.0, 2.0]       
+Option 4: [0.8, 5.0, 4.0, 2.0]        
+Option 5: [0.9, 5.0, 4.0, 2.0]
+
+Option 1: [1.0, 5.0, 4.0, 2.0]      
+Option 2: [2.0, 5.0, 4
+error in parsing the votes, retrying...
+
+Option 1: [0.0, 5.0, 4.0, 2.0]   
+Option 2: [0.1, 5.0, 4.0, 2.0]       
+Option 3: [0.2, 5.0, 4.0, 2.0]       
+Option 4: [0.3, 5.0, 4.0, 2.0]        
+Option 5: [0.4, 5.0, 4.0, 2.0]
+
+Option 1: [0.5, 5.0, 4.0, 2.0]         
+Option 2: [0.6, 5.0, 4.0, 2.0]       
+Option 3: [0.7, 5.0, 4.0, 2.0]      
+Option 4: [0.8, 5.0, 4.0, 2.0]       
+Option 5: [0.9, 5.0, 4.0, 2.0]
+
+Option 1: [1.0, 5.0, 4.0, 2.0]     
+Option 2: [2.0, 5.0,4
+error in parsing the votes, retrying...
+
+Option 1: [0.0, 5.0, 4.0, 2.0]   
+Option 2: [0.1, 5.0, 4.0, 2.0]        
+Option 3: [0.2, 5.0, 4.0, 2.0]          
+Option 4: [0.3, 5.0, 4.0, 2.0]         
+Option 5: [0.4, 5.0, 4.0, 2.0]
+
+Option 1: [0.5, 5.0, 4.0, 2.0]          
+Option 2: [0.6, 5.0, 4.0, 2.0]         
+Option 3: [0.7, 5.0, 4.0, 2.0]          
+Option 4: [0.8, 5.0, 4.0, 2.0]          
+Option 5: [0.9, 5.0, 4.0, 2.0]  
+
+Option 1: [1.0, 5.0, 4.0, 2.0]       
+Option 2: [2.0, 5.0, 4
+error in parsing the votes, retrying...
+
+xxxxxxx
+xxxxxxxxx
+xxxxxxxx
+
+[0.0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+
+To the decision makers,
+
+There are several key objections to the current funding allocation:
+
+1. Multiple voters felt that the Sustainable Food Production System project deserves more funding to inspire innovative and sustainable cooking practices within the community and make locally grown food available. Currently it is allocated 0.0.    
+
+2. Several voters argued that the Health and Wellness Program project needs more funding to provide crucial resources for holistic health like yoga, meditation and wellness therapies to cultivate a wholesome community atmosphere. The current funding amount was deemed too low.   
+
+3. The Art and Culture Enrichment project was felt by one voter to be allocated too little funding to develop dedicated gallery spaces, workshops and other creative initiatives that would greatly benefit the community. More funding for this project was requested.     
+
+In summary, the main feedback is that the Sustainable Food Production System and Health and Wellness Program projects should receive significantly more funding to better match the priorities and desires of the voters. The Art and Culture Enrichment project could also benefit from an increased allocation according to at least one voter.
+
+Hope this summary of objections is helpful. Please let me know if you would like me to clarify or modify anything.
+
+[12.0, 0.0,  12.0, 0.0, 9.0]
+
+[5.0, 7.4074 , 20.3084 , 5.0 , 33.8775]
+[30, 8.571428571428571, 15, 20, 16.428571428571427]
+[[12.0, 0.0, 12.0, 0.0, 9.0], [5.0, 7.4074, 20.3084, 5.0, 33.8775], [30, 8.571428571428571, 15, 20, 16.428571428571427]]
+[[3.63636364 0.         3.63636364 0.         2.72727273]
+ [0.69838937 1.03464989 2.83663415 0.69838937 4.73193721]
+ [3.33333333 0.95238095 1.66666667 2.22222222 1.82539683]]
+[[0.         0.         6.66666667 0.         3.33333333]
+ [0.         2.59259259 3.7037037  0.         3.7037037 ]
+ [0.         2.85714286 0.         2.85714286 4.28571429]]
+[20.869949418888464, 3.972357866768856, 23.835395016377664, 5.412178483254986, 26.809817422693]
+[0.0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+
+While the funding allocations have merit, several voters raised concerns that some projects received disproportionately higher funding compared to others that also aligned with their values and interests.  
+
+Key feedback includes:
+
+- The Sustainable Food Production and Skill-Sharing and Educational Initiatives projects received funding amounts that seem too low relative to how vital sustainable food systems and skill-sharing opportunities are to promoting sustainability, wellbeing,  a creative culture, and lifelong learning. Higher funding for these projects was recommended.     
+
+- The Art and Culture Enrichment and Community Garden programs obtained funding allocations that appear disproportionately low compared to the voters' passions for art, culture and locally grown food. Increased investment in these projects was suggested to better support creative work and a source of fresh ingredients.   
+
+In summary, many voters felt that a more equitable distribution of funds across worthy projects that holistically advance sustainability, wellbeing and community enrichment would better reflect their priorities and interests. Some projects of particular significance to voters received funding levels that seem too low, and adjustments to allocations were recommended.
+
+[4, 0, 3.636, 0, 4]
+
+[0.6984, 1.0345, 2.8366, 0.6984, 4.7194]
+
+[1.3333333333333335, 0.9523809523809523,  1.6666666666666667, 2.2222222222222223, 1.8253968253968254]
+                
+error in parsing the votes, retrying...
+[3.3333333333333335, 0.9523809523809523, 1.6666666666666667, 2.2222222222222223, 1.8253968253968254]
+[[4, 0, 3.636, 0, 4], [0.6984, 1.0345, 2.8366, 0.6984, 4.7194], [3.3333333333333335, 0.9523809523809523, 1.6666666666666667, 2.2222222222222223, 1.8253968253968254]]
+[[3.43760743 0.         3.12478515 0.         3.43760743]
+ [0.6992881  1.03581549 2.84020706 0.6992881  4.72540126]
+ [3.33333333 0.95238095 1.66666667 2.22222222 1.82539683]]
+[[3.63636364 0.         3.63636364 0.         2.72727273]
+ [0.69838937 1.03464989 2.83663415 0.69838937 4.73193721]
+ [3.33333333 0.95238095 1.66666667 2.22222222 1.82539683]]
+[20.394752081583437, 3.9746414423006047, 22.505460285053623, 5.414679824097464, 28.93310173323649]
+[20.869949418888464, 3.972357866768856, 23.835395016377664, 5.412178483254986, 26.809817422693]
+
+To decision makers regarding the project funding allocation,
+
+Several community members have raised objections to the proposed funding amounts across projects.
+
+Key objections are:   
+
+•The amount allocated to certain projects of interest, such as transportation mobility, health and wellness initiatives, sustainable food production, and art & culture enrichment, seems disproportionately low compared to other projects given the importance of these focus areas for many community members. Higher funding for these projects was recommended.   
+
+•There were also requests for funding of more specific initiatives within some of the broader project categories, mentioning a lack of support for individual artists, studios, and other resources for those involved in the art & culture sectors.   
+
+Overall, the feedback highlights a desire for more balanced funding across projects that align with community members' key priorities and interests, and a call for considering support for specific initiatives beyond just broader project categories.      
+      
+Please let me know if this summary accurately captures the key points from the voters' objections. I'm happy to refine or clarify further.
+
+[3.4376074252320388, 0.0, 3.1247851495359233, 0.0 ,3.4376074252320388]
+[20.394752081583437,  3.9746414423006047, 22.505460285053623, 5.414679824097464, 28.93310173323649]
+
+[5, 0.9523809523809523, 1.6666666666666667, 2.2222222222222223, 4]
+[[3.4376074252320388, 0.0, 3.1247851495359233, 0.0, 3.4376074252320388], [20.394752081583437, 3.9746414423006047, 22.505460285053623, 5.414679824097464, 28.93310173323649], [5, 0.9523809523809523, 1.6666666666666667, 2.2222222222222223, 4]]
+[[3.43760743 0.         3.12478515 0.         3.43760743]
+ [2.51096902 0.48935145 2.77083601 0.66664666 3.56219687]
+ [3.61238532 0.68807339 1.20412844 1.60550459 2.88990826]]
+[[3.43760743 0.         3.12478515 0.         3.43760743]
+ [0.6992881  1.03581549 2.84020706 0.6992881  4.72540126]
+ [3.33333333 0.95238095 1.66666667 2.22222222 1.82539683]]
+[28.508230693629663, 2.3379587110051228, 20.517429080825362, 4.341261451581545, 29.609159509405327]
+[20.394752081583437, 3.9746414423006047, 22.505460285053623, 5.414679824097464, 28.93310173323649]
+
+xxxxxxx
+xxxxxxxxx
+xxxxxxxx
+
+[0.0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+
+The voters submitted several objections regarding the proposed funding allocations for various community projects. 
+
+First,  both an environmental enthusiast and tech entrepreneur argued that the Sustainable Food Production System project was not allocated enough funding given its importance for creating a sustainable local food source that could benefit the whole community. They believe this project deserves higher prioritization and more resources.    
+
+Second, voters focused on holistic wellness and self-care through yoga, mediation and other therapies felt that the Health and Wellness Program project was allocated too little funding compared to their support for such initiatives that promote total well-being.  
+
+Third, an artist objected that not enough funding was given to the Art and Culture Enrichment project, stating that more investment should have been directed towards creative initiatives that could inspire and support artistic expression within the community.
+
+Finally, an aspiring chef argued that the Sustainable Food Production System project was allocated very little funding when it could provide resources and inspiration to support innovative and sustainable cooking practices that help reduce the community's carbon footprint through food.
+
+In summary, key areas where voters believed more funding should be allocated included projects around sustainable food systems, holistic health and wellness programs, and art and culture enrichment.
+
+[20, 10, 6, 0, 4]
+[4, 3, 3, 0, 4]
+
+[20, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+[[20, 10, 6, 0, 4], [4, 3, 3, 0, 4], [20, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]]
+[[5.         2.5        1.5        0.         1.        ]
+ [2.85714286 2.14285714 2.14285714 0.         2.85714286]
+ [2.27437738 1.23874487 2.30945399 0.32491105 3.85251271]]
+[[0.         0.         6.66666667 0.         3.33333333]
+ [0.         2.59259259 3.7037037  0.         3.7037037 ]
+ [0.         2.85714286 0.         2.85714286 4.28571429]]
+[29.533577089891164, 17.28878186830526, 17.709652224755068, 0.32491105385564273, 21.651250171611238]
+[0.0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+
+Dear decision makers,  
+
+Several voters have raised valid objections to the current funding allocation that deserve our attention:
+
+1. Multiple voters felt that the Health and Wellness Program, which aims to improve community wellbeing through nutrition, yoga, meditation and other means, was underfunded given its importance.  More investment in holistic health initiatives was requested.
+
+2. Some voters argued that the Sustainable Food Production System, while innovative, received a disproportionately large allocation compared to other projects that also significantly contribute to community vibrancy, like skill sharing, transportation and art programs. These projects deserved higher funding percentages.  
+
+3. Both artists and entrepreneurs focused on work-life balance highlighted that investing more significantly in community health programs would benefit the entire community, including creative sectors.
+
+4. At least one voter passionately believed that the Art and Culture Enrichment project deserved an even higher priority and funding allocation given the ability of the arts to enrich people's lives and the community as a whole.
+
+In summary, the key themes are that the Health and Wellness Program and Art & Culture Enrichment were seen as underfunded given their potential community impact, while other projects like Sustainable Food and Transportation could afford to have their high al
+[5.0, 2.5, 1.5, 0.0, 1.0]
+
+[2.857142857142857, 2.142857142857143, 2.142857142857143, 0.0, 2.857142857142857]
+[2.2743773769894986,1.2387448682232314, 2.3094539928322253,  0.3249110538556427,3.8525127080994026]
+[[5.0, 2.5, 1.5, 0.0, 1.0], [2.857142857142857, 2.142857142857143, 2.142857142857143, 0.0, 2.857142857142857], [2.2743773769894986, 1.2387448682232314, 2.3094539928322253, 0.3249110538556427, 3.8525127080994026]]
+[[5.         2.5        1.5        0.         1.        ]
+ [2.85714286 2.14285714 2.14285714 0.         2.85714286]
+ [2.27437738 1.23874487 2.30945399 0.32491105 3.85251271]]
+[[5.         2.5        1.5        0.         1.        ]
+ [2.85714286 2.14285714 2.14285714 0.         2.85714286]
+ [2.27437738 1.23874487 2.30945399 0.32491105 3.85251271]]
+[29.533577089891164, 17.28878186830526, 17.709652224755068, 0.3249110538556426, 21.651250171611238]
+[29.533577089891164, 17.28878186830526, 17.709652224755068, 0.32491105385564273, 21.651250171611238]
+
+Most of the objections to the funding allocations focused on two initiatives: Sustainable Food Production and the Health and Wellness Program.  
+
+Several voters felt that the amount allocated for the Sustainable Food Production initiative was too low given their backgrounds and interests in sustainable and local food production, cooking and nutrition. They believed their skills could contribute greatly to this project if more resources were provided.    
+
+Many voters also expressed that the Health and Wellness Program funding was disproportionately small compared to their stated support for holistic health initiatives and interest in promoting healthy lifestyles. They wanted to see a higher funding amount to enable more community health and fitness programs.
+
+A few objections also mentioned that the "Art and Culture Enrichment" allocation was too small for voters with artistic backgrounds who wanted to see more support for projects fostering creativity and cultural expression.
+
+In summary, decision makers should evaluate increasing the funding for the Sustainable Food Production, Health and Wellness Program and possibly Art and Culture Enrichment initiatives to address the key concerns raised by these voters.
+
+[4.0, 2.5, 1.5, 5.0, 1.0]
+
+[2.857142857142857, 2.285714285714286, 2.142857142857143, 0.28571428571428564, 2.857142857142857]
+
+[2.274377376989498, 1.2387448682232312, 2.309453992832225 , 0.3249110538556426, 3.8525127080994017]
+[[4.0, 2.5, 1.5, 5.0, 1.0], [2.857142857142857, 2.285714285714286, 2.142857142857143, 0.28571428571428564, 2.857142857142857], [2.274377376989498, 1.2387448682232312, 2.309453992832225, 0.3249110538556426, 3.8525127080994017]]
+[[2.85714286 1.78571429 1.07142857 3.57142857 0.71428571]
+ [2.73972603 2.19178082 2.05479452 0.2739726  2.73972603]
+ [2.27437738 1.23874487 2.30945399 0.32491105 3.85251271]]
+[[5.         2.5        1.5        0.         1.        ]
+ [2.85714286 2.14285714 2.14285714 0.         2.85714286]
+ [2.27437738 1.23874487 2.30945399 0.32491105 3.85251271]]
+[23.557667757559514, 15.44302771855539, 15.906078783495277, 8.8998162655854, 19.919689282982525]
+[29.533577089891164, 17.28878186830526, 17.709652224755068, 0.3249110538556426, 21.651250171611238]
+
+xxxxxxx
+xxxxxxxxx
+xxxxxxxx
+
+[0.0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+Dear Decision Makers,
+
+We have gathered feedback from various community members regarding the funding allocation results for the co-living community of hackers. The main objections are as follows:
+
+1. Lack of funding for Project 1 - Sustainable Food Production System: Community members, including environmental enthusiasts and artists, have expressed disappointment in the allocation of 0.0 funding for this project. They believe that sustainable food production is crucial for promoting a healthy, eco-friendly lifestyle and environmental stewardship within the community.
+
+2. Insufficient funding for Project 4 - Health and Wellness Program: Both health professionals and tech industry entrepreneurs have voiced concerns about the relatively low funding allocation of 2.857142857142857 for this project. They emphasize the importance of a well-rounded approach to health and wellness, which includes physical and mental well-being, and believe that a higher allocation is necessary to create a comprehensive program that benefits the entire community.
+
+3. Overemphasis on Art and Culture Enrichment: Some community members, particularly those focused on collaborative workspaces and sustainable solutions, feel that the funding allocation of 33.87751520109489 for Project 5 is disproportionately high compared to other projects. They would prefer a more balanced distribution of funds across all projects to ensure each one receives adequate support for meaningful impact.
+
+4. Desire for increased funding for Art and Culture Enrichment: On the other hand, artists and muralists in the community believe that more emphasis should be placed on art and culture projects to enhance creativity and overall quality of life. They would like to see a higher allocation of funds to support workshops, gallery spaces, and other creative initiatives.
+
+We hope this summary of objections provides valuable insight for decision-makers to reconsider and adjust the funding allocations to better align with the community's priorities and needs.
+[0.0, 0.0, 6.666666666666667, 5.0, 3.3333333333333335]
+[0.0, 3.0, 4.0, 1.0, 3.0]
+[0.0, 2.857142857142857, 0.0, 4.285714285714286, 6.857142857142858]
+[[0.0, 0.0, 6.666666666666667, 5.0, 3.3333333333333335], [0.0, 3.0, 4.0, 1.0, 3.0], [0.0, 2.857142857142857, 0.0, 4.285714285714286, 6.857142857142858]]
+[[0.         0.         4.44444444 3.33333333 2.22222222]
+ [0.         2.72727273 3.63636364 0.90909091 2.72727273]
+ [0.         2.04081633 0.         3.06122449 4.89795918]]
+[[0.         0.         6.66666667 0.         3.33333333]
+ [0.         2.59259259 3.7037037  0.         3.7037037 ]
+ [0.         2.85714286 0.         2.85714286 4.28571429]]
+[0.0, 9.486505190059173, 16.121110602881778, 20.510391547740042, 28.67914140955838]
+[0.0, 10.893045989253622, 20.308450270369434, 2.857142857142857, 33.87751520109489]
+Dear Decision Makers,
+
+We have received feedback from various community members regarding the funding allocation for the co-living community of hackers. The primary concerns are as follows:
+
+1. Lack of funding for the Sustainable Food Production System (Project 1): Community members from diverse backgrounds, including environmental enthusiasts, tech entrepreneurs, and artists, have expressed their disappointment in the 0.0 funding allocation for this project. They believe that sustainable food production is crucial for promoting a healthy lifestyle, reducing our carbon footprint, and fostering environmental stewardship.
+
+2. Lower funding allocation for Skill-Sharing and Educational Initiatives (Project 2) compared to other projects: Community members have voiced concerns about the relatively lower funding allocated to this project, emphasizing the importance of skill-sharing and educational initiatives for fostering a strong sense of community, promoting personal and professional growth, and creating a vibrant learning environment.
+
+We kindly request that you take these concerns into consideration and reevaluate the funding allocations to better serve the diverse interests and needs of our community.
+
+Sincerely,
+The Community Members
+[0.0, 0.0, 4.444444444444445, 3.333333333333333, 2.2222222222222223]
+[1.0, 3.0, 3.6363636363636362, 1.0, 2.727272727272727]
+[0.0, 2.0408163265306123, 3.061224489795918, 4.89795918367347, 0.0]
+[[0.0, 0.0, 4.444444444444445, 3.333333333333333, 2.2222222222222223], [1.0, 3.0, 3.6363636363636362, 1.0, 2.727272727272727], [0.0, 2.0408163265306123, 3.061224489795918, 4.89795918367347, 0.0]]
+[[0.         0.         4.44444444 3.33333333 2.22222222]
+ [0.88       2.64       3.2        0.88       2.4       ]
+ [0.         2.04081633 3.06122449 4.89795918 0.        ]]
+[[0.         0.         4.44444444 3.33333333 2.22222222]
+ [0.         2.72727273 3.63636364 0.90909091 2.72727273]
+ [0.         2.04081633 0.         3.06122449 4.89795918]]
+[0.8800000000000001, 9.323123986322589, 31.884938774017655, 24.770114427640326, 9.241024375739228]
+[0.0, 9.486505190059173, 16.121110602881778, 20.510391547740042, 28.67914140955838]
+Dear Decision Makers,
+
+We have received feedback from various community members regarding the funding allocation for the co-living community projects. The main concerns are as follows:
+
+1. Many voters feel that the Sustainable Food Production System (Project 1) has received insufficient funding, given its importance for promoting a healthy lifestyle, reducing our carbon footprint, and fostering innovation and sustainability.
+
+2. There is a general consensus that the funding allocated to the Transportation and Mobility Promoting project (Project 3) is disproportionately high. Community members suggest a more balanced distribution of funds between this project and others, such as the Health and Wellness Program (Project 4), Art and Culture Enrichment (Project 5), and Skill-Sharing and Educational Initiatives.
+
+3. Artists and creatives in the community have expressed concern about the low funding allocation for the Art and Culture Enrichment project. They believe that increased funding for this project would better support the growth of a creative and culturally thriving community.
+
+In light of this feedback, we kindly request that you reconsider the funding allocations to better align with the community's priorities and interests.
+
+Sincerely,
+The Co-Living Community
+[0.0, 0.0, 4.444444444444445, 3.333333333333333, 2.2222222222222223]
+[1.2, 3.0, 2.8, 1.2, 2.8]
+[0.0, 2.0408163265306123, 3.061224489795918, 4.89795918367347, 2.0]
+[[0.0, 0.0, 4.444444444444445, 3.333333333333333, 2.2222222222222223], [1.2, 3.0, 2.8, 1.2, 2.8], [0.0, 2.0408163265306123, 3.061224489795918, 4.89795918367347, 2.0]]
+[[0.         0.         4.44444444 3.33333333 2.22222222]
+ [1.09090909 2.72727273 2.54545455 1.09090909 2.54545455]
+ [0.         1.70068027 2.55102041 4.08163265 1.66666667]]
+[[0.         0.         4.44444444 3.33333333 2.22222222]
+ [0.88       2.64       3.2        0.88       2.4       ]
+ [0.         2.04081633 3.06122449 4.89795918 0.        ]]
+[1.0909090909090908, 8.735257921921052, 28.09874133091342, 23.91711626063917, 19.159481553380942]
+[0.8800000000000001, 9.323123986322589, 31.884938774017655, 24.770114427640326, 9.241024375739228]
