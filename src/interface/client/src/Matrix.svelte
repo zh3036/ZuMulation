@@ -9,6 +9,7 @@
   export let proposalDicts = [];
   export let voterDicts = [];
 
+
   async function refreshMatrix() {
     let response = await fetch("/api/getmatrix", {
       method: "POST",
