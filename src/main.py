@@ -6,7 +6,7 @@ from pathos.multiprocessing import ProcessingPool as Pool
 
 from langchain import Anthropic
 from langchain.chat_models import ChatAnthropic
-import os
+import os 
 import sys
 
 from algorithms.voting.quadratic import perform_votes, perform_votes_from_prf
@@ -51,7 +51,7 @@ def simple_voting(problem_statement: str, user_inputs: list[str], options: list[
     # user_structs =  [{'health': 0.9, 'transport': 0.8, 'energy': 0.9, 'skill': 0.3, 'art': 0.5, 'food': 0.7}, {'food': 0.8, 'health': 0.9, 'transport': 0.5, 'skill': 0.7, 'art': 0.3, 'energy': 0.9}, {'food': 0.3, 'health': 0.4, 'transport': 0.2, 'skill': 0.8, 'art': 0.9, 'energy': 0.5}, {'food': 0.5, 'health': 0.7, 'transport': 0.8, 'skill': 0.9, 'art': 0.6, 'energy': 1}, {'food': 0.3, 'health': 0.8, 'transport': 0.7, 'skill': 0.5, 'art': 0.2, 'energy': 0.4}, {'food': 1.0, 'health': 1.0, 'transport': 0.7, 'skill': 0.8, 'art': 0.5, 'energy': 0.5}, {'food': 0.3, 'health': 0.8, 'transport': 0.7, 'skill': 0.5, 'art': 0.4, 'energy': 0.9}]
     # options_structs = [{'food': 1, 'health': 1, 'transport': 0, 'skill': 1, 'art': 1, 'energy': 1}, {'food': 1.0, 'health': 0.0, 'transport': 0.0, 'skill': 1.0, 'art': 1.0, 'energy': 0.0}, {'food': 0.9, 'health': 1, 'transport': 1, 'skill': 0, 'art': 0, 'energy': 0.8}, {'food': 0, 'health': 1, 'transport': 0, 'skill': 0, 'art': 0, 'energy': 1}, {'food': 0, 'health': 0, 'transport': 0, 'skill': 0, 'art': 1, 'energy': 0}]
     # criteria = list(user_schema["criteria"].keys())
-    return perform_votes(options_structs, user_structs)
+    return perform_votes(options_structs, user_structs), user_structs, options_structs
 
 
 
@@ -63,8 +63,28 @@ if __name__ == "__main__":
     #problem="allocating money to projects being built for a community of hackers"
     problem="using quadratic funding to allocate "+"money to projects being built for a co-living community of hackers"
   
-    v = simple_voting(problem, user_inputs, options)
+    v, user_structs, options_struct = simple_voting(problem, user_inputs, options)
     voteRes = v['qvRes']
+    jsonRes = {}
+    jsonRes["users"] = []
+    for i, u in enumerate(user_structs):
+        jsonRes["users"].append({
+            "description": user_inputs[i],
+            "scoring": u
+        })
+
+    jsonRes["options"] = []
+    for i, o in enumerate(options_struct):
+        jsonRes["options"].append({
+            "description": options[i],
+            "scoring": o
+        })
+    print("jsonRes", jsonRes)
+    out_json_file = open("out_preferences.json", "a")
+    out_json_file.write(str(jsonRes).replace("\\n", "\n"))
+    out_json_file.close()
+
+
     vote_by_citiziens = v['preferenceMatrix']
     print("user votes", vote_by_citiziens)
     print("final Votes", voteRes)
@@ -83,8 +103,8 @@ if __name__ == "__main__":
             citizen_updated = It_test.update_user(user_inputs[i],summary_objections,vote_by_citiziens[i],options)
             newVote = It_test.get_formatted_votes(citizen_updated,len(options))
             newVotes.append(newVote)
-        newVotes =np.array(newVotes)
-        newVotes =newVotes*10 / newVotes.sum(axis=1,keepdims=1)
+        newVotes = np.array(newVotes)
+        newVotes = newVotes*10 / newVotes.sum(axis=1,keepdims=1)
         print("vote from last round:")
         print(vote_by_citiziens)
         print ("normalized new votes:\n", newVotes)
