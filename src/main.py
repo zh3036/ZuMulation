@@ -27,7 +27,7 @@ def simple_voting(problem_statement: str, user_inputs: list[str], options: list[
     user_inputs is voter profiles; options is the options to vote on; 
     """
     if True:
-        state_formalizer = struct_state_builder.LLMStateBuilder(
+        state_formalizer = struct_state_builder.SimpleLLMStateBuilder(
             problem_statement, llm=llm)
         user_schema = state_formalizer.build_user_schema(user_inputs, options)
         options_schema = state_formalizer.build_options_schema(
