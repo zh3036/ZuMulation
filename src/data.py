@@ -42,7 +42,7 @@ General Opinion on Zuzalu: Loves the idea of a creative and culturally thriving 
 Attitudes towards projects: Enthusiastic about art and culture projects, community garden programs, and anything related to enhancing creativity. Appreciates the community-based actions leading to the environmental stewardship of multiple projects."""]
 
 
-options=["""Project 1 - Sustainable Food Production System 
+options2=["""Project 1 - Sustainable Food Production System 
 Explanation: As an aspiring chef with a culinary education, I am passionate about turning locally-grown and sustainably sourced ingredients into delicious culinary creations. I believe this project could provide valuable resources and inspire community residents, including myself, in innovative and sustainable cooking practices while also reducing our carbon footprint.""",
                """Project 2 - Skill-Sharing and Educational Initiatives 
 Explanation: We can never stop learning, improving and sharing our knowledge with others. Combining culinary education and experience with others' skill sets will only lead to a more vibrant and multifaceted community. I look forward to expanding my own horizons as well as having the opportunity to teach cooking classes and share my passion for food with my fellow community members.""",
@@ -52,3 +52,44 @@ Explanation: Being an advocate for healthy living and sustainability, ensuring e
 Explanation: Total well-being comprises more than just eating right; a healthy mind and body are of vital importance too. Yoga, meditation, and holistic therapies resonate deeply with my desire to live a well-rounded life. This project could attract health professionals from whom I can learn and truly cultivate a wholesome atmosphere in our community.""",
                """Project 5 - Art and Culture Enrichment 
 Explanation: A healthy dose of art and culture can breathe life into any community. As an appreciator of art, I believe dedicated gallery spaces, workshops, and other creative projects will not only foster our home-grown artistic expressions but also incorporate creativity into our everyday lives, potentially blending with food production and healthy living."""]
+
+
+options_4=["""Project 1 - Sustainable Food Production System 
+Explanation: As an aspiring chef with a culinary education, I am passionate about turning locally-grown and sustainably sourced ingredients into delicious culinary creations. I believe this project could provide valuable resources and inspire community residents, including myself, in innovative and sustainable cooking practices while also reducing our carbon footprint.""",
+               """Project 2 - Skill-Sharing and Educational Initiatives 
+Explanation: We can never stop learning, improving and sharing our knowledge with others. Combining culinary education and experience with others' skill sets will only lead to a more vibrant and multifaceted community. I look forward to expanding my own horizons as well as having the opportunity to teach cooking classes and share my passion for food with my fellow community members.""",
+               """Project 3 - Transportation and Mobility Promoting 
+Explanation: Being an advocate for healthy living and sustainability, ensuring efficient and environment-friendly mobility options is important. Commuting to local farmers' markets and other food sourcing without negatively impacting the environment is both practical and appealing for me. Investing in bike-shares and community-friendly pathways will also encourage a more active lifestyle and foster community-wide connections.""",
+               """Project 4 - a cigarette and alchohol shop
+                    sell cigarretees, can generate profit for the community.""",
+               """Project 5 - Art and Culture Enrichment 
+Explanation: A healthy dose of art and culture can breathe life into any community. As an appreciator of art, I believe dedicated gallery spaces, workshops, and other creative projects will not only foster our home-grown artistic expressions but also incorporate creativity into our everyday lives, potentially blending with food production and healthy living."""]
+
+
+options3 = """Project 1: Sustainable Food Production System
+Description: This project aims to design and implement a vertical farming system, enabling sustainable year-round food production for the community. Residents can benefit from access to locally grown fresh fruit, vegetables, and edible herbs straight from the source, ultimately promoting less reliance on imported produce and lowering the carbon footprint.
+
+Project 2: Renewable Energy Infrastructure
+Description: The implementation of solar panels, wind turbines, and a smart energy grid will provide clean, renewable energy to power the entire community. The initiative incorporates research and technology to develop a highly efficient, decentralized energy system.
+
+Project 3: Waste Management and Recycling Program
+Description: The creation of an effective waste management and recycling program, minimizing bulk waste and promoting a closed-loop system is the essence of this project. This will include compost bins, recycling stations and community education.
+
+Project 4: Collective Workspaces and Incubator
+Description: Offering shared workspaces and fostering a collaborative environment, this project aims to encourage innovation among community members. Facilities like a prototyping lab, meeting rooms, and event spaces will also support entrepreneurial ventures within the community.
+
+Project 5: Communal Resource Library
+Description: A shared resource library will facilitate knowledge-sharing and saving among the community members. This library will consist of books, tools, equipment, and more, promoting a lending rather than owning mentality.
+
+Project 6: Health and Wellness Program
+Description: This initiative advocates for holistic wellness and healthcare by offering regular workshops, yoga and meditation rooms, fitness equipment, and hosting health professionals to provide consultations and holistic therapies.
+
+Project 7: Skill-Sharing and Educational Initiatives
+Description: Enabling knowledge to be efficiently shared and acquired through skill-based workshops, mentoring programs, and a community-run learning center, this project focuses on developing the collective skills of community members.
+"""
+
+options3 = options3.split("\n\n")
+options = options3[:5]
+options[3] = options_4[3]
+if __name__ == "__main__":
+    print (options3[0])

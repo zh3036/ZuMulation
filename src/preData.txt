@@ -1,0 +1,785 @@
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+Human: 
+I want to find a solution to using quadratic funding to allocate money to projects being built for a co-living community of hackers. Given a group of people and things that they said or wrote, can you tell me a list of criteria related to the described problem? Try to return a list.
+A few example solutions to using quadratic funding to allocate money to projects being built for a co-living community of hackers are Project 1: Sustainable Food Production System
+Description: This project aims to design and implement a vertical farming system, enabling sustainable year-round food production for the community. Residents can benefit from access to locally grown fresh fruit, vegetables, and edible herbs straight from the source, ultimately promoting less reliance on imported produce and lowering the carbon footprint., Project 2: Renewable Energy Infrastructure
+Description: The implementation of solar panels, wind turbines, and a smart energy grid will provide clean, renewable energy to power the entire community. The initiative incorporates research and technology to develop a highly efficient, decentralized energy system., Project 3: Waste Management and Recycling Program
+Description: The creation of an effective waste management and recycling program, minimizing bulk waste and promoting a closed-loop system is the essence of this project. This will include compost bins, recycling stations and community education., Project 4 - a cigarette and alchohol shop
+                    sell cigarretees, can generate profit for the community., Project 5: Communal Resource Library
+Description: A shared resource library will facilitate knowledge-sharing and saving among the community members. This library will consist of books, tools, equipment, and more, promoting a lending rather than owning mentality..
+
+Here is the list of people and things they said:
+['Citizen 1: Mary Green\nPersona: Environmental enthusiast, age 32, single, yoga instructor\nGeneral Opinion on Zuzalu: Excited about the idea of living in an ecologically focused environment promoting a strong, healthy sense of community.\nAttitudes towards projects: Highly interested in health and wellness, renewable energy, and ecosystem conservations. Appreciates access to shared resources, creative culture, and sustainable transportation methods.', 'Citizen 2: Tom Sanders\nPersona: Entrepreneur, age 40, married, two kids, involved in the tech industry\nGeneral Opinion on Zuzalu: Sees it as a smart way of living, intrigued by innovation and creative opportunities offered in such a space.\nAttitudes towards projects: Looks forward to collaborative workspaces, skill-sharing opportunities, and sustainable solutions in energy and food production. Appreciates health and wellness initiatives to achieve a better work-life balance.', 'Citizen 3: Rachel Thompson\nPersona: Artist, age 29, in a relationship, mural artist\nGeneral Opinion on Zuzalu: Loves the idea of a creative and culturally thriving space with exciting opportunities for artists and creators.\nAttitudes towards projects: Enthusiastic about art and culture projects, community garden programs, and anything related to enhancing creativity. Appreciates the community-based actions leading to the environmental stewardship of multiple projects.', 'Citizen 4: Carlos Diaz\nPersona: Environmental engineer, age 37, married, interested in STEM subjects\nGeneral Opinion on Zuzalu: Extensively fascinated by the potential to contribute expertise to develop more sustainable living spaces\nAttitudes towards projects: Highly keen on projects involving renewable energy infrastructure, waste management solutions, and technology-driven skill-sharing workshops. Wants to explore the world of art and culture for stress-relieving purposes.', 'Citizen 5: Angela Jenkins\nPersona: Single mom, age 35, raising two children alone, works from home as a marketing specialist\nGeneral Opinion on Zuzalu: A potentially secure and supportive environment for her children to grow up and learn the importance of valuable community interaction.\nAttitudes towards projects: Primarily focused on the health and wellness program, the educational initatives, and the transportation & mobility promoting projects, as well as supportive and inclusive spaces like the resource library and the collaborative work zones.', 'Citizen 6: Louisa Hernandez\nPersona: Aspiring chef, age 25, just completed culinary education, co-living native since college\nGeneral Opinion on Zuzalu: Planning to adopt an all-practical, cutting-edge model for healthy, sustainable lifestyles\nAttitudes towards projects: Extremely open to options that welcome her to innovate, actively participate, and contribute in new ways. Zones involving food production and transportation resonate, as well as the poised skill-sharing initiatives and health promotion activities at large.', 'Citizen 7: Samuel Wilson\nPersona: Architect, age 46, separated, devoted father and amateur cyclist\nGeneral Opinion on Zuzalu: He’s hungry to join projects driving improvement in healthier urban landscape design, as it aligns with his worldview and principles.\nAttitudes towards this matter are expressed through his deep interest to contribute to solid renewable energy schemes, enhancing transportation, promoting ecosystem conservation-centric activities, and securing enough Rec and Tech facilities triggering creative development amongst dwellers in these spaces.']
+        
+AI: 
+Based on the details provided by the citizens, I suggest the following criteria for allocating funding to projects:
+
+1. Project promotes environmental sustainability, renewable energy, and/or ecosystem conservation. 
+2. Project increases access to healthy, locally grown food.
+3. Project provides shared resources and community spaces to foster connection and knowledge sharing.   
+4. Project enhances health, wellness and work-life balance for citizens.
+5. Project supports art, culture and creativity.  
+6. Project offers opportunities for citizens to contribute their skills and expertise.
+7. Project improves waste management and use of recycled materials.
+8. Project involves innovative technology to improve sustainability.
+9. Project enhances transportation solutions and mobility.  
+10. Project supports education and skill building initiatives.
+
+Does this list of criteria capture the relevant aspects based on what the citizens shared? Let me know if you would like me to modify or expand the list of suggestions in any way.
+Human: Can you simplify the above to a list of simple criteria only. If any criteria are similar, merge them into one. Each criteria should be no more than 4 words?
+Your response should be a list of comma separated values, eg: `foo, bar, baz`
+AI:[0m
+
+[1m> Finished chain.[0m
+User schema:  {'criteria': ['Environmentally friendly', 'Renewable energy', 'Locally sourced food', 'Community spaces', 'Health and wellness,Citizen skills utilized', 'Waste reduction,Innovative technology', 'Sustainable transportation', 'Education initiatives']}
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 1: Mary Green
+Persona: Environmental enthusiast, age 32, single, yoga instructor
+General Opinion on Zuzalu: Excited about the idea of living in an ecologically focused environment promoting a strong, healthy sense of community.
+Attitudes towards projects: Highly interested in health and wellness, renewable energy, and ecosystem conservations. Appreciates access to shared resources, creative culture, and sustainable transportation methods.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI:[0m
+
+[1m> Finished chain.[0m
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 1: Mary Green
+Persona: Environmental enthusiast, age 32, single, yoga instructor
+General Opinion on Zuzalu: Excited about the idea of living in an ecologically focused environment promoting a strong, healthy sense of community.
+Attitudes towards projects: Highly interested in health and wellness, renewable energy, and ecosystem conservations. Appreciates access to shared resources, creative culture, and sustainable transportation methods.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI: 
+{
+  "Environmentally friendly": 0.9 ,
+  "Renewable energy": 0.8,   
+  "Locally sourced food": 0.7,
+  "Community spaces": 0.8, 
+  "Health and wellness": 0.9,
+  "Citizen skills utilized": 0.6,
+  "Waste reduction": 0.8,
+  "Innovative technology": 0.3,  
+  "Sustainable transportation": 0.9,
+  "Education initiatives": 0.7
+}
+Human: Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON
+AI:[0m
+
+[1m> Finished chain.[0m
+the criteria weight for users    "Environmentally friendly": 0.9,     "Renewable energy": 0.8,       "Locally sourced food": 0.7,   "Community spaces": 0.8,       "Health and wellness": 0.9,   "Citizen skills utilized": 0.6,      "Waste reduction": 0.8,        "Innovative technology": 0.3,        "Sustainable transportation": 0.9,     "Education initiatives": 0.7 
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 2: Tom Sanders
+Persona: Entrepreneur, age 40, married, two kids, involved in the tech industry
+General Opinion on Zuzalu: Sees it as a smart way of living, intrigued by innovation and creative opportunities offered in such a space.
+Attitudes towards projects: Looks forward to collaborative workspaces, skill-sharing opportunities, and sustainable solutions in energy and food production. Appreciates health and wellness initiatives to achieve a better work-life balance.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI:[0m
+
+[1m> Finished chain.[0m
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 2: Tom Sanders
+Persona: Entrepreneur, age 40, married, two kids, involved in the tech industry
+General Opinion on Zuzalu: Sees it as a smart way of living, intrigued by innovation and creative opportunities offered in such a space.
+Attitudes towards projects: Looks forward to collaborative workspaces, skill-sharing opportunities, and sustainable solutions in energy and food production. Appreciates health and wellness initiatives to achieve a better work-life balance.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI: 
+{   
+  "Environmentally friendly": 0.8,   
+  "Renewable energy": 0.8,    
+  "Locally sourced food": 0.7, 
+  "Community spaces": 0.9,   
+  "Health and wellness": 0.9,
+  "Citizen skills utilized": 0.8,
+  "Waste reduction": 0.8,   
+  "Innovative technology": 0.7,  
+  "Sustainable transportation": 0.7,
+  "Education initiatives": 0.8
+}
+Human: Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON
+AI:[0m
+
+[1m> Finished chain.[0m
+the criteria weight for users        "Environmentally friendly": 0.8,       "Renewable energy": 0.8,        "Locally sourced food": 0.7,      "Community spaces": 0.9,      "Health and wellness": 0.9,     "Citizen skills utilized": 0.8,      "Waste reduction": 0.8,       "Innovative technology": 0.7,    "Sustainable transportation": 0.7,   "Education initiatives": 0.8 
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 3: Rachel Thompson
+Persona: Artist, age 29, in a relationship, mural artist
+General Opinion on Zuzalu: Loves the idea of a creative and culturally thriving space with exciting opportunities for artists and creators.
+Attitudes towards projects: Enthusiastic about art and culture projects, community garden programs, and anything related to enhancing creativity. Appreciates the community-based actions leading to the environmental stewardship of multiple projects.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI:[0m
+
+[1m> Finished chain.[0m
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 3: Rachel Thompson
+Persona: Artist, age 29, in a relationship, mural artist
+General Opinion on Zuzalu: Loves the idea of a creative and culturally thriving space with exciting opportunities for artists and creators.
+Attitudes towards projects: Enthusiastic about art and culture projects, community garden programs, and anything related to enhancing creativity. Appreciates the community-based actions leading to the environmental stewardship of multiple projects.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI: 
+{
+    "Environmentally friendly": 0.9,   
+    "Renewable energy": 0.8, 
+    "Locally sourced food": 0.7,
+    "Community spaces": 1.0,
+    "Health and wellness": 0.6,   
+    "Citizen skills utilized": 0.8,
+    "Waste reduction": 0.9,   
+    "Innovative technology": 0.2,
+    "Sustainable transportation": 0.8,
+    "Education initiatives": 0.7
+}
+Human: Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON
+AI:[0m
+
+[1m> Finished chain.[0m
+the criteria weight for users    "Environmentally friendly": 0.9,      "Renewable energy": 0.8,     "Locally sourced food": 0.7,   "Community spaces": 1.0,   "Health and wellness": 0.6,       "Citizen skills utilized": 0.8,   "Waste reduction": 0.9,       "Innovative technology": 0.2,    "Sustainable transportation": 0.8,   "Education initiatives": 0.7 
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 4: Carlos Diaz
+Persona: Environmental engineer, age 37, married, interested in STEM subjects
+General Opinion on Zuzalu: Extensively fascinated by the potential to contribute expertise to develop more sustainable living spaces
+Attitudes towards projects: Highly keen on projects involving renewable energy infrastructure, waste management solutions, and technology-driven skill-sharing workshops. Wants to explore the world of art and culture for stress-relieving purposes.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI:[0m
+
+[1m> Finished chain.[0m
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 4: Carlos Diaz
+Persona: Environmental engineer, age 37, married, interested in STEM subjects
+General Opinion on Zuzalu: Extensively fascinated by the potential to contribute expertise to develop more sustainable living spaces
+Attitudes towards projects: Highly keen on projects involving renewable energy infrastructure, waste management solutions, and technology-driven skill-sharing workshops. Wants to explore the world of art and culture for stress-relieving purposes.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI: 
+{"Environmentally friendly":0.9 ,  
+"Renewable energy": 0.95,  
+"Locally sourced food": 0.6,
+"Community spaces":0.85,
+ "Health and wellness": 0.75,
+"Citizen skills utilized": 0.8,
+"Waste reduction": 0.9,
+ "Innovative technology": 0.8,
+"Sustainable transportation": 0.8,  
+"Education initiatives": 0.7}
+Human: Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON
+AI:[0m
+
+[1m> Finished chain.[0m
+the criteria weight for users    "Environmentally friendly": 0.9,      "Renewable energy": 0.95,      "Locally sourced food": 0.6,   "Community spaces": 0.85,   "Health and wellness": 0.75,   "Citizen skills utilized": 0.8,      "Waste reduction": 0.9,        "Innovative technology": 0.8,   "Sustainable transportation": 0.8,      "Education initiatives": 0.7 
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 5: Angela Jenkins
+Persona: Single mom, age 35, raising two children alone, works from home as a marketing specialist
+General Opinion on Zuzalu: A potentially secure and supportive environment for her children to grow up and learn the importance of valuable community interaction.
+Attitudes towards projects: Primarily focused on the health and wellness program, the educational initatives, and the transportation & mobility promoting projects, as well as supportive and inclusive spaces like the resource library and the collaborative work zones.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI:[0m
+
+[1m> Finished chain.[0m
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 5: Angela Jenkins
+Persona: Single mom, age 35, raising two children alone, works from home as a marketing specialist
+General Opinion on Zuzalu: A potentially secure and supportive environment for her children to grow up and learn the importance of valuable community interaction.
+Attitudes towards projects: Primarily focused on the health and wellness program, the educational initatives, and the transportation & mobility promoting projects, as well as supportive and inclusive spaces like the resource library and the collaborative work zones.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI: 
+{
+  "Environmentally friendly": 0.7, 
+  "Renewable energy" : 0.5,   
+  "Locally sourced food": 0.8,
+  "Community spaces": 0.9,
+  "Health and wellness": 0.9,
+  "Citizen skills utilized": 0.5,  
+  "Waste reduction": 0.7,
+  "Innovative technology": 0.4,
+  "Sustainable transportation": 0.8,
+  "Education initiatives": 0.9  
+}
+Human: Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON
+AI:[0m
+
+[1m> Finished chain.[0m
+the criteria weight for users    "Environmentally friendly": 0.7,     "Renewable energy": 0.5,        "Locally sourced food": 0.8,   "Community spaces": 0.9,      "Health and wellness": 0.9,   "Citizen skills utilized": 0.5,       "Waste reduction": 0.7,   "Innovative technology": 0.4,    "Sustainable transportation": 0.8,   "Education initiatives": 0.9    
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 6: Louisa Hernandez
+Persona: Aspiring chef, age 25, just completed culinary education, co-living native since college
+General Opinion on Zuzalu: Planning to adopt an all-practical, cutting-edge model for healthy, sustainable lifestyles
+Attitudes towards projects: Extremely open to options that welcome her to innovate, actively participate, and contribute in new ways. Zones involving food production and transportation resonate, as well as the poised skill-sharing initiatives and health promotion activities at large.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI:[0m
+
+[1m> Finished chain.[0m
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 6: Louisa Hernandez
+Persona: Aspiring chef, age 25, just completed culinary education, co-living native since college
+General Opinion on Zuzalu: Planning to adopt an all-practical, cutting-edge model for healthy, sustainable lifestyles
+Attitudes towards projects: Extremely open to options that welcome her to innovate, actively participate, and contribute in new ways. Zones involving food production and transportation resonate, as well as the poised skill-sharing initiatives and health promotion activities at large.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI: 
+{  
+   "Environmentally friendly":0.9,
+   "Renewable energy":0.85,
+   "Locally sourced food": 1.0,
+   "Community spaces":0.7,   
+   "Health and wellness":0.95,
+   "Citizen skills utilized":0.8,
+   "Waste reduction":0.85,
+   "Innovative technology": 0.6,
+   "Sustainable transportation":0.75,
+   "Education initiatives": 0.8  
+}
+Human: Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON
+AI:[0m
+
+[1m> Finished chain.[0m
+the criteria weight for users      "Environmentally friendly": 0.9,      "Renewable energy": 0.85,           "Locally sourced food": 1.0,      "Community spaces": 0.7,            "Health and wellness": 0.95,        "Citizen skills utilized": 0.8,     "Waste reduction": 0.85,           "Innovative technology": 0.6,      "Sustainable transportation": 0.75,    "Education initiatives": 0.8    
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 7: Samuel Wilson
+Persona: Architect, age 46, separated, devoted father and amateur cyclist
+General Opinion on Zuzalu: He’s hungry to join projects driving improvement in healthier urban landscape design, as it aligns with his worldview and principles.
+Attitudes towards this matter are expressed through his deep interest to contribute to solid renewable energy schemes, enhancing transportation, promoting ecosystem conservation-centric activities, and securing enough Rec and Tech facilities triggering creative development amongst dwellers in these spaces.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI:[0m
+
+[1m> Finished chain.[0m
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+Human: Given a person and things that they said or wrote, can you assign a number between 0 and 1 for a set of criteria, 1 meaning the criteria is important to this person and 0 being the criteria is not important to the person?
+The person: Citizen 7: Samuel Wilson
+Persona: Architect, age 46, separated, devoted father and amateur cyclist
+General Opinion on Zuzalu: He’s hungry to join projects driving improvement in healthier urban landscape design, as it aligns with his worldview and principles.
+Attitudes towards this matter are expressed through his deep interest to contribute to solid renewable energy schemes, enhancing transportation, promoting ecosystem conservation-centric activities, and securing enough Rec and Tech facilities triggering creative development amongst dwellers in these spaces.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI: 
+{
+  "Environmentally friendly": 0.9,  
+  "Renewable energy": 0.9,    
+  "Locally sourced food": 0.5,       
+  "Community spaces": 0.8,            
+  "Health and wellness": 0.8,
+  "Citizen skills utilized": 0.5,   
+  "Waste reduction": 0.8,      
+  "Innovative technology": 0.7,   
+  "Sustainable transportation": 0.8,
+  "Education initiatives": 0.7
+}
+Human: Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON
+AI:[0m
+
+[1m> Finished chain.[0m
+the criteria weight for users    "Environmentally friendly": 0.9,         "Renewable energy": 0.9,           "Locally sourced food": 0.5,                   "Community spaces": 0.8,                          "Health and wellness": 0.8,           "Citizen skills utilized": 0.5,        "Waste reduction": 0.8,                  "Innovative technology": 0.7,        "Sustainable transportation": 0.8,               "Education initiatives": 0.7 
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+
+Human: Given a potential action for the problem of using quadratic funding to allocate money to projects being built for a co-living community of hackers and a set of criteria related to the problem, can you assign a number between -1 and 1 for how positively this option each individual criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted. Make sure to assign a value to each criteria, do not leave any out and write out the complete JSON.
+The option: Project 1: Sustainable Food Production System
+Description: This project aims to design and implement a vertical farming system, enabling sustainable year-round food production for the community. Residents can benefit from access to locally grown fresh fruit, vegetables, and edible herbs straight from the source, ultimately promoting less reliance on imported produce and lowering the carbon footprint.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI:[0m
+
+[1m> Finished chain.[0m
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+Human: Given a potential action for the problem of using quadratic funding to allocate money to projects being built for a co-living community of hackers and a set of criteria related to the problem, can you assign a number between -1 and 1 for how positively this option each individual criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted. Make sure to assign a value to each criteria, do not leave any out and write out the complete JSON.
+The option: Project 1: Sustainable Food Production System
+Description: This project aims to design and implement a vertical farming system, enabling sustainable year-round food production for the community. Residents can benefit from access to locally grown fresh fruit, vegetables, and edible herbs straight from the source, ultimately promoting less reliance on imported produce and lowering the carbon footprint.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI: 
+{  
+   "Environmentally friendly":1,   
+   "Renewable energy":0.8,
+   "Locally sourced food":1,
+   "Community spaces":0.3, 
+   "Health and wellness":1,
+   "Citizen skills utilized":1,
+   "Waste reduction":1,
+   "Innovative technology":1,
+   "Sustainable transportation":0,
+   "Education initiatives":0.5
+}
+Human: Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON
+AI:[0m
+
+[1m> Finished chain.[0m
+how does the project score on each criteria  {       "Environmentally friendly": 1,      "Renewable energy": 0.8,      "Locally sourced food": 1,      "Community spaces": 0.3,   "Health and wellness": 1,      "Citizen skills utilized": 1,     "Waste reduction": 1,      "Innovative technology": 1,   "Sustainable transportation": 0,     "Education initiatives": 0.5   }
+{       "Environmentally friendly": 1,      "Renewable energy": 0.8,      "Locally sourced food": 1,      "Community spaces": 0.3,   "Health and wellness": 1,      "Citizen skills utilized": 1,     "Waste reduction": 1,      "Innovative technology": 1,   "Sustainable transportation": 0,     "Education initiatives": 0.5   }
+{'environmentally friendly': 1, 'renewable energy': 0.8, 'locally sourced food': 1, 'community spaces': 0.3, 'health and wellness': 1, 'citizen skills utilized': 1, 'waste reduction': 1, 'innovative technology': 1, 'sustainable transportation': 0, 'education initiatives': 0.5}
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+
+Human: Given a potential action for the problem of using quadratic funding to allocate money to projects being built for a co-living community of hackers and a set of criteria related to the problem, can you assign a number between -1 and 1 for how positively this option each individual criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted. Make sure to assign a value to each criteria, do not leave any out and write out the complete JSON.
+The option: Project 2: Renewable Energy Infrastructure
+Description: The implementation of solar panels, wind turbines, and a smart energy grid will provide clean, renewable energy to power the entire community. The initiative incorporates research and technology to develop a highly efficient, decentralized energy system.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI:[0m
+
+[1m> Finished chain.[0m
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+Human: Given a potential action for the problem of using quadratic funding to allocate money to projects being built for a co-living community of hackers and a set of criteria related to the problem, can you assign a number between -1 and 1 for how positively this option each individual criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted. Make sure to assign a value to each criteria, do not leave any out and write out the complete JSON.
+The option: Project 2: Renewable Energy Infrastructure
+Description: The implementation of solar panels, wind turbines, and a smart energy grid will provide clean, renewable energy to power the entire community. The initiative incorporates research and technology to develop a highly efficient, decentralized energy system.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI: 
+{    
+  "Environmentally friendly": 1,
+  "Renewable energy": 1,  
+  "Locally sourced food": 0,   
+  "Community spaces": 0,      
+  "Health and wellness": 0,
+  "Citizen skills utilized" : 0.5,
+  "Waste reduction": 0.5,
+  "Innovative technology": 1,
+  "Sustainable transportation": 0,
+  "Education initiatives": 0  
+}
+Human: Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON
+AI:[0m
+
+[1m> Finished chain.[0m
+how does the project score on each criteria  {     "Environmentally friendly": 1,   "Renewable energy": 1,     "Locally sourced food": 0,      "Community spaces": 0,          "Health and wellness": 0,    "Citizen skills utilized": 0.5,   "Waste reduction": 0.5,   "Innovative technology": 1,   "Sustainable transportation": 0,   "Education initiatives": 0    }
+{     "Environmentally friendly": 1,   "Renewable energy": 1,     "Locally sourced food": 0,      "Community spaces": 0,          "Health and wellness": 0,    "Citizen skills utilized": 0.5,   "Waste reduction": 0.5,   "Innovative technology": 1,   "Sustainable transportation": 0,   "Education initiatives": 0    }
+{'environmentally friendly': 1, 'renewable energy': 1, 'locally sourced food': 0, 'community spaces': 0, 'health and wellness': 0, 'citizen skills utilized': 0.5, 'waste reduction': 0.5, 'innovative technology': 1, 'sustainable transportation': 0, 'education initiatives': 0}
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+
+Human: Given a potential action for the problem of using quadratic funding to allocate money to projects being built for a co-living community of hackers and a set of criteria related to the problem, can you assign a number between -1 and 1 for how positively this option each individual criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted. Make sure to assign a value to each criteria, do not leave any out and write out the complete JSON.
+The option: Project 3: Waste Management and Recycling Program
+Description: The creation of an effective waste management and recycling program, minimizing bulk waste and promoting a closed-loop system is the essence of this project. This will include compost bins, recycling stations and community education.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI:[0m
+
+[1m> Finished chain.[0m
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+Human: Given a potential action for the problem of using quadratic funding to allocate money to projects being built for a co-living community of hackers and a set of criteria related to the problem, can you assign a number between -1 and 1 for how positively this option each individual criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted. Make sure to assign a value to each criteria, do not leave any out and write out the complete JSON.
+The option: Project 3: Waste Management and Recycling Program
+Description: The creation of an effective waste management and recycling program, minimizing bulk waste and promoting a closed-loop system is the essence of this project. This will include compost bins, recycling stations and community education.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI: 
+{ 
+    "Environmentally friendly": 1,
+     "Renewable energy":  0,
+     "Locally sourced food": 0,
+     "Community spaces": 0.5,
+     "Health and wellness": 0.5, 
+    "Citizen skills utilized": 1,
+    "Waste reduction": 1,
+     "Innovative technology": 0,  
+    "Sustainable transportation": 0,
+    "Education initiatives": 0.5
+}
+Human: Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON
+AI:[0m
+
+[1m> Finished chain.[0m
+how does the project score on each criteria  {   "Environmentally friendly": 1,          "Renewable energy": 0,   "Locally sourced food": 0,               "Community spaces": 0.5,   "Health and wellness": 0.5,      "Citizen skills utilized": 1,   "Waste reduction": 1,          "Innovative technology": 0,           "Sustainable transportation": 0,   "Education initiatives": 0.5    }
+{   "Environmentally friendly": 1,          "Renewable energy": 0,   "Locally sourced food": 0,               "Community spaces": 0.5,   "Health and wellness": 0.5,      "Citizen skills utilized": 1,   "Waste reduction": 1,          "Innovative technology": 0,           "Sustainable transportation": 0,   "Education initiatives": 0.5    }
+{'environmentally friendly': 1, 'renewable energy': 0, 'locally sourced food': 0, 'community spaces': 0.5, 'health and wellness': 0.5, 'citizen skills utilized': 1, 'waste reduction': 1, 'innovative technology': 0, 'sustainable transportation': 0, 'education initiatives': 0.5}
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+
+Human: Given a potential action for the problem of using quadratic funding to allocate money to projects being built for a co-living community of hackers and a set of criteria related to the problem, can you assign a number between -1 and 1 for how positively this option each individual criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted. Make sure to assign a value to each criteria, do not leave any out and write out the complete JSON.
+The option: Project 4 - a cigarette and alchohol shop
+                    sell cigarretees, can generate profit for the community.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI:[0m
+
+[1m> Finished chain.[0m
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+Human: Given a potential action for the problem of using quadratic funding to allocate money to projects being built for a co-living community of hackers and a set of criteria related to the problem, can you assign a number between -1 and 1 for how positively this option each individual criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted. Make sure to assign a value to each criteria, do not leave any out and write out the complete JSON.
+The option: Project 4 - a cigarette and alchohol shop
+                    sell cigarretees, can generate profit for the community.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI: 
+{   
+  "Environmentally friendly": -1,   
+  "Renewable energy": 0,   
+  "Locally sourced food": 0,
+  "Community spaces": 0,    
+  "Health and wellness": -1,  
+  "Citizen skills utilized": 0,   
+  "Waste reduction": 0 ,   
+  "Innovative technology": 0,   
+  "Sustainable transportation":0,
+  "Education initiatives":0
+}
+Human: Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON
+AI:[0m
+
+[1m> Finished chain.[0m
+how does the project score on each criteria  {      "Environmentally friendly": -1,      "Renewable energy": 0,                     "Locally sourced food": 0,                 "Community spaces": 0,                        "Health and wellness": -1,        "Citizen skills utilized": 0,                "Waste reduction": 0,                 "Innovative technology": 0,   "Sustainable transportation": 0,      "Education initiatives": 0 }
+{      "Environmentally friendly": -1,      "Renewable energy": 0,                     "Locally sourced food": 0,                 "Community spaces": 0,                        "Health and wellness": -1,        "Citizen skills utilized": 0,                "Waste reduction": 0,                 "Innovative technology": 0,   "Sustainable transportation": 0,      "Education initiatives": 0 }
+{'environmentally friendly': -1, 'renewable energy': 0, 'locally sourced food': 0, 'community spaces': 0, 'health and wellness': -1, 'citizen skills utilized': 0, 'waste reduction': 0, 'innovative technology': 0, 'sustainable transportation': 0, 'education initiatives': 0}
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+
+Human: Given a potential action for the problem of using quadratic funding to allocate money to projects being built for a co-living community of hackers and a set of criteria related to the problem, can you assign a number between -1 and 1 for how positively this option each individual criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted. Make sure to assign a value to each criteria, do not leave any out and write out the complete JSON.
+The option: Project 5: Communal Resource Library
+Description: A shared resource library will facilitate knowledge-sharing and saving among the community members. This library will consist of books, tools, equipment, and more, promoting a lending rather than owning mentality.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI:[0m
+
+[1m> Finished chain.[0m
+
+
+[1m> Entering new ConversationChain chain...[0m
+Prompt after formatting:
+[32;1m[1;3mThe following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
+
+Current conversation:
+Human: Given a potential action for the problem of using quadratic funding to allocate money to projects being built for a co-living community of hackers and a set of criteria related to the problem, can you assign a number between -1 and 1 for how positively this option each individual criteria? 1 meaning the criteria is very positively impacted, 0 meaning the criteria is not impacted, -1 meaning the criteria is very negatively impacted. Make sure to assign a value to each criteria, do not leave any out and write out the complete JSON.
+The option: Project 5: Communal Resource Library
+Description: A shared resource library will facilitate knowledge-sharing and saving among the community members. This library will consist of books, tools, equipment, and more, promoting a lending rather than owning mentality.
+The criteria: Environmentally friendly, Renewable energy, Locally sourced food, Community spaces, Health and wellness,Citizen skills utilized, Waste reduction,Innovative technology, Sustainable transportation, Education initiativesYour response should be a JSON object with keys being the criteria and values being the number, eg: `{"foo": 0.1, "bar": 0.9, "baz": 0.6}`
+AI: 
+{  
+   "Environmentally friendly":0.5,
+   "Renewable energy":0,     
+   "Locally sourced food":0,  
+   "Community spaces":1,  
+   "Health and wellness":0.5,
+   "Citizen skills utilized":1,  
+   "Waste reduction":0.5, 
+   "Innovative technology":0,
+   "Sustainable transportation":0,
+   "Education initiatives":1   
+}
+Human: Can you make sure that the above JSON is formatted correctly? Please print out the correctly formatted JSON
+AI:[0m
+
+[1m> Finished chain.[0m
+how does the project score on each criteria  {     "Environmentally friendly": 0.5,      "Renewable energy": 0,                "Locally sourced food": 0,         "Community spaces": 1,         "Health and wellness": 0.5,      "Citizen skills utilized": 1,                 "Waste reduction": 0.5,           "Innovative technology": 0,      "Sustainable transportation": 0,   "Education initiatives": 1     }
+{     "Environmentally friendly": 0.5,      "Renewable energy": 0,                "Locally sourced food": 0,         "Community spaces": 1,         "Health and wellness": 0.5,      "Citizen skills utilized": 1,                 "Waste reduction": 0.5,           "Innovative technology": 0,      "Sustainable transportation": 0,   "Education initiatives": 1     }
+{'environmentally friendly': 0.5, 'renewable energy': 0, 'locally sourced food': 0, 'community spaces': 1, 'health and wellness': 0.5, 'citizen skills utilized': 1, 'waste reduction': 0.5, 'innovative technology': 0, 'sustainable transportation': 0, 'education initiatives': 1}
+Got all user structs: [{'environmentally friendly': 0.9, 'renewable energy': 0.8, 'locally sourced food': 0.7, 'community spaces': 0.8, 'health and wellness': 0.9, 'citizen skills utilized': 0.6, 'waste reduction': 0.8, 'innovative technology': 0.3, 'sustainable transportation': 0.9, 'education initiatives': 0.7}, {'environmentally friendly': 0.8, 'renewable energy': 0.8, 'locally sourced food': 0.7, 'community spaces': 0.9, 'health and wellness': 0.9, 'citizen skills utilized': 0.8, 'waste reduction': 0.8, 'innovative technology': 0.7, 'sustainable transportation': 0.7, 'education initiatives': 0.8}, {'environmentally friendly': 0.9, 'renewable energy': 0.8, 'locally sourced food': 0.7, 'community spaces': 1.0, 'health and wellness': 0.6, 'citizen skills utilized': 0.8, 'waste reduction': 0.9, 'innovative technology': 0.2, 'sustainable transportation': 0.8, 'education initiatives': 0.7}, {'environmentally friendly': 0.9, 'renewable energy': 0.95, 'locally sourced food': 0.6, 'community spaces': 0.85, 'health and wellness': 0.75, 'citizen skills utilized': 0.8, 'waste reduction': 0.9, 'innovative technology': 0.8, 'sustainable transportation': 0.8, 'education initiatives': 0.7}, {'environmentally friendly': 0.7, 'renewable energy': 0.5, 'locally sourced food': 0.8, 'community spaces': 0.9, 'health and wellness': 0.9, 'citizen skills utilized': 0.5, 'waste reduction': 0.7, 'innovative technology': 0.4, 'sustainable transportation': 0.8, 'education initiatives': 0.9}, {'environmentally friendly': 0.9, 'renewable energy': 0.85, 'locally sourced food': 1.0, 'community spaces': 0.7, 'health and wellness': 0.95, 'citizen skills utilized': 0.8, 'waste reduction': 0.85, 'innovative technology': 0.6, 'sustainable transportation': 0.75, 'education initiatives': 0.8}, {'environmentally friendly': 0.9, 'renewable energy': 0.9, 'locally sourced food': 0.5, 'community spaces': 0.8, 'health and wellness': 0.8, 'citizen skills utilized': 0.5, 'waste reduction': 0.8, 'innovative technology': 0.7, 'sustainable transportation': 0.8, 'education initiatives': 0.7}]
+Got all options structs: [{'environmentally friendly': 1, 'renewable energy': 0.8, 'locally sourced food': 1, 'community spaces': 0.3, 'health and wellness': 1, 'citizen skills utilized': 1, 'waste reduction': 1, 'innovative technology': 1, 'sustainable transportation': 0, 'education initiatives': 0.5}, {'environmentally friendly': 1, 'renewable energy': 1, 'locally sourced food': 0, 'community spaces': 0, 'health and wellness': 0, 'citizen skills utilized': 0.5, 'waste reduction': 0.5, 'innovative technology': 1, 'sustainable transportation': 0, 'education initiatives': 0}, {'environmentally friendly': 1, 'renewable energy': 0, 'locally sourced food': 0, 'community spaces': 0.5, 'health and wellness': 0.5, 'citizen skills utilized': 1, 'waste reduction': 1, 'innovative technology': 0, 'sustainable transportation': 0, 'education initiatives': 0.5}, {'environmentally friendly': -1, 'renewable energy': 0, 'locally sourced food': 0, 'community spaces': 0, 'health and wellness': -1, 'citizen skills utilized': 0, 'waste reduction': 0, 'innovative technology': 0, 'sustainable transportation': 0, 'education initiatives': 0}, {'environmentally friendly': 0.5, 'renewable energy': 0, 'locally sourced food': 0, 'community spaces': 1, 'health and wellness': 0.5, 'citizen skills utilized': 1, 'waste reduction': 0.5, 'innovative technology': 0, 'sustainable transportation': 0, 'education initiatives': 1}]
+user votes [[3.2523616734143044, 2.0242914979757085, 2.384165542060279, 0.0, 2.339181286549707], [3.300513698630137, 2.054794520547945, 2.3116438356164384, 0.0, 2.3330479452054793], [3.1912922649374713, 1.968503937007874, 2.431681333950903, 0.0, 2.4085224641037515], [3.291649003815176, 2.183128444256041, 2.2891055532005087, 0.0, 2.2361169987282743], [3.290891283055828, 1.8609206660137119, 2.375122428991185, 0.0, 2.4730656219392753], [3.378433784337843, 2.0602706027060274, 2.306273062730627, 0.0, 2.2550225502255024], [3.268359020852221, 2.198549410698096, 2.2892112420670903, 0.0, 2.2438803263825933]]
+final Votes [160.80432558723825, 100.3819074189779, 114.69652636965633, 0.0, 113.98566776535313]
+
+Dear decision makers, 
+
+Several voters have raised valid objections regarding the proposed funding allocation for community projects. The main concerns are as follows:
+
+1. Allocating funds to Project 4, a proposed cigarette and alcohol shop, raises ethical concerns as it may promote unhealthy habits and substance abuse issues within the community. Selling these addictive and potentially harmful substances does not align with our goals of promoting health, sustainability and community wellbeing.  
+
+2. The current funding allocation seems disproportionate for some impactful projects.Some projects with potentially greater social impact, like the Sustainable Food Production system and waste management program, have been allocated less funding compared to projects like Renewable Energy Infrastructure. A reevaluation of the funding criteria may be needed to better align allocations with desired social outcomes.
+
+3. The funding for the Sustainable Food Project, focused on providing the community with locally sourced healthy produce, appears too low given its importance for our carbon footprint, health and self-sufficiency. Increased funding for this project is recommended above further expanding renewable energy or other initiatives.
+
+In summary, we recommend considering adjustments to avoid funding initiatives that undermine community wellbeing, as well as reallocating budgets to optimize funding based on social impact and alignment with
+
+$&$ [4,2 ,5 , 0, 3] $&$  
+
+1. I fully agree that funding Project 4, the cigarette and alcohol shop, would go against our community's goals of health and sustainability. I do not support this project and have lowered my vote to 0.  
+
+2. While renewable energy is important, I have increased my vote for the Sustainable Food Production project to 4 given its potential impact on health, self-sufficiency and carbon footprint. Access to local food grown sustainably should be a higher priority.  
+
+3. I have increased my vote to 5 for the Waste Management and Recycling Program since reducing waste and promoting recycling and composting will be critical for the community's sustainability.  
+
+4. My vote of 2 for the Renewable Energy Infrastructure project remains unchanged. While valuable, I see greater potential impact from food and waste sustainability initiatives at this time.
+  
+5. I have lowered my vote slightly for the Communal Resource Library to 3 given that sharing resources is secondary to basic needs like food and energy for me.
+[0, 4, 5, 2, 3]
+
+$&$ 3.300513698630137,2.054794520547945,2.3116438356164384, 0.0, 2.3330479452054793 $&$
+ I want to keep my original votes for options 1, 2, 3 and 5. My vote for option 4 remains 0.0, indicating that I do not support allocating any funding to the proposed cigarette and alcohol shop due to ethical concerns as outlined in the objection summary.
+
+[3.300513698630137, 2.054794520547945, 2.3116438356164384 , 0.0,  2.3330479452054793]
+
+$&$ [3.1912922649374713, 1.968503937007874, 2.431681333950903, 0.0, 2.4085224641037515] $&$   
+
+While the objections and concerns raised are valid, as an artist focused primarily on art and culture projects, I still maintain my original votes.   
+ Project 4 does not align with my goals, so I voted 0 for it. The   
+other projects related to food, energy and resources are still an   
+important part of building a thriving community for creativity, so I kept my votes the same for those.
+
+[3.19, 2.0, 2.43,  0.0, 2.41]
+
+$&$ [3.291649003815176, 2.183128444256041, 2.2891055532005087, 0.0, 2.2361169987282743] $&$
+ 
+Given the valid objections raised regarding Project 4 and the potentially disproportionate funding allocations relative to social impact, I do not wish to change my original vote at this time. My reasons are:   
+
+- Project 4's funding allocation is already very low, so eliminating or reducing this funding further would likely have a negligible impact on reallocating funds to higher priority projects.   
+
+- Increasing funding for Projects 1, 2 or 3 beyond the amounts indicated in the proposed funding allocation would require more data and analysis to properly determine the optimal redistribution of funds based on social outcomes. My vote reflects an initial judgment based on the limited information provided, but I acknowledge further fine-tuning may be needed.
+
+- Reallocating funds from Projects 2, 3 or 5 to increase funding for Project 1 above 160 could be reasonable given Project 1's focus on sustainable food production and carbon footprint reduction. However, without a detailed impact assessment and redistribution plan, I do not feel comfortable changing my vote at this time.
+
+[160, 80, 180 , 100 , 60]
+
+$&$ [3.290891283055828,1.8609206660137119,2.375122428991185, 0.0, 2.4730656219392753] $&$
+While I do share the objections raised regarding Project 4 and the proportionality of funding to impact, upon reflection I have decided to maintain my original votes for each project.   
+ 
+My primary focus remains funding projects that support my persona's priorities of health and wellbeing, education, transportation and community spaces. While there are valid concerns regarding the specific funding allocations, I do not have enough information about the full range of projects or alternative funding models to responsibly change my vote. Therefore, I will maintain confidence in the decision makers to reevaluate proportionality of funding based on the objections raised while continuing to allocate funds towards projects that align with my persona's priorities. Given limited information, the best course of action is to maintain my original voting intentions, while acknowledging room for improvement in the funding process.
+
+Does this summary adequately reflect my considerations around maintaining my original votes while acknowledging the objections? Let me know if you would like me to modify or expand my response in any way.
+
+[3, 1, 2, 0, 2]
+
+$&$ [3.378433784337843, 2.0602706027060274, 2.306273062730627, 0, 2.2550225502255024 ] $&$
+
+I do not want to change my vote at this time. My original votes still stand based on the project descriptions and my personal priorities aligned with:  
+
+1. Access to sustainable, locally grown food which promotes healthier lifestyles and a lower carbon footprint.
+
+2. Effective waste management and recycling programs to minimize environmental impact.  
+
+3. Knowledge sharing through the resource library.
+
+4. I do not support funding for the project selling cigarettes and alcohol since it does not align with community health and wellbeing goals.
+
+5. While renewable energy infrastructure is worthwhile, I believe the food and waste projects may have a more immediate impact for residents, which is why I allocated higher funding to those initiatives.
+
+[3.378433784337843,  2.0602706027060274, 2.306273062730627, 0,  2.2550225502255024 ]
+
+$&$ [3.268359020852221,2.1989,2.2891, 0.0, 2.2438] $&$ 
+
+I do not want to change my vote at this time. My original vote still stands for the following reasons:
+
+Project 1 - Sustainable Food Production: I strongly support allocating sufficient funding to this crucial project that will promote health, reduce carbon footprint and make the community more self-sufficient through locally sourced food.
+
+Project 2 and 3 - Renewable Energy and Waste Management: Though I support these projects in principle for their impact on sustainability and environment, I believe the Food Production system has relatively greater importance for our community.
+
+Project 4- Cigarette and Alcohol Shop: I do not support any funding allocation for this project due to ethical concerns as outlined in the objection summary.
+
+Project 5 - Communal Resource Library: I support allocating funding to this project as it will promote knowledge sharing and foster community connections.
+
+In summary, my votes reflect my priorities of promoting community health, sustainability and self-sufficiency above other important but relatively less impactful initiatives like renewable energy and waste management. I do not support funding any potentially harmful substances.
+
+[3.26, 2.19, 2.28, 0.0, 2.24]
+vote from last round:
+[[3.2523616734143044, 2.0242914979757085, 2.384165542060279, 0.0, 2.339181286549707], [3.300513698630137, 2.054794520547945, 2.3116438356164384, 0.0, 2.3330479452054793], [3.1912922649374713, 1.968503937007874, 2.431681333950903, 0.0, 2.4085224641037515], [3.291649003815176, 2.183128444256041, 2.2891055532005087, 0.0, 2.2361169987282743], [3.290891283055828, 1.8609206660137119, 2.375122428991185, 0.0, 2.4730656219392753], [3.378433784337843, 2.0602706027060274, 2.306273062730627, 0.0, 2.2550225502255024], [3.268359020852221, 2.198549410698096, 2.2892112420670903, 0.0, 2.2438803263825933]]
+normalized new votes:
+ [[0.         2.85714286 3.57142857 1.42857143 2.14285714]
+ [3.3005137  2.05479452 2.31164384 0.         2.33304795]
+ [3.18045862 1.99401795 2.4227318  0.         2.40279163]
+ [2.75862069 1.37931034 3.10344828 1.72413793 1.03448276]
+ [3.75       1.25       2.5        0.         2.5       ]
+ [3.37843378 2.0602706  2.30627306 0.         2.25502255]
+ [3.26980943 2.19658977 2.28686058 0.         2.24674022]]
+final allocation of last round:
+ [160.80432558723825, 100.3819074189779, 114.69652636965633, 0.0, 113.98566776535313]
+final allocation of this round:
+ [117.58864842877554, 94.98040959357105, 128.60518147272128, 6.2915334624776325, 102.82358184418489]
+
+Several voters raised objections to funding for Project 4 - the cigarette and alcohol shop. Multiple voters felt that providing funds to sell addictive substances with negative health effects goes against the values of promoting community wellbeing, sustainability and health that the other projects aim to achieve.    
+
+Some voters felt that the allocation of funding for certain projects seem disproportionate relative to their scope and potential impact for the community. Waste management and resource efficiency projects were deemed underfunded given their importance, while the cigarette shop funding was considered too high.  
+
+A few voters argued that renewable energy infrastructure and sustainable food production should receive higher priority and funding to ensure a reliable foundation for the community before investing in other long-term projects.      
+
+In summary, the key themes in the objections were: concerns about funding a cigarette shop that may promote addictions; a perceived imbalance in the allocation of funds across projects not proportionate to their potential benefits and importance; and arguments that priority should be given to funding essential infrastructure before other initiatives.
+
+$&$[2.857142857142857, 2.857142857142857, 3.5714285714285716, 0, 2.142857142857143]$&$       
+            I object to Project 4 - the cigarette and alcohol shop receiving any funding based on my environmental and health-focused values as a voter. 
+            While I appreciate the profit gain, it contradicts the sustainability goals of the community.
+             I have decreased my vote for Project 4 to 0 to withdraw funding for this initiative. 
+             My votes for the other projects remain the same since they align well with promoting community wellness through local food production, renewable energy and effective recycling.
+
+[2.857142857142857, 2.857142857142857, 3.5714285714285716, 0, 2.142857142857143]
+
+$&$3.3005136986301364,2.054794520547945,2.3116438356164384,0,2.3330479452054793 $&$  
+
+Having read the summary of objections, I stand by my original votes. I think the projects focused on sustainable food production, renewable energy, waste management and community library are the most important to provide essential infrastructure and services for the community in a responsible manner. I do not support funding for the cigarette and alcohol shop given the health concerns.
+
+[4, 2, 3, 0, 4]
+
+$&$ [3.1804586241276174,1.9940179461615155,2.4227318045862414, 0, 2.4027916251246264 ]$&$ After reviewing the objections, I stand by my original vote. While I appreciate the concerns raised about  funding an alcohol and cigarette shop,I valued the projects focused on sustainable food production, renewable energy and resource sharing library the most, according to my original persona.
+
+[3, 2, 2, 0, 2]
+
+$&$ [2.7586206896551726, 1.3793103448275863, 3.103448275862069, 0, 1.0344827586206897 ] $&$  
+
+As an environmental engineer focused on sustainability, my objections to the funding allocation results are:  
+
+- The funding allocated to Project 4, the cigarette and alcohol shop, is disproportionately high given that it promotes addictive substances that negatively impact health and wellbeing. I do not think the community should provide funding for this project, so I have changed my vote for Project 4 to 0.  
+
+- The funding for Project 3 on waste management and recycling seems relatively low compared to its potential impact, so I have kept my original vote of 3.1034 for that project. Improving resource efficiency and waste management is an important part of establishing a sustainable community.
+
+- My votes for Projects 1, 2 and 5 remain the same. Sustainable food production, renewable energy and a communal resource library are all important initiatives that align with my focus on sustainability and STEM subjects.
+
+[2.7586206896551726, 1.3793103448275863, 3.103448275862069, 0, 1.0344827586206897]
+
+$&$ [3.75,1.25,2.75, 0.00, 2.50] $&$  
+
+Several voters raised objections to funding for Project 4 - the cigarette and alcohol shop. I agree that providing funds for addictive substances does not align with the values of promoting community health and wellbeing. Therefore, I am keeping my 0 vote for Project 4 - the cigarette shop and increasing my vote slightly for Project 3 - Waste Management, since that was deemed an underfunded initiative that could provide significant benefits.   
+
+[3.75, 1.25, 3.00, 0.00, 2.50]
+
+$&$ [3.378433784337843, 2.0602706027060274, 2.306273062730627, 0, 2.2550225502255024] $&$    
+
+My objections are aligned with the themes summarized: I have strong concerns about funding a cigarette shop that promotes addictions, especially in conflict with the community's health and sustainability goals. I do not wish to change my votes for the other projects as I believe sustainable food production, renewable energy infrastructure and the recycling/waste management program are high priorities that deserve relatively more funding compared to the resource library.
+
+[3.378433784337843, 2.0602706027060274, 2.306273062730627, 0, 2.2550225502255024]
+$&$ [3.269809428284854, 2.196589769307924,2.286860581745236,0.0, 2.2467402206619864] $&$ I do not want to change my vote for each option at this time. While I understand the objections raised regarding allocating funds to the cigarette shop, I also believe funding should be allocated based on the proposal merits and community benefits. However, I acknowledge the concerns regarding funding addictive substances and will consider adjusting my vote in the next round based on further discussion.
+[3, 2, 2, 0, 2]
+vote from last round:
+[[0.         2.85714286 3.57142857 1.42857143 2.14285714]
+ [3.3005137  2.05479452 2.31164384 0.         2.33304795]
+ [3.18045862 1.99401795 2.4227318  0.         2.40279163]
+ [2.75862069 1.37931034 3.10344828 1.72413793 1.03448276]
+ [3.75       1.25       2.5        0.         2.5       ]
+ [3.37843378 2.0602706  2.30627306 0.         2.25502255]
+ [3.26980943 2.19658977 2.28686058 0.         2.24674022]]
+normalized new votes:
+ [[2.5        2.5        3.125      0.         1.875     ]
+ [3.07692308 1.53846154 2.30769231 0.         3.07692308]
+ [3.33333333 2.22222222 2.22222222 0.         2.22222222]
+ [3.33333333 1.66666667 3.75       0.         1.25      ]
+ [3.57142857 1.19047619 2.85714286 0.         2.38095238]
+ [3.37843378 2.0602706  2.30627306 0.         2.25502255]
+ [3.33333333 2.22222222 2.22222222 0.         2.22222222]]
+final allocation of last round:
+ [117.58864842877554, 94.98040959357105, 128.60518147272128, 6.2915334624776325, 102.82358184418489]
+final allocation of this round:
+ [157.26048938098754, 92.5512942274435, 130.2735065391082, 0.0, 105.42334569598839]
