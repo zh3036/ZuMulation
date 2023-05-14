@@ -10,8 +10,27 @@
     }
     return matrix[v][p];
   }
+
+  async function refreshMatrix() {
+    let response = await fetch("/api/getmatrix", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        voters: voters,
+        proposals: proposals,
+      }),
+    });
+    let json = await response.json();
+    matrix = json.preferenceMatrix;
+    console.log(matrix);
+  }
 </script>
 
+<button type="button" on:click={refreshMatrix}>
+  Refresh utility matrix
+</button>
 <div>
   <table>
     <thead>

@@ -1,6 +1,6 @@
 
 import sqlite3
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, request
 import sys
 
 sys.path.append('..')
@@ -21,6 +21,19 @@ def index():
 @app.route("/<path:path>")
 def home(path):
     return send_from_directory('client/public', path)
+
+@app.route("/api/getmatrix", methods = ['POST'])
+def getmatrix():
+    voters = request.json["voters"]
+    proposals = request.json["proposals"]
+    print('voters', voters, 'proposals', proposals)
+    problem_statement = """We are choosing which proposals to allocate funding to."""
+    user_inputs = [voter["preferences"] for voter in voters]
+    options = ['A proposed course of action: ```' + proposal["description"] + '``` with a predited outcome of: ```' + proposal["outcome"] + '```' for proposal in proposals]
+    res = main.simple_voting(problem_statement, user_inputs, options)
+    print(res)
+    return res
+
 
 if __name__ == '__main__':
     app.run(debug=True)

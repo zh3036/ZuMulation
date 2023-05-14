@@ -12,6 +12,8 @@ def _build_normalized_user_preference(options: list[dict], user: dict) -> list[f
     if minimum < 0:
         unNormalized = [u - minimum for u in unNormalized]
     total = sum(unNormalized)
+    if total == 0:
+        return [0] * len(options)
     return [u / total for u in unNormalized]
 
 
@@ -27,6 +29,8 @@ def perform_votes(options: list[dict], users: list[dict]) -> dict:
     # make preferences' each entry summed up to 10
     for i in range(len(preferences)):
         total = sum(preferences[i])
+        if total == 0:
+            continue
         preferences[i] = [p / total * 10 for p in preferences[i]]
 
     weighted_votes = [
