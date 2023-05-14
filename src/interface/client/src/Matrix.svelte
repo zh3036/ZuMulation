@@ -4,14 +4,25 @@
   export let voters = [];
   export let matrix = [];
 
-  function getMatrix(v, p) {
-    if (v >= matrix.length || p >= matrix[0].length) {
-      return NaN;
-    }
-    return matrix[v][p];
+  async function refreshMatrix() {
+    let response = await fetch("/api/getmatrix", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        voters: voters,
+        proposals: proposals,
+      }),
+    });
+    let json = await response.json();
+    matrix = json.preferenceMatrix;
   }
 </script>
 
+<button type="button" on:click={refreshMatrix}>
+  Refresh utility matrix
+</button>
 <div>
   <table>
     <thead>
@@ -27,7 +38,11 @@
         <tr>
           <th>{voter.name}</th>
           {#each proposals as proposal, j}
-            <td>{getMatrix(i, j)}</td>
+            {#if (i >= matrix.length || j >= matrix[0].length)}
+              <td>N/A</td>
+            {:else}
+              <td>{matrix[i][j]}</td>
+            {/if}
           {/each}
         </tr>
       {/each}
