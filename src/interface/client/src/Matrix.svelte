@@ -4,13 +4,6 @@
   export let voters = [];
   export let matrix = [];
 
-  function getMatrix(v, p) {
-    if (v >= matrix.length || p >= matrix[0].length) {
-      return NaN;
-    }
-    return matrix[v][p];
-  }
-
   async function refreshMatrix() {
     let response = await fetch("/api/getmatrix", {
       method: "POST",
@@ -46,7 +39,11 @@
         <tr>
           <th>{voter.name}</th>
           {#each proposals as proposal, j}
-            <td>{getMatrix(i, j)}</td>
+            {#if (i >= matrix.length || j >= matrix[0].length)}
+              <td>N/A</td>
+            {:else}
+              <td>{matrix[i][j]}</td>
+            {/if}
           {/each}
         </tr>
       {/each}
