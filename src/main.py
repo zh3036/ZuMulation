@@ -16,10 +16,10 @@ import numpy as np
 pool = Pool()
 
 # llm = OpenAI(model_name="gpt-3.5-turbo")
-ANTRHOPIC_KEY = os.environ['ANTHROPIC_API_KEY']
+
 
 #TODO: UserWarning: This Anthropic LLM is deprecated. Please use `from langchain.chat_models import ChatAnthropic` instead
-llm = Anthropic(anthropic_api_key=ANTRHOPIC_KEY, model="claude-instant-v1-100k")
+llm = Anthropic(model="claude-instant-v1-100k")
 # llm = OpenAI(model_name="gpt-4")
 
 def simple_voting(problem_statement: str, user_inputs: list[str], options: list[str]):
