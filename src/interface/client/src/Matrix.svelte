@@ -17,7 +17,6 @@
     });
     let json = await response.json();
     matrix = json.preferenceMatrix;
-    console.log(matrix);
   }
 </script>
 
