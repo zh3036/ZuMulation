@@ -1,8 +1,13 @@
 
 <script>
+
+  import SvelteTooltip from 'svelte-tooltip';
+
   export let proposals = [];
   export let voters = [];
   export let matrix = [];
+  export let proposalDicts = [];
+  export let voterDicts = [];
 
   async function refreshMatrix() {
     let response = await fetch("/api/getmatrix", {
@@ -16,7 +21,10 @@
       }),
     });
     let json = await response.json();
-    matrix = json.preferenceMatrix;
+    console.log('json', json);
+    matrix = json[0].preferenceMatrix;
+    voterDicts = json[1];
+    proposalDicts = json[2];
   }
 </script>
 
@@ -28,15 +36,15 @@
     <thead>
       <tr>
         <th></th>
-        {#each proposals as proposal}
-          <th>{proposal.name}</th>
+        {#each proposals as proposal, i}
+          <th><SvelteTooltip tip={i >= proposalDicts.length ? "" : JSON.stringify(proposalDicts[i])}>{proposal.name}</SvelteTooltip></th>
         {/each}
       </tr>
     </thead>
     <tbody>
       {#each voters as voter, i}
         <tr>
-          <th>{voter.name}</th>
+          <th><SvelteTooltip tip={i >= voterDicts.length ? "" : JSON.stringify(voterDicts[i])}>{voter.name}</SvelteTooltip></th>
           {#each proposals as proposal, j}
             {#if (i >= matrix.length || j >= matrix[0].length)}
               <td>N/A</td>
@@ -49,3 +57,8 @@
     </tbody>
   </table>
 </div>
+<style>
+  SvelteTooltip {
+    color: white;
+  }
+</style>

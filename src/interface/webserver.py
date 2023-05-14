@@ -30,7 +30,8 @@ def getmatrix():
     user_inputs = [voter["preferences"] for voter in voters]
     options = ['A proposed course of action, titled ```' + proposal["name"] + '```: ```' + proposal["description"] + '``` with a predited outcome of: ```' + proposal["outcome"] + '```' for proposal in proposals]
     res = main.simple_voting(problem_statement, user_inputs, options)
-    return res
+    print(res)
+    return list(res)
 
 
 if __name__ == '__main__':
