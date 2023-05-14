@@ -28,7 +28,7 @@ def getmatrix():
     proposals = request.json["proposals"]
     problem_statement = """We are choosing which proposals to allocate funding to."""
     user_inputs = [voter["preferences"] for voter in voters]
-    options = ['A proposed course of action: ```' + proposal["description"] + '``` with a predited outcome of: ```' + proposal["outcome"] + '```' for proposal in proposals]
+    options = ['A proposed course of action, titled ```' + proposal["name"] + ': ```' + proposal["description"] + '``` with a predited outcome of: ```' + proposal["outcome"] + '```' for proposal in proposals]
     res = main.simple_voting(problem_statement, user_inputs, options)
     return res
 
